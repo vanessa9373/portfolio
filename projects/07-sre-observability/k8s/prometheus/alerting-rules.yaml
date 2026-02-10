@@ -1,0 +1,132 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: sre-alerting-rules
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  groups:
+    # --- SLO Burn Rate Alerts (Multi-Window, Multi-Burn-Rate) ---
+    - name: slo-burn-rate
+      rules:
+        - alert: SLOBurnRateCritical
+          expr: |
+            (
+              sum(rate(http_requests_total{code=~"5.."}[1h])) /
+              sum(rate(http_requests_total[1h]))
+            ) > (14.4 * 0.001)
+          for: 2m
+          labels:
+            severity: critical
+            team: platform
+          annotations:
+            summary: "SLO burn rate critical - 1h window"
+            description: "Error rate is burning through error budget 14.4x faster than sustainable. Current: {{ $value | humanizePercentage }}"
+            runbook: "https://github.com/vanessa9373/portfolio/blob/main/projects/07-sre-observability/docs/runbook-alerts.md#slo-burn-rate"
+
+        - alert: SLOBurnRateHigh
+          expr: |
+            (
+              sum(rate(http_requests_total{code=~"5.."}[6h])) /
+              sum(rate(http_requests_total[6h]))
+            ) > (6 * 0.001)
+          for: 15m
+          labels:
+            severity: warning
+            team: platform
+          annotations:
+            summary: "SLO burn rate high - 6h window"
+            description: "Error rate burning 6x faster than sustainable over 6h window."
+
+    # --- Application Alerts ---
+    - name: application
+      rules:
+        - alert: HighErrorRate
+          expr: sum(rate(http_requests_total{code=~"5.."}[5m])) / sum(rate(http_requests_total[5m])) > 0.01
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "HTTP 5xx error rate exceeds 1%"
+            description: "Error rate: {{ $value | humanizePercentage }}"
+
+        - alert: HighLatencyP99
+          expr: histogram_quantile(0.99, sum(rate(http_request_duration_seconds_bucket[5m])) by (le)) > 0.5
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: "P99 latency exceeds 500ms"
+            description: "P99: {{ $value }}s"
+
+        - alert: HighLatencyP95
+          expr: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le)) > 0.25
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: "P95 latency exceeds 250ms"
+
+    # --- Kubernetes Alerts ---
+    - name: kubernetes
+      rules:
+        - alert: PodCrashLooping
+          expr: rate(kube_pod_container_status_restarts_total[15m]) * 60 * 15 > 3
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Pod {{ $labels.namespace }}/{{ $labels.pod }} is crash looping"
+            description: "Pod has restarted {{ $value | humanize }} times in 15 minutes."
+
+        - alert: NodeNotReady
+          expr: kube_node_status_condition{condition="Ready",status="true"} == 0
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Node {{ $labels.node }} is not ready"
+
+        - alert: PodOOMKilled
+          expr: kube_pod_container_status_last_terminated_reason{reason="OOMKilled"} == 1
+          for: 0m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Container {{ $labels.container }} in {{ $labels.pod }} was OOM killed"
+
+    # --- Infrastructure Alerts ---
+    - name: infrastructure
+      rules:
+        - alert: HighNodeCPU
+          expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 85
+          for: 10m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Node CPU usage above 85%"
+
+        - alert: HighNodeMemory
+          expr: (1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100 > 90
+          for: 10m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Node memory usage above 90%"
+
+        - alert: DiskSpaceLow
+          expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes) * 100 < 10
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Disk space below 10% on {{ $labels.mountpoint }}"
+
+        - alert: CertificateExpiringSoon
+          expr: (probe_ssl_earliest_cert_expiry - time()) / 86400 < 30
+          for: 1h
+          labels:
+            severity: warning
+          annotations:
+            summary: "TLS certificate expires in {{ $value | humanize }} days"
