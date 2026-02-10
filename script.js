@@ -265,34 +265,47 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
 
-  /* ---------- CONTACT FORM ---------- */
+  /* ---------- CONTACT FORM (Formsubmit.co backend) ---------- */
   const contactForm = document.getElementById('contact-form');
 
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-
-    // Show success message (replace with actual form handler)
     const btn = contactForm.querySelector('button[type="submit"]');
     const originalText = btn.textContent;
-    btn.textContent = 'Message Sent!';
-    btn.style.background = '#10b981';
+    btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      btn.disabled = false;
-      contactForm.reset();
-    }, 3000);
+    const formData = new FormData(contactForm);
 
-    // TIP: To make this form functional, use one of these services:
-    // - Formspree (https://formspree.io) — set form action to your Formspree URL
-    // - EmailJS (https://www.emailjs.com) — send emails from JavaScript
-    // - Netlify Forms — add netlify attribute to form tag
-    console.log(`Contact form submitted by ${name}`);
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        btn.textContent = 'Message Sent!';
+        btn.style.background = '#10b981';
+        contactForm.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    })
+    .catch(() => {
+      btn.textContent = 'Error — Try Again';
+      btn.style.background = '#e63946';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+      }, 3000);
+    });
   });
 
 });
