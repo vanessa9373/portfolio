@@ -265,47 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
 
-  /* ---------- CONTACT FORM (Formsubmit.co backend) ---------- */
+  /* ---------- CONTACT FORM (native submit to Formsubmit.co) ---------- */
   const contactForm = document.getElementById('contact-form');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const btn = contactForm.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    const formData = new FormData(contactForm);
-
-    fetch(contactForm.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        btn.textContent = 'Message Sent!';
-        btn.style.background = '#10b981';
-        contactForm.reset();
-        setTimeout(() => {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 4000);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    })
-    .catch(() => {
-      btn.textContent = 'Error — Try Again';
-      btn.style.background = '#e63946';
-      btn.disabled = false;
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-      }, 3000);
-    });
+  contactForm.addEventListener('submit', () => {
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
   });
 
 });
