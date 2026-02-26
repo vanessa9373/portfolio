@@ -1,0 +1,9 @@
+variable "project_name" { type = string }
+variable "subnet_ids" { type = list(string) }
+variable "vpc_id" { type = string }
+variable "cluster_version" { default = "1.29" }
+variable "instance_type" { default = "t3.medium" }
+variable "desired_nodes" { default = 2 }
+variable "min_nodes" { default = 1 }
+variable "max_nodes" { default = 5 }
+variable "public_access" { default = true }
