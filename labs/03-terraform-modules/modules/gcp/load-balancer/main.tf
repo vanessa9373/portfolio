@@ -1,6 +1,6 @@
 # ============================================================
 # Load Balancer Module — Global HTTP(S) LB with Cloud CDN and Cloud Armor
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ---------- Global IP Address ----------

@@ -1,6 +1,6 @@
 # ============================================================
 # Load Balancer Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "lb_ip_address" {

@@ -1,7 +1,7 @@
 """
 Auto-Remediator Lambda
 Matches alerts to remediation playbooks and executes automated fixes.
-Author: Jenella V.
+Author: Jenella Awo
 """
 
 import json

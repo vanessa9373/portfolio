@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud SQL Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "instance_name" {

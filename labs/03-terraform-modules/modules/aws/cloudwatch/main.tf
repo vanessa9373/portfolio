@@ -1,7 +1,7 @@
 # ============================================================
 # CloudWatch Module — Log Group, Metric Alarms, Dashboard,
 # and SNS Notification Integration
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ----------------------------------------------

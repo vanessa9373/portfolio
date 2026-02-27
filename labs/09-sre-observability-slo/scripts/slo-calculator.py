@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 SLO Calculator — Queries Prometheus and calculates SLO compliance.
-Author: Jenella V.
+Author: Jenella Awo
 
 Usage:
     python slo-calculator.py --prometheus-url http://localhost:9090 --window 30d

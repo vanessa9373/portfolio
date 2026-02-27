@@ -1,7 +1,7 @@
 # ============================================================
 # VPC Module — Production-Grade
 # Creates VPC, subnets, NAT, IGW, route tables, flow logs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "aws_vpc" "this" {

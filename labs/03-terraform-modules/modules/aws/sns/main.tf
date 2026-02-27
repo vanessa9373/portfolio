@@ -1,7 +1,7 @@
 # ============================================================
 # SNS Module — Standard/FIFO Topic with KMS Encryption,
 # Subscriptions, Topic Policy, and Delivery Status Logging
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

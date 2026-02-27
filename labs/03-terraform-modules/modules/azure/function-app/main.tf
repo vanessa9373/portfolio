@@ -1,6 +1,6 @@
 # ============================================================
 # Azure Function App Module — Serverless Functions
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # --- Linux Function App ---

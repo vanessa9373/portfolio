@@ -1,6 +1,6 @@
 # ============================================================
 # IAM Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "service_account_email" {

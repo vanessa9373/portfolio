@@ -1,7 +1,7 @@
 # ============================================================
 # SQS Module — Standard/FIFO Queue with Dead-Letter Queue,
 # Encryption, Redrive Policy, and Access Policy
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

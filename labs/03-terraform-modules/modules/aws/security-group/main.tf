@@ -1,7 +1,7 @@
 # ============================================================
 # Security Group Module — Reusable Security Group with
 # Configurable Ingress/Egress Rules (CIDR and SG-based)
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

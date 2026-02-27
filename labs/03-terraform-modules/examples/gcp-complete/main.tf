@@ -1,6 +1,6 @@
 # ============================================================
 # GCP Complete Example — Using All GCP Modules Together
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

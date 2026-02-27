@@ -1,6 +1,6 @@
 # ============================================================
 # App Gateway Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "app_gateway_id" {

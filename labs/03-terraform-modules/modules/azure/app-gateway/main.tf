@@ -2,7 +2,7 @@
 # App Gateway Module — Azure Application Gateway v2 with WAF,
 #   HTTP/HTTPS listeners, backend pools, SSL, URL routing,
 #   redirect configurations, and autoscaling
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

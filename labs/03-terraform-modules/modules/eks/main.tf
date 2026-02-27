@@ -1,6 +1,6 @@
 # ============================================================
 # EKS Module — Managed Kubernetes Cluster
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "aws_eks_cluster" "this" {

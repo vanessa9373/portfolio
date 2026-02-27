@@ -1,6 +1,6 @@
 # ============================================================
 # Artifact Registry Module — Container and package repository
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ---------- Repository ----------

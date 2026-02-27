@@ -1,7 +1,7 @@
 # ============================================================
 # ACR Module — Azure Container Registry with geo-replication,
 #   content trust, network rules, retention, and webhooks
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_container_registry" "this" {

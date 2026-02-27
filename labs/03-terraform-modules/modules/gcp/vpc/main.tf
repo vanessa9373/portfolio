@@ -1,6 +1,6 @@
 # ============================================================
 # VPC Module — GCP VPC Network with subnets, Cloud NAT, and firewall
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "google_compute_network" "vpc" {

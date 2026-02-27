@@ -1,6 +1,6 @@
 # ============================================================
 # CI/CD Platform — EKS Cluster, VPC, IAM, ECR
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

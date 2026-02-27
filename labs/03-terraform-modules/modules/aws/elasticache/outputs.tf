@@ -1,6 +1,6 @@
 # ============================================================
 # ElastiCache Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "primary_endpoint" {

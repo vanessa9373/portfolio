@@ -1,7 +1,7 @@
 # ============================================================
 # Cloud Security & Compliance Framework
 # Security Hub, GuardDuty, Config, CloudTrail, KMS
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

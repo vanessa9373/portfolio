@@ -1,6 +1,6 @@
 # ============================================================
 # IAM Module — Service accounts, role bindings, and Workload Identity
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ---------- Service Account ----------

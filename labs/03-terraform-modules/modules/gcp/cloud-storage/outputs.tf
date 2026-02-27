@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud Storage Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "bucket_id" {

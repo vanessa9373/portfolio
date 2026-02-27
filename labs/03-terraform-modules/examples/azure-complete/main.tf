@@ -1,6 +1,6 @@
 # ============================================================
 # Azure Complete Example — Using All Azure Modules Together
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

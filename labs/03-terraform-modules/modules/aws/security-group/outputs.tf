@@ -1,6 +1,6 @@
 # ============================================================
 # Security Group Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "security_group_id" {

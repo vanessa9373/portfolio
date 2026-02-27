@@ -1,6 +1,6 @@
 # ============================================================
 # SQL Database Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "server_id" {

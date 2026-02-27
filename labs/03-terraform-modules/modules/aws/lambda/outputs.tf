@@ -1,6 +1,6 @@
 # ============================================================
 # Lambda Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "function_arn" {

@@ -2,7 +2,7 @@
 """
 Chaos Experiment Orchestrator
 Validates prerequisites, runs experiments, monitors impact, auto-rolls back.
-Author: Jenella V.
+Author: Jenella Awo
 
 Usage:
     python run-experiment.py --experiment aws-fis/ec2-instance-stop --duration 300

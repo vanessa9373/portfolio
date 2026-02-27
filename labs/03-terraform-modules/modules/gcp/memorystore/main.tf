@@ -1,6 +1,6 @@
 # ============================================================
 # Memorystore Module — Managed Redis for GCP
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "google_redis_instance" "this" {

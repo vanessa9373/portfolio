@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud Run Module — Variables
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 variable "project_name" {

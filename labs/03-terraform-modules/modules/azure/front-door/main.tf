@@ -1,6 +1,6 @@
 # ============================================================
 # Azure Front Door Module — Global Load Balancing & CDN
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_cdn_frontdoor_profile" "this" {

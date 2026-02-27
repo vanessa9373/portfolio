@@ -1,7 +1,7 @@
 # ============================================================
 # Multi-stage Dockerfile for Cloud Migration
 # Stage 1: Build | Stage 2: Production
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # --- Stage 1: Build ---

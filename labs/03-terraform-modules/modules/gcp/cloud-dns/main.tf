@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud DNS Module — Public & Private Managed Zones
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # --- Managed Zone ---

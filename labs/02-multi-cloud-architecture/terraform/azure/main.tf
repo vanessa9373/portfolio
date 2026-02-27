@@ -1,7 +1,7 @@
 # ============================================================
 # Multi-Cloud Architecture — Azure Side
 # VNet, VPN Gateway, Subnets, NSGs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

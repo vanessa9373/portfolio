@@ -1,7 +1,7 @@
 # ============================================================
 # CloudFront Module — Distribution with OAC, Custom Domain,
 # Caching Policies, WAF, Geo Restriction, and SPA Support
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

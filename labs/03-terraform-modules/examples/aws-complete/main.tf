@@ -1,7 +1,7 @@
 # ============================================================
 # AWS Complete Example — Production Environment
 # Composes all AWS modules into a full-stack deployment
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

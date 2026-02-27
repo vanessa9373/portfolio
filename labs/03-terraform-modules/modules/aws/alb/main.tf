@@ -1,7 +1,7 @@
 # ============================================================
 # ALB Module — Application Load Balancer with Security Group,
 # HTTP/HTTPS Listeners, Target Groups, and Access Logs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

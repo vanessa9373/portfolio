@@ -1,7 +1,7 @@
 # ============================================================
 # Multi-Cloud Architecture — AWS Side
 # VPC, Transit Gateway, VPN Gateway, Subnets
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

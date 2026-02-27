@@ -1,7 +1,7 @@
 # ============================================================
 # IAM Module — Reusable IAM Roles, Policies, Instance Profiles,
 # and OIDC-Based Roles for EKS IRSA
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

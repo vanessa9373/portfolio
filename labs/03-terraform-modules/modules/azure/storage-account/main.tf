@@ -2,7 +2,7 @@
 # Storage Account Module — Azure Storage with blob containers,
 #   file shares, lifecycle management, network rules, CMK
 #   encryption, and static website hosting
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_storage_account" "this" {

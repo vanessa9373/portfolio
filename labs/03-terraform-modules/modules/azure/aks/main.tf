@@ -1,7 +1,7 @@
 # ============================================================
 # AKS Module — Azure Kubernetes Service with managed identity,
 #   Azure CNI, RBAC, monitoring, auto-scaling, and Key Vault
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_user_assigned_identity" "aks" {

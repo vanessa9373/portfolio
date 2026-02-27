@@ -1,6 +1,6 @@
 # ============================================================
 # Pub/Sub Module — Topics, subscriptions, dead-letter, and encryption
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ---------- Schema (optional) ----------

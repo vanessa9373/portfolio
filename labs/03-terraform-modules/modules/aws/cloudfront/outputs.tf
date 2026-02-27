@@ -1,6 +1,6 @@
 # ============================================================
 # CloudFront Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "distribution_id" {

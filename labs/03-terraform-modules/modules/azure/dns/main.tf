@@ -1,6 +1,6 @@
 # ============================================================
 # Azure DNS Module — Public & Private DNS Zones
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # --- Public DNS Zone ---

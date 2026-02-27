@@ -1,7 +1,7 @@
 # ============================================================
 # S3 Module — Production S3 Bucket with Encryption, Versioning,
 # Lifecycle Rules, Public Access Block, and SSL Enforcement
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 data "aws_caller_identity" "current" {}

@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud SQL Module — Managed PostgreSQL/MySQL with HA and backups
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "random_id" "db_suffix" {

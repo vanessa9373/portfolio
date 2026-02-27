@@ -1,7 +1,7 @@
 # ============================================================
 # ECR Module — Container Registry with Image Scanning,
 # Encryption, Lifecycle Policies, and Cross-Account Access
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

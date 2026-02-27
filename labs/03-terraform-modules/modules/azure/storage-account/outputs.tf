@@ -1,6 +1,6 @@
 # ============================================================
 # Storage Account Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "storage_account_id" {

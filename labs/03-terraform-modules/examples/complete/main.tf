@@ -1,6 +1,6 @@
 # ============================================================
 # Complete Example — Using All Modules Together
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

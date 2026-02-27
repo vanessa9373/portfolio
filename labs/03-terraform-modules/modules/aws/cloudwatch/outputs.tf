@@ -1,6 +1,6 @@
 # ============================================================
 # CloudWatch Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "log_group_arn" {

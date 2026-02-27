@@ -1,7 +1,7 @@
 # ============================================================
 # Lambda Module — Function with IAM Role, VPC Config,
 # Event Source Mappings, CloudWatch Logs, and Function URL
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

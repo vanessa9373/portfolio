@@ -1,7 +1,7 @@
 # ============================================================
 # DynamoDB Module — Table with GSI, LSI, PITR, TTL,
 # Streams, and Configurable Encryption
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

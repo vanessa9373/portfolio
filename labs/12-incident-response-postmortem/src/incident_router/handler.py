@@ -1,7 +1,7 @@
 """
 Incident Router Lambda
 Receives PagerDuty webhooks, creates Slack channels, Jira tickets, and posts runbooks.
-Author: Jenella V.
+Author: Jenella Awo
 """
 
 import json

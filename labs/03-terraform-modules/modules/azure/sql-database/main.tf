@@ -2,7 +2,7 @@
 # SQL Database Module — Azure SQL Server and Database with
 #   AD admin, firewall, TDE, auditing, geo-replication,
 #   private endpoint, and long-term backup retention
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_mssql_server" "this" {

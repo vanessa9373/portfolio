@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud Storage Module — GCS bucket with lifecycle, versioning, and encryption
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "google_storage_bucket" "bucket" {

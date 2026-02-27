@@ -1,7 +1,7 @@
 # ============================================================
 # ElastiCache Module — Redis/Memcached Replication Group
 # with Encryption, Auth, Subnet Group, and Parameter Group
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 locals {

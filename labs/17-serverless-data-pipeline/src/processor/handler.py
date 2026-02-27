@@ -1,6 +1,6 @@
 """
 Processor Lambda — Consumes from SQS, transforms data, writes to DynamoDB and S3.
-Author: Jenella V.
+Author: Jenella Awo
 """
 
 import json

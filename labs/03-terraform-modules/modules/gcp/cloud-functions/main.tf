@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud Functions Module — 2nd gen Cloud Functions with event triggers
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ---------- Source archive ----------

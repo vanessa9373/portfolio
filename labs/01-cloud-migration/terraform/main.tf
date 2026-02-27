@@ -1,7 +1,7 @@
 # ============================================================
 # Enterprise Cloud Migration — On-Prem to AWS
 # Core Infrastructure: VPC, ECS Fargate, Aurora, ALB
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 terraform {

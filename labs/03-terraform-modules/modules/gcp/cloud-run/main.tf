@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud Run Module — Serverless Container Platform
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "google_cloud_run_v2_service" "this" {

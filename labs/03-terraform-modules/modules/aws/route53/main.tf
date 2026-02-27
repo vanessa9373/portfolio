@@ -1,7 +1,7 @@
 # ============================================================
 # Route53 Module — Hosted Zone with DNS Records,
 # Health Checks, and Optional DNSSEC
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 # ----------------------------------------------

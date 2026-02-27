@@ -1,6 +1,6 @@
 # ============================================================
 # RDS Module — Aurora PostgreSQL with encryption & backups
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "aws_db_subnet_group" "this" {

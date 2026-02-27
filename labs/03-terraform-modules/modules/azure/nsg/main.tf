@@ -1,7 +1,7 @@
 # ============================================================
 # NSG Module — Network Security Group with configurable rules,
 #   common presets, subnet associations, and flow logs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_network_security_group" "this" {

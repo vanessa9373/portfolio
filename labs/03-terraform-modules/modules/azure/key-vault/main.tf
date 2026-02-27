@@ -2,7 +2,7 @@
 # Key Vault Module — Azure Key Vault with access policies,
 #   RBAC, network ACLs, soft delete, purge protection,
 #   private endpoint, and diagnostic settings
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 data "azurerm_client_config" "current" {}

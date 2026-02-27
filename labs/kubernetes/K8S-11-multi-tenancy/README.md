@@ -292,5 +292,5 @@ K8S-11-multi-tenancy/
 
 ## Author
 
-**Jenella V.** — Solutions Architect & Cloud Engineer
+**Jenella Awo** — Solutions Architect & Cloud Engineer
 - [LinkedIn](https://www.linkedin.com/in/jenella-v-4a4b963ab/) | [GitHub](https://github.com/vanessa9373) | [Portfolio](https://vanessa9373.github.io/portfolio/)

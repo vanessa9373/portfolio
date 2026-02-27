@@ -1,6 +1,6 @@
 # ============================================================
 # Azure Redis Cache Module — Outputs
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 output "redis_id" {

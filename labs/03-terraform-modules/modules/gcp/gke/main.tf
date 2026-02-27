@@ -1,6 +1,6 @@
 # ============================================================
 # GKE Module — Google Kubernetes Engine regional private cluster
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 data "google_project" "current" {

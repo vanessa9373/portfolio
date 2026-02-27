@@ -1,7 +1,7 @@
 # ============================================================
 # VNet Module — Azure Virtual Network with subnets, NSGs,
 #   service endpoints, peering, and optional DDoS protection
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_network_ddos_protection_plan" "this" {

@@ -1,6 +1,6 @@
 # ============================================================
 # Azure Redis Cache Module — Azure Cache for Redis
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 resource "azurerm_redis_cache" "this" {

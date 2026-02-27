@@ -1,6 +1,6 @@
 """
 Ingestion Lambda — Receives API Gateway events, validates, and publishes to SQS.
-Author: Jenella V.
+Author: Jenella Awo
 """
 
 import json

@@ -2,7 +2,7 @@
 # ============================================================
 # Cloud Security Audit Script
 # Scans for common security misconfigurations in AWS
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 set -euo pipefail

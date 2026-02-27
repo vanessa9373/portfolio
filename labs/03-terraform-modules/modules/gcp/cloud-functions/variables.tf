@@ -1,6 +1,6 @@
 # ============================================================
 # Cloud Functions Module — Variables
-# Author: Jenella V.
+# Author: Jenella Awo
 # ============================================================
 
 variable "project_name" {
