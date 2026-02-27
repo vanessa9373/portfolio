@@ -1364,14 +1364,14 @@ ul { list-style: none; }
 
 
 /* ============================================================
-   PAGE-LOAD FADE-IN
+   PAGE-LOAD FADE-IN (CSS-only, works without JS)
    ============================================================ */
-body {
-  opacity: 0;
-  transition: opacity 0.6s ease;
+@keyframes pageLoad {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-body.loaded {
-  opacity: 1;
+body {
+  animation: pageLoad 0.6s ease forwards;
 }
 
 
@@ -1431,6 +1431,16 @@ body.light-mode {
 
 body.light-mode .navbar.scrolled {
   background: rgba(240, 244, 248, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .nav-link { color: #556677; }
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active { color: #0d1b2a; }
+
+body.light-mode .nav-cta {
+  background: var(--accent);
+  color: #fff;
 }
 
 body.light-mode .hero-bg-grid {
@@ -1443,8 +1453,44 @@ body.light-mode .orbit {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .hero-name {
-  -webkit-text-fill-color: transparent;
+body.light-mode .page-hero {
+  background: linear-gradient(160deg, #dce4ee 0%, #b8c9dc 50%, #e8edf4 100%);
+}
+
+body.light-mode .footer {
+  border-top-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .footer-socials a {
+  background: #dce4ee;
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #556677;
+}
+
+body.light-mode .footer-socials a:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #1a2a3a;
+}
+
+body.light-mode .form-group input::placeholder,
+body.light-mode .form-group textarea::placeholder {
+  color: #8896a8;
+}
+
+body.light-mode .back-to-top {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .nav-toggle span {
+  background: #1a2a3a;
 }
 
 .theme-toggle {
@@ -1508,6 +1554,13 @@ body.light-mode .hero-name {
     radial-gradient(rgba(108,71,255,0.04) 2px, transparent 2px);
   background-size: 40px 40px, 60px 60px;
   background-position: 0 0, 30px 30px;
+}
+
+
+/* Filter card animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 

@@ -61,10 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ---------- PAGE-LOAD FADE-IN ---------- */
-  document.body.classList.add('loaded');
-
-
   /* ---------- ACTIVE NAV LINK — PATHNAME-BASED ---------- */
   const navLinks = document.querySelectorAll('.nav-link');
   const path = window.location.pathname;
@@ -90,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Handle bare directory (/) as Home
   if (path.endsWith('/') || path === '') currentPage = 'Home';
+  // Post pages → highlight Blog
+  if (path.includes('/posts/')) currentPage = 'Blog';
 
   navLinks.forEach(link => {
     link.classList.remove('active');
@@ -240,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ---------- PROJECT FILTERS (Projects page only) ---------- */
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.filter-btn:not(.blog-filter-btn)');
   const projectCards = document.querySelectorAll('.project-card');
 
   if (filterBtns.length > 0) {
@@ -427,9 +425,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- DARK / LIGHT MODE TOGGLE ---------- */
   const themeToggle = document.querySelector('.theme-toggle');
   if (themeToggle) {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      document.body.classList.add('light-mode');
+    // Sync icon with current state (class already set by inline script)
+    if (document.body.classList.contains('light-mode')) {
       themeToggle.textContent = '\u2600';
     }
 
@@ -473,8 +470,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (progressBar) {
     window.addEventListener('scroll', () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = (window.scrollY / docHeight) * 100;
-      progressBar.style.width = scrolled + '%';
+      if (docHeight > 0) {
+        const scrolled = Math.min((window.scrollY / docHeight) * 100, 100);
+        progressBar.style.width = scrolled + '%';
+      }
     });
   }
 
