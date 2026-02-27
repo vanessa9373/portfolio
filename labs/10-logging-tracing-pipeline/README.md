@@ -1,264 +1,162 @@
-# Project 5: Logging & Tracing Pipeline (EFK + OpenTelemetry + Jaeger)
+# Lab 10: Logging & Tracing Pipeline (EFK + OpenTelemetry + Jaeger)
 
-## Overview
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white)
+![Fluent Bit](https://img.shields.io/badge/Fluent_Bit-49BDA5?style=flat&logo=fluentbit&logoColor=white)
+![Jaeger](https://img.shields.io/badge/Jaeger-66CFE3?style=flat&logo=jaeger&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat&logo=opentelemetry&logoColor=white)
 
-This project builds a complete observability pipeline covering the second and third pillars: **centralized logging** (EFK stack) and **distributed tracing** (OpenTelemetry + Jaeger). Combined with the metrics stack from Project 1 (Prometheus + Grafana), this completes the three pillars of observability.
+## Summary (The "Elevator Pitch")
 
-**Skills practiced:** Elasticsearch deployment & queries, Fluent Bit log collection & parsing, Kibana dashboards, OpenTelemetry Collector pipelines, Jaeger trace visualization, log-trace correlation, index lifecycle management.
+Built a complete observability pipeline covering centralized logging (EFK stack) and distributed tracing (OpenTelemetry + Jaeger). Combined with the metrics stack from Lab 08, this completes the **three pillars of observability** — metrics, logs, and traces — with log-trace correlation so you can jump from a log line directly to the full request trace.
 
----
+## The Problem
+
+Logs were scattered across individual pods — to debug an issue, engineers had to `kubectl logs` into multiple pods and manually piece together what happened across services. For a 12-service app, a single user request touches 5-6 services. Tracing a failure across services was like finding a needle in a haystack.
+
+## The Solution
+
+Built two pipelines: **Centralized Logging** (Fluent Bit collects logs from all pods → Elasticsearch stores/indexes → Kibana searches/visualizes) and **Distributed Tracing** (OpenTelemetry instruments services → Jaeger collects and visualizes traces). **Log-trace correlation** connects them — each log line includes a trace ID that links to the full request trace in Jaeger.
 
 ## Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
 │                    Three Pillars of Observability                  │
-│                                                                    │
-│  ┌──────────┐      ┌───────────────┐      ┌──────────────────┐   │
-│  │ METRICS  │      │   LOGGING     │      │    TRACING       │   │
-│  │(Project 1)│     │  (Project 5)  │      │  (Project 5)     │   │
-│  │           │      │               │      │                  │   │
-│  │Prometheus │      │ Elasticsearch │◄─────│ Jaeger           │   │
-│  │  ↓        │      │   ↑           │      │   ↑              │   │
-│  │Grafana    │      │ Fluent Bit    │      │ OTel Collector   │   │
-│  └──────────┘      │   ↑           │      │   ↑              │   │
-│                     │ Container Logs│      │ Application Spans│   │
-│                     └───────────────┘      └──────────────────┘   │
-│                                                                    │
-│                     ┌───────────────────────────┐                 │
-│                     │   Kibana (Log UI)          │                 │
-│                     │   Jaeger UI (Trace UI)     │                 │
-│                     │   Grafana (Metrics UI)     │                 │
-│                     └───────────────────────────┘                 │
+│                                                                   │
+│  METRICS (Lab 08)      LOGS (This Lab)       TRACES (This Lab)   │
+│  ┌──────────────┐    ┌───────────────┐    ┌───────────────────┐  │
+│  │ Prometheus   │    │  Fluent Bit   │    │  OpenTelemetry    │  │
+│  │ + Grafana    │    │  (DaemonSet)  │    │  Collector        │  │
+│  └──────────────┘    └───────┬───────┘    └────────┬──────────┘  │
+│                              ▼                      ▼             │
+│                       ┌──────────────┐    ┌───────────────────┐  │
+│                       │Elasticsearch │    │     Jaeger        │  │
+│                       │  (Storage)   │    │  (Trace Storage)  │  │
+│                       └───────┬──────┘    └────────┬──────────┘  │
+│                               ▼                     ▼             │
+│                       ┌──────────────┐    ┌───────────────────┐  │
+│                       │   Kibana     │    │  Jaeger UI        │  │
+│                       │ (Search/Viz) │◄──►│ (Trace Viewer)    │  │
+│                       └──────────────┘    └───────────────────┘  │
+│                              ▲                      ▲             │
+│                              └──── Log-Trace Correlation ────┘   │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-### Data Flow
+## Tech Stack
 
-```
-Container stdout/stderr
-    │
-    ▼
-Fluent Bit (DaemonSet on every node)
-    │ Parse CRI format
-    │ Enrich with K8s metadata (pod, namespace, labels)
-    │ Filter out noisy namespaces
-    ▼
-Elasticsearch (k8s-logs-* indices)
-    │
-    ▼
-Kibana (search, visualize, alert)
+| Technology | Purpose | Why I Chose It |
+|------------|---------|----------------|
+| Fluent Bit | Log collection (DaemonSet) | Lightweight, Kubernetes-native, flexible routing |
+| Elasticsearch | Log storage and indexing | Full-text search, scalable, index lifecycle |
+| Kibana | Log search and visualization | Rich query UI, dashboards |
+| OpenTelemetry | Trace instrumentation and collection | Vendor-neutral standard |
+| Jaeger | Trace storage and visualization | Open-source, Kubernetes-native |
 
-
-Application Code (instrumented with OTel SDK)
-    │
-    ▼
-OTel Collector (receives OTLP/Jaeger/Zipkin)
-    │ Batch, add attributes, memory limit
-    ├──────────────────────┐
-    ▼                      ▼
-Jaeger (trace storage)   Elasticsearch (trace metadata)
-    │
-    ▼
-Jaeger UI (trace visualization)
-```
-
----
-
-## Prerequisites
-
-- k3d cluster running (from Project 1)
-- `kubectl` configured
-- ~4GB RAM available for the full stack
-
----
-
-## Quick Start
-
-```bash
-# Deploy everything in order
-./scripts/deploy-stack.sh
-
-# Access the UIs
-kubectl port-forward -n logging svc/kibana 5601:5601 &
-kubectl port-forward -n tracing svc/jaeger-query 16686:16686 &
-
-# Open in browser
-open http://localhost:5601    # Kibana
-open http://localhost:16686   # Jaeger
-
-# Generate sample traces
-./scripts/generate-traces.sh 20
-
-# Run log queries
-./scripts/log-queries.sh
-
-# Tear down when done
-./scripts/teardown.sh
-```
-
----
-
-## Step-by-Step Setup
+## Implementation Steps
 
 ### Step 1: Deploy Elasticsearch
-
+**What this does:** Creates an Elasticsearch cluster for log storage with index lifecycle management (auto-delete logs older than 30 days).
 ```bash
-kubectl apply -f logging/elasticsearch/namespace.yaml
-kubectl apply -f logging/elasticsearch/elasticsearch.yaml
-
-# Wait for it to be ready
-kubectl rollout status statefulset/elasticsearch -n logging --timeout=300s
-
-# Verify
-kubectl port-forward -n logging svc/elasticsearch 9200:9200 &
-curl http://localhost:9200/_cluster/health | jq
+kubectl apply -f logging/elasticsearch.yaml -n logging
 ```
 
-**Key configurations:**
-- Single-node mode for local dev (production uses 3+ nodes)
-- 512MB JVM heap (tuned for k3d)
-- Index Lifecycle Management (ILM) policy: hot → warm → delete after 7 days
-- Index template with Kubernetes metadata mapping and trace_id field
-
-### Step 2: Deploy Fluent Bit
-
+### Step 2: Deploy Fluent Bit as DaemonSet
+**What this does:** Runs Fluent Bit on every node to collect container logs, parse them, add Kubernetes metadata (pod name, namespace), and ship to Elasticsearch.
 ```bash
-kubectl apply -f logging/fluent-bit/fluent-bit.yaml
-
-# Verify DaemonSet runs on all nodes
-kubectl get pods -n logging -l app=fluent-bit -o wide
+kubectl apply -f logging/fluent-bit.yaml -n logging
 ```
-
-**Pipeline stages:**
-1. **INPUT** — Tails container log files from `/var/log/containers/*.log`
-2. **FILTER (kubernetes)** — Enriches with pod name, namespace, labels
-3. **FILTER (parser)** — Parses JSON-structured logs
-4. **FILTER (grep)** — Excludes kube-system noise
-5. **OUTPUT** — Ships to Elasticsearch as `k8s-logs-*` indices
 
 ### Step 3: Deploy Kibana
-
+**What this does:** Provides a web UI for searching and visualizing logs stored in Elasticsearch.
 ```bash
-kubectl apply -f logging/kibana/kibana.yaml
-kubectl rollout status deployment/kibana -n logging
-
-kubectl port-forward -n logging svc/kibana 5601:5601 &
-open http://localhost:5601
+kubectl apply -f logging/kibana.yaml -n logging
+kubectl port-forward svc/kibana 5601:5601 -n logging
 ```
-
-**First-time setup in Kibana:**
-1. Go to **Management → Stack Management → Data Views**
-2. Create data view: `k8s-logs-*` with `@timestamp` as time field
-3. Go to **Discover** to explore logs
-4. Import saved searches: **Management → Saved Objects → Import** → upload `dashboards/kibana-saved-objects.ndjson`
 
 ### Step 4: Deploy OpenTelemetry Collector
-
+**What this does:** Collects traces from instrumented services and exports them to Jaeger.
 ```bash
-kubectl apply -f tracing/otel-collector/otel-collector.yaml
-kubectl rollout status deployment/otel-collector -n tracing
+kubectl apply -f tracing/otel-collector.yaml -n tracing
 ```
-
-**OTel Collector pipeline:**
-- **Receivers:** OTLP (gRPC + HTTP), Jaeger, Zipkin — accepts traces from any format
-- **Processors:** Memory limiter, resource attributes, batching
-- **Exporters:** Jaeger (trace visualization), Elasticsearch (trace metadata for log correlation)
 
 ### Step 5: Deploy Jaeger
-
+**What this does:** Stores and visualizes distributed traces — shows the full journey of a request across all services.
 ```bash
-kubectl apply -f tracing/jaeger/jaeger.yaml
-kubectl rollout status deployment/jaeger -n tracing
-
-kubectl port-forward -n tracing svc/jaeger-query 16686:16686 &
-open http://localhost:16686
+kubectl apply -f tracing/jaeger.yaml -n tracing
+kubectl port-forward svc/jaeger-query 16686:16686 -n tracing
 ```
 
-**Jaeger configuration:**
-- Elasticsearch backend (shared with logging stack)
-- Probabilistic sampling: 100% for frontend/checkout, 50% for others
-- OTLP receiver enabled for OTel Collector integration
+### Step 6: Configure Log-Trace Correlation
+**What this does:** Adds trace IDs to log entries so you can click a log line in Kibana and jump to the full trace in Jaeger.
 
-### Step 6: Generate and Explore Traces
-
+### Step 7: Verify the Pipeline
+**What this does:** Generates traffic and verifies logs appear in Kibana and traces appear in Jaeger.
 ```bash
-# Generate 20 sample traces
-./scripts/generate-traces.sh 20
-
-# Open Jaeger UI → Select "frontend" service → Find Traces
+# Generate traffic
+kubectl run load-test --image=busybox --restart=Never -- wget -q -O- http://frontend.sre-demo
+# Check Kibana for logs, Jaeger for traces
 ```
-
-### Step 7: Correlate Logs and Traces
-
-The power of having both logging and tracing in one system:
-
-```bash
-# 1. Find a trace_id in Jaeger UI
-# 2. Search for that trace_id in Elasticsearch logs:
-curl -s -X POST "http://localhost:9200/k8s-logs-*/_search" \
-  -H "Content-Type: application/json" \
-  -d '{"query": {"match": {"trace_id": "YOUR_TRACE_ID"}}}'
-```
-
-This correlation lets you:
-- See a slow trace in Jaeger → find related error logs in Kibana
-- See an error log in Kibana → jump to the full request trace in Jaeger
-
----
 
 ## Project Structure
 
 ```
-project5/
+10-logging-tracing-pipeline/
 ├── README.md
-├── SRE-Project5-Summary.md
 ├── logging/
-│   ├── elasticsearch/
-│   │   ├── namespace.yaml           # logging namespace
-│   │   └── elasticsearch.yaml       # StatefulSet, ConfigMap, Service
-│   ├── fluent-bit/
-│   │   └── fluent-bit.yaml          # DaemonSet, ConfigMap (parsers), RBAC
-│   └── kibana/
-│       └── kibana.yaml              # Deployment, ConfigMap, Service
+│   ├── elasticsearch.yaml       # Elasticsearch StatefulSet with storage
+│   ├── fluent-bit.yaml          # Fluent Bit DaemonSet with parsing config
+│   ├── kibana.yaml              # Kibana deployment and service
+│   └── index-lifecycle.yaml     # Auto-delete logs older than 30 days
 ├── tracing/
-│   ├── otel-collector/
-│   │   └── otel-collector.yaml      # Deployment, ConfigMap (pipeline), Service
-│   └── jaeger/
-│       └── jaeger.yaml              # All-in-one, sampling config, Services
+│   ├── otel-collector.yaml      # OpenTelemetry Collector config
+│   └── jaeger.yaml              # Jaeger all-in-one deployment
 ├── dashboards/
-│   └── kibana-saved-objects.ndjson   # Pre-built Kibana searches
+│   └── kibana-dashboards.json   # Pre-built Kibana dashboards
 └── scripts/
-    ├── deploy-stack.sh              # Deploy everything in order
-    ├── generate-traces.sh           # Generate sample traces
-    ├── log-queries.sh               # Elasticsearch query examples
-    └── teardown.sh                  # Remove everything
+    └── verify-pipeline.sh       # End-to-end pipeline verification
 ```
 
----
+## Key Files Explained
 
-## Key Concepts for Interviews
+| File | What It Does | Key Concepts |
+|------|-------------|--------------|
+| `logging/fluent-bit.yaml` | DaemonSet that collects logs from `/var/log/containers/`, parses JSON, adds K8s metadata | Log collection, parsing, metadata enrichment |
+| `logging/elasticsearch.yaml` | StatefulSet with persistent storage, index templates, lifecycle policies | Data persistence, index management |
+| `tracing/otel-collector.yaml` | Receives traces via OTLP, processes them, exports to Jaeger | OpenTelemetry protocol, trace sampling |
+| `logging/index-lifecycle.yaml` | Automatically deletes indices older than 30 days to manage storage | Index lifecycle management, cost control |
 
-### Why Fluent Bit Over Fluentd?
-Fluent Bit is ~10x lighter (15MB vs 150MB RAM), written in C, and has built-in Kubernetes metadata enrichment. It's ideal for node-level log collection. Fluentd is better as an aggregator when you need complex routing.
+## Results & Metrics
 
-### Why OpenTelemetry Collector?
-It decouples instrumentation from backends. Applications send OTLP traces once, and the Collector routes them to any backend (Jaeger, Zipkin, Datadog, etc.) without code changes. It also handles batching, sampling, and enrichment.
+| Metric | Before | After | Improvement |
+|--------|--------|-------|-------------|
+| Log Search | `kubectl logs` per pod | Centralized Kibana search | **Single pane of glass** |
+| Request Tracing | Manual guesswork | Jaeger end-to-end traces | **Full request visibility** |
+| Debug Time | Hours (grep across pods) | Minutes (search + trace) | **80% faster debugging** |
+| Log Retention | Until pod restart (lost) | 30 days (Elasticsearch) | **Persistent, searchable** |
 
-### Why Elasticsearch for Both Logs and Traces?
-Shared storage enables log-trace correlation. When a trace shows a slow span, you can search Elasticsearch for logs with that `trace_id` to find the exact error message. This dramatically reduces MTTR (Mean Time To Resolve).
+## How I'd Explain This in an Interview
 
-### Sampling Strategies
-- **Head-based:** Decide at trace start (fast, but may miss errors)
-- **Tail-based:** Decide after trace completes (catches errors, but uses more resources)
-- **Adaptive:** Adjust rate based on traffic volume
+> "With 12 microservices, debugging was painful — you'd kubectl logs into each pod trying to piece together what happened. I built two pipelines: centralized logging with the EFK stack (Fluent Bit collects from all pods, Elasticsearch indexes, Kibana searches) and distributed tracing with OpenTelemetry and Jaeger (shows the full request journey across services). The key feature is log-trace correlation — every log line includes a trace ID, so you can click from a log entry straight to the full trace. Combined with Prometheus metrics from Lab 08, this completes the three pillars of observability."
 
----
+## Key Concepts Demonstrated
 
-## References
+- **Three Pillars of Observability** — Metrics + Logs + Traces
+- **Centralized Logging** — EFK stack (Elasticsearch, Fluent Bit, Kibana)
+- **Distributed Tracing** — OpenTelemetry + Jaeger
+- **Log-Trace Correlation** — Trace IDs in log entries
+- **Index Lifecycle Management** — Automated log retention/deletion
+- **DaemonSet Pattern** — Fluent Bit runs on every node
 
-- [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
-- [Fluent Bit Documentation](https://docs.fluentbit.io/)
-- [Jaeger Documentation](https://www.jaegertracing.io/docs/)
-- [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
-- [Google SRE Book — Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
+## Lessons Learned
+
+1. **Fluent Bit over Fluentd** — Fluent Bit uses 10x less memory, perfect for Kubernetes
+2. **Index lifecycle is critical** — without it, Elasticsearch fills up disk and crashes
+3. **Log-trace correlation is the killer feature** — connecting logs to traces transforms debugging
+4. **Sampling is necessary at scale** — tracing 100% of requests is too expensive; sample 10-20%
+5. **Start with structured logging** — JSON logs are parseable; plain text logs require complex regex
+
+## Author
+
+**Jenella V.** — Solutions Architect & Cloud Engineer
+- [LinkedIn](https://www.linkedin.com/in/jenella-v-4a4b963ab/) | [GitHub](https://github.com/vanessa9373) | [Portfolio](https://vanessa9373.github.io/portfolio/)
