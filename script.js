@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'projects.html': 'Projects',
     'experience.html': 'Experience',
     'contact.html': 'Contact',
-    'blog.html': 'Blog'
+    'blog.html': 'Blog',
+    'devops-mastery.html': 'Projects'
   };
 
   // Determine current page
@@ -275,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- SCROLL REVEAL ANIMATION ---------- */
   const revealElements = document.querySelectorAll(
-    '.about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-grid, .quick-nav-card, .blog-card'
+    '.about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-grid, .quick-nav-card, .blog-card, .phase-section'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));
@@ -303,6 +304,32 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
       }
     });
+  }
+
+
+  /* ---------- PHASE NAV SCROLL SPY (DevOps Mastery page) ---------- */
+  const phaseNav = document.querySelector('.phase-nav');
+  if (phaseNav) {
+    const phaseSections = document.querySelectorAll('.phase-section');
+    const phaseLinks = document.querySelectorAll('.phase-nav-link');
+
+    const phaseObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          phaseLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+          // Scroll active link into view in the nav
+          const activeLink = phaseNav.querySelector('.phase-nav-link.active');
+          if (activeLink) {
+            activeLink.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+
+    phaseSections.forEach(section => phaseObserver.observe(section));
   }
 
 
@@ -425,15 +452,18 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- DARK / LIGHT MODE TOGGLE ---------- */
   const themeToggle = document.querySelector('.theme-toggle');
   if (themeToggle) {
-    // Sync icon with current state (class already set by inline script)
+    const moonSVG = '<svg class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    const sunSVG = '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+
+    // Sync icon with current state
     if (document.body.classList.contains('light-mode')) {
-      themeToggle.textContent = '\u2600';
+      themeToggle.innerHTML = sunSVG;
     }
 
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light-mode');
       const isLight = document.body.classList.contains('light-mode');
-      themeToggle.textContent = isLight ? '\u2600' : '\u263E';
+      themeToggle.innerHTML = isLight ? sunSVG : moonSVG;
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
   }
