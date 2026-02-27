@@ -1,6 +1,6 @@
 /* ============================================================
-   JENELLA V. — Portfolio JavaScript
-   Solutions Architect & Cloud Engineer
+   Jenella Awo — Portfolio JavaScript
+   Solutions Architect, Cloud & DevOps Engineer, SRE
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const titles = [
     'Solutions Architect',
     'Cloud Engineer',
+    'DevOps Engineer',
     'Site Reliability Engineer',
     'AWS Certified',
-    'Multi-Cloud Expert',
-    'DevOps Enthusiast'
+    'Multi-Cloud Expert'
   ];
   let titleIndex = 0;
   let charIndex = 0;

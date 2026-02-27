@@ -3,13 +3,13 @@
 </p>
 
 <h1 align="center">Jenella Awo</h1>
-<h3 align="center">Solutions Architect | Cloud Engineer | Site Reliability Engineer</h3>
+<h3 align="center">Solutions Architect | Cloud Engineer | DevOps Engineer | Site Reliability Engineer</h3>
 
 <p align="center">
   <a href="https://vanessa9373.github.io/portfolio/">Portfolio</a> &bull;
   <a href="https://www.linkedin.com/in/jenella-v-4a4b963ab/">LinkedIn</a> &bull;
-  <a href="mailto:vanessajenella@gmail.com">Email</a> &bull;
-  Seattle, WA
+  <a href="mailto:vanessa93730@gmail.com">Email</a> &bull;
+  Remote
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 I design and deliver **scalable, secure, and cost-efficient** cloud solutions across AWS, Azure, and GCP. With a B.S. in Computer Science from **Western Governors University** (anticipated May 2026) and a Bachelor's in Business Management from the **University of Douala**, I combine deep technical expertise in Infrastructure as Code, containers, and SRE practices with strong analytical and stakeholder communication skills.
 
-This repository contains my **professional portfolio website**, **18 production-grade labs**, an **18-lab Kubernetes Mastery Guide**, and a **40-module multi-cloud Terraform library**.
+This repository is itself one of my key projects — it contains my **professional portfolio website**, **18 production-grade infrastructure labs**, an **18-lab Kubernetes Mastery Guide** (beginner to expert), and a **40-module multi-cloud Terraform library** across AWS, Azure, and GCP.
 
 ---
 
@@ -296,15 +296,15 @@ This repository contains my **professional portfolio website**, **18 production-
 
 ## Contact
 
-I'm actively seeking **Solutions Architect**, **Cloud Engineer**, **SRE**, and **Cloud Consultant** opportunities.
+I'm actively seeking **Solutions Architect**, **Cloud Engineer**, **DevOps Engineer**, **SRE**, and **Cloud Consultant** opportunities.
 
 | | |
 |---|---|
-| **Email** | [vanessajenella@gmail.com](mailto:vanessajenella@gmail.com) |
+| **Email** | [vanessa93730@gmail.com](mailto:vanessa93730@gmail.com) |
 | **LinkedIn** | [linkedin.com/in/jenella-v](https://www.linkedin.com/in/jenella-v-4a4b963ab/) |
 | **GitHub** | [github.com/vanessa9373](https://github.com/vanessa9373) |
 | **Portfolio** | [vanessa9373.github.io/portfolio](https://vanessa9373.github.io/portfolio/) |
-| **Location** | Seattle, Washington &bull; Open to Remote |
+| **Location** | Remote |
 
 ---
 
