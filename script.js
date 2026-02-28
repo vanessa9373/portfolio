@@ -73,8 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'projects.html': 'Projects',
     'experience.html': 'Experience',
     'contact.html': 'Contact',
-    'blog.html': 'Blog',
-    'devops-mastery.html': 'Projects'
+    'blog.html': 'Blog'
   };
 
   // Determine current page
@@ -276,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- SCROLL REVEAL ANIMATION ---------- */
   const revealElements = document.querySelectorAll(
-    '.about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-grid, .quick-nav-card, .blog-card, .phase-section'
+    '.about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-grid, .quick-nav-card, .blog-card'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));
@@ -304,32 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
       }
     });
-  }
-
-
-  /* ---------- PHASE NAV SCROLL SPY (DevOps Mastery page) ---------- */
-  const phaseNav = document.querySelector('.phase-nav');
-  if (phaseNav) {
-    const phaseSections = document.querySelectorAll('.phase-section');
-    const phaseLinks = document.querySelectorAll('.phase-nav-link');
-
-    const phaseObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          phaseLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-          });
-          // Scroll active link into view in the nav
-          const activeLink = phaseNav.querySelector('.phase-nav-link.active');
-          if (activeLink) {
-            activeLink.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-          }
-        }
-      });
-    }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
-
-    phaseSections.forEach(section => phaseObserver.observe(section));
   }
 
 
