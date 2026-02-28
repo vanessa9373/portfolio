@@ -1,7 +1,7 @@
 /* ============================================================
    Jenella Awo — Portfolio JavaScript
    Solutions Architect, Cloud & DevOps Engineer, SRE
-   Multi-page version
+   Hybrid single-page + separate pages version
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navToggle.classList.toggle('open');
     });
 
-    // Close menu when a link is clicked
+    // Close menu when a link is clicked (including anchor links)
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -65,14 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const path = window.location.pathname;
 
-  // Map page filenames to nav labels
+  // Map page filenames to nav labels (only separate pages)
   const pageMap = {
     'index.html': 'Home',
-    'about.html': 'About',
-    'skills.html': 'Skills',
     'projects.html': 'Projects',
-    'experience.html': 'Experience',
-    'contact.html': 'Contact',
     'blog.html': 'Blog'
   };
 
@@ -95,6 +91,42 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+
+  /* ---------- SCROLL SPY (Home page only) ---------- */
+  const isHomePage = document.querySelector('.hero');
+  if (isHomePage) {
+    const sectionIdToNav = {
+      'home': 'Home',
+      'about': 'About',
+      'skills': 'Skills',
+      'experience': 'Experience',
+      'certifications': 'Experience',
+      'contact': 'Contact'
+    };
+
+    const spySections = document.querySelectorAll('section[id]');
+    if (spySections.length > 0) {
+      const spyObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            const navLabel = sectionIdToNav[id];
+            if (navLabel) {
+              navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.trim() === navLabel) {
+                  link.classList.add('active');
+                }
+              });
+            }
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '-80px 0px -40% 0px' });
+
+      spySections.forEach(section => spyObserver.observe(section));
+    }
+  }
 
 
   /* ---------- TYPING EFFECT (Home page only) ---------- */
@@ -187,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ---------- SKILL TABS (Skills page only) ---------- */
+  /* ---------- SKILL TABS ---------- */
   const skillTabs = document.querySelectorAll('.skill-tab');
   const skillPanels = document.querySelectorAll('.skill-panel');
 
@@ -275,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- SCROLL REVEAL ANIMATION ---------- */
   const revealElements = document.querySelectorAll(
-    '.about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-grid, .quick-nav-card, .blog-card'
+    '.about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-grid, .blog-card'
   );
 
   revealElements.forEach(el => el.classList.add('reveal'));
@@ -292,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
 
-  /* ---------- CONTACT FORM (Contact page only) ---------- */
+  /* ---------- CONTACT FORM ---------- */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -374,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ---------- CARD TILT EFFECT ---------- */
-  const tiltTargets = document.querySelectorAll('.quick-nav-card, .project-card, .skill-card, .cert-card');
+  const tiltTargets = document.querySelectorAll('.project-card, .skill-card, .cert-card');
   const isTouchDevice = 'ontouchstart' in window;
 
   if (!isTouchDevice) {
@@ -398,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ---------- STAGGERED SCROLL REVEAL ---------- */
-  const staggerContainers = document.querySelectorAll('.quick-nav-grid, .skills-grid, .projects-grid, .certs-grid, .blog-grid');
+  const staggerContainers = document.querySelectorAll('.skills-grid, .projects-grid, .certs-grid, .blog-grid');
   staggerContainers.forEach(container => {
     const children = container.children;
     for (let i = 0; i < children.length; i++) {
