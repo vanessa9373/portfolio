@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <rect width="400" height="26" fill="#0a1f3a"/>
+  <text x="200" y="17" text-anchor="middle" fill="#326ce5" font-size="10" font-family="monospace" font-weight="bold" letter-spacing="1">KUBERNETES IN PRODUCTION · 10 LESSONS LEARNED</text>
+
+  <!-- Control Plane -->
+  <rect x="8" y="32" width="384" height="24" rx="4" fill="#0d1f3c" stroke="#326ce5" stroke-width="1.5"/>
+  <text x="60" y="46" text-anchor="middle" fill="#326ce5" font-size="8" font-family="monospace" font-weight="bold">CONTROL PLANE</text>
+  <text x="180" y="46" text-anchor="middle" fill="#60a5fa" font-size="7.5" font-family="monospace">API Server</text>
+  <text x="250" y="46" text-anchor="middle" fill="#60a5fa" font-size="7.5" font-family="monospace">etcd</text>
+  <text x="310" y="46" text-anchor="middle" fill="#60a5fa" font-size="7.5" font-family="monospace">Scheduler</text>
+  <text x="370" y="46" text-anchor="middle" fill="#60a5fa" font-size="7.5" font-family="monospace">Controller</text>
+
+  <!-- Worker Nodes -->
+  <rect x="8" y="64" width="116" height="58" rx="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2"/>
+  <text x="66" y="78" text-anchor="middle" fill="#00b4d8" font-size="7.5" font-family="monospace" font-weight="bold">WORKER NODE 1</text>
+  <rect x="14" y="82" width="50" height="14" rx="3" fill="#1e293b"/>
+  <text x="39" y="92" text-anchor="middle" fill="#94a3b8" font-size="6.5" font-family="monospace">Pod: app-v2</text>
+  <rect x="68" y="82" width="50" height="14" rx="3" fill="#1e293b"/>
+  <text x="93" y="92" text-anchor="middle" fill="#94a3b8" font-size="6.5" font-family="monospace">Pod: app-v2</text>
+  <rect x="14" y="100" width="104" height="14" rx="3" fill="#0a2a1a" stroke="#10b98150" stroke-width="0.8"/>
+  <text x="66" y="110" text-anchor="middle" fill="#64748b" font-size="6.5" font-family="monospace">kubelet · kube-proxy · containerd</text>
+
+  <rect x="134" y="64" width="116" height="58" rx="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2"/>
+  <text x="192" y="78" text-anchor="middle" fill="#00b4d8" font-size="7.5" font-family="monospace" font-weight="bold">WORKER NODE 2</text>
+  <rect x="140" y="82" width="50" height="14" rx="3" fill="#1e293b"/>
+  <text x="165" y="92" text-anchor="middle" fill="#94a3b8" font-size="6.5" font-family="monospace">Pod: db</text>
+  <rect x="194" y="82" width="50" height="14" rx="3" fill="#1e293b"/>
+  <text x="219" y="92" text-anchor="middle" fill="#94a3b8" font-size="6.5" font-family="monospace">Pod: cache</text>
+  <rect x="140" y="100" width="104" height="14" rx="3" fill="#0a2a1a" stroke="#10b98150" stroke-width="0.8"/>
+  <text x="192" y="110" text-anchor="middle" fill="#64748b" font-size="6.5" font-family="monospace">HPA · PDB · ResourceQuota</text>
+
+  <rect x="260" y="64" width="132" height="58" rx="4" fill="#0d1f3c" stroke="#00b4d8" stroke-width="1.2"/>
+  <text x="326" y="78" text-anchor="middle" fill="#00b4d8" font-size="7.5" font-family="monospace" font-weight="bold">ADD-ONS</text>
+  <rect x="266" y="82" width="58" height="14" rx="3" fill="#1a0a2a" stroke="#a78bfa50" stroke-width="0.8"/>
+  <text x="295" y="92" text-anchor="middle" fill="#a78bfa" font-size="6.5" font-family="monospace">Istio Mesh</text>
+  <rect x="328" y="82" width="58" height="14" rx="3" fill="#0a2a1a" stroke="#10b98150" stroke-width="0.8"/>
+  <text x="357" y="92" text-anchor="middle" fill="#34d399" font-size="6.5" font-family="monospace">Prometheus</text>
+  <rect x="266" y="100" width="58" height="14" rx="3" fill="#2a1500" stroke="#fbbf2450" stroke-width="0.8"/>
+  <text x="295" y="110" text-anchor="middle" fill="#fbbf24" font-size="6.5" font-family="monospace">ArgoCD</text>
+  <rect x="328" y="100" width="58" height="14" rx="3" fill="#0a1f2a" stroke="#00b4d850" stroke-width="0.8"/>
+  <text x="357" y="110" text-anchor="middle" fill="#00b4d8" font-size="6.5" font-family="monospace">Grafana</text>
+
+  <!-- Lessons stats -->
+  <rect x="8" y="132" width="88" height="40" rx="4" fill="#0d2137" stroke="#326ce5" stroke-width="1.2"/>
+  <text x="52" y="149" text-anchor="middle" fill="#60a5fa" font-size="15" font-family="monospace" font-weight="bold">10</text>
+  <text x="52" y="162" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">LESSONS</text>
+  <text x="52" y="170" text-anchor="middle" fill="#475569" font-size="6.5" font-family="sans-serif">hard-earned</text>
+
+  <rect x="108" y="132" width="88" height="40" rx="4" fill="#0d2137" stroke="#10b981" stroke-width="1.2"/>
+  <text x="152" y="149" text-anchor="middle" fill="#10b981" font-size="15" font-family="monospace" font-weight="bold">3</text>
+  <text x="152" y="162" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">CLUSTERS</text>
+  <text x="152" y="170" text-anchor="middle" fill="#475569" font-size="6.5" font-family="sans-serif">production</text>
+
+  <rect x="208" y="132" width="88" height="40" rx="4" fill="#0d2137" stroke="#ff9900" stroke-width="1.2"/>
+  <text x="252" y="149" text-anchor="middle" fill="#ff9900" font-size="15" font-family="monospace" font-weight="bold">EKS</text>
+  <text x="252" y="162" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">AKS · GKE</text>
+  <text x="252" y="170" text-anchor="middle" fill="#475569" font-size="6.5" font-family="sans-serif">multi-cloud</text>
+
+  <rect x="308" y="132" width="84" height="40" rx="4" fill="#0d2137" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="350" y="149" text-anchor="middle" fill="#fbbf24" font-size="15" font-family="monospace" font-weight="bold">8min</text>
+  <text x="350" y="162" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">DEPLOY TIME</text>
+  <text x="350" y="170" text-anchor="middle" fill="#475569" font-size="6.5" font-family="sans-serif">avg pipeline</text>
+</svg>

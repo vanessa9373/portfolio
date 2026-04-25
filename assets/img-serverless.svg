@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <rect width="400" height="26" fill="#0a1f3a"/>
+  <text x="200" y="17" text-anchor="middle" fill="#f97316" font-size="10" font-family="monospace" font-weight="bold" letter-spacing="1">SERVERLESS DATA PROCESSING PIPELINE · 1M+ EVENTS/DAY</text>
+
+  <!-- Pipeline flow -->
+  <!-- Client -->
+  <rect x="8" y="48" width="56" height="44" rx="4" fill="#0d1f3c" stroke="#64748b" stroke-width="1.5"/>
+  <text x="36" y="66" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="monospace" font-weight="bold">CLIENT</text>
+  <text x="36" y="80" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">SaaS App</text>
+
+  <polygon points="66,70 76,64 76,76" fill="#00b4d8"/>
+  <text x="71" y="62" text-anchor="middle" fill="#00b4d8" font-size="6" font-family="monospace">HTTP</text>
+
+  <!-- API Gateway -->
+  <rect x="78" y="40" width="66" height="60" rx="4" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <text x="111" y="58" text-anchor="middle" fill="#fb923c" font-size="8" font-family="monospace" font-weight="bold">API</text>
+  <text x="111" y="70" text-anchor="middle" fill="#fb923c" font-size="8" font-family="monospace" font-weight="bold">Gateway</text>
+  <text x="111" y="84" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">REST / WS</text>
+  <text x="111" y="94" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Auth · Rate</text>
+
+  <polygon points="146,70 156,64 156,76" fill="#f97316"/>
+
+  <!-- Lambda -->
+  <rect x="158" y="40" width="66" height="60" rx="4" fill="#0d1f3c" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="191" y="58" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace" font-weight="bold">Lambda</text>
+  <text x="191" y="72" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Transform</text>
+  <text x="191" y="84" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Enrich</text>
+  <text x="191" y="94" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">&lt;100ms</text>
+
+  <polygon points="226,70 236,64 236,76" fill="#fbbf24"/>
+
+  <!-- SQS -->
+  <rect x="238" y="40" width="66" height="60" rx="4" fill="#0d1f3c" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="271" y="62" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace" font-weight="bold">SQS</text>
+  <text x="271" y="76" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">FIFO Queue</text>
+  <text x="271" y="88" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Dead Letter</text>
+  <text x="271" y="98" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Retry Logic</text>
+
+  <polygon points="306,70 316,64 316,76" fill="#fbbf24"/>
+
+  <!-- DynamoDB + S3 -->
+  <rect x="318" y="40" width="74" height="26" rx="4" fill="#0d1f3c" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="355" y="53" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace" font-weight="bold">DynamoDB</text>
+  <text x="355" y="63" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">NoSQL Store</text>
+
+  <rect x="318" y="74" width="74" height="26" rx="4" fill="#0d1f3c" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="355" y="87" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace" font-weight="bold">S3</text>
+  <text x="355" y="97" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Raw Archive</text>
+
+  <!-- Monitoring -->
+  <rect x="8" y="108" width="384" height="20" rx="4" fill="#0a2a1a" stroke="#10b981" stroke-width="1"/>
+  <text x="50" y="122" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace">CloudWatch</text>
+  <text x="140" y="122" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace">X-Ray Tracing</text>
+  <text x="240" y="122" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace">CloudFormation IaC</text>
+  <text x="345" y="122" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace">Cost Explorer</text>
+
+  <!-- Stats -->
+  <rect x="8" y="138" width="90" height="34" rx="4" fill="#0d2137" stroke="#f97316" stroke-width="1.2"/>
+  <text x="53" y="154" text-anchor="middle" fill="#f97316" font-size="15" font-family="monospace" font-weight="bold">1M+</text>
+  <text x="53" y="167" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">EVENTS/DAY</text>
+
+  <rect x="110" y="138" width="90" height="34" rx="4" fill="#0d2137" stroke="#10b981" stroke-width="1.2"/>
+  <text x="155" y="154" text-anchor="middle" fill="#10b981" font-size="15" font-family="monospace" font-weight="bold">70%</text>
+  <text x="155" y="167" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">COST SAVINGS</text>
+
+  <rect x="212" y="138" width="90" height="34" rx="4" fill="#0d2137" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="257" y="154" text-anchor="middle" fill="#fbbf24" font-size="14" font-family="monospace" font-weight="bold">&lt;100ms</text>
+  <text x="257" y="167" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">LATENCY</text>
+
+  <rect x="314" y="138" width="78" height="34" rx="4" fill="#0d2137" stroke="#ff9900" stroke-width="1.2"/>
+  <text x="353" y="154" text-anchor="middle" fill="#ff9900" font-size="13" font-family="monospace" font-weight="bold">Serverless</text>
+  <text x="353" y="167" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">NO SERVERS</text>
+</svg>

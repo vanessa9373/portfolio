@@ -6,6 +6,63 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- AOS (ANIMATE ON SCROLL) ---------- */
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out',
+      once: true,
+      offset: 60
+    });
+  }
+
+
+  /* ---------- PAGE LOADER ---------- */
+  const pageLoader = document.getElementById('page-loader');
+  if (pageLoader) {
+    const minTime = 1400;
+    const startTime = performance.now();
+
+    function dismissLoader() {
+      const elapsed = performance.now() - startTime;
+      const remaining = Math.max(0, minTime - elapsed);
+      setTimeout(() => pageLoader.classList.add('hidden'), remaining);
+    }
+
+    if (document.readyState === 'complete') {
+      dismissLoader();
+    } else {
+      window.addEventListener('load', dismissLoader);
+    }
+  }
+
+
+  /* ---------- SCROLL PROGRESS BAR ---------- */
+  const scrollProgress = document.getElementById('scroll-progress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        scrollProgress.style.width = Math.min((window.scrollY / docHeight) * 100, 100) + '%';
+      }
+    }, { passive: true });
+  }
+
+
+  /* ---------- BUTTON RIPPLE ---------- */
+  document.querySelectorAll('.ripple-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px`;
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
+
   /* ---------- MOBILE NAVIGATION ---------- */
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');

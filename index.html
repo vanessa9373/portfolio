@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jenella Awo — Solutions Architect, Cloud Engineer, DevOps Engineer & SRE. Designing scalable, secure multi-cloud infrastructure.">
+  <meta name="description" content="Jenella Awo | Solutions Architect, Cloud Engineer, DevOps Engineer and SRE. Designing scalable, secure multi-cloud infrastructure.">
   <meta name="keywords" content="Solutions Architect, Cloud Engineer, DevOps Engineer, SRE, Site Reliability Engineer, AWS, Azure, GCP, Terraform, Kubernetes, DevOps">
   <title>Jenella Awo | Solutions Architect, Cloud & DevOps Engineer, SRE</title>
   <link rel="stylesheet" href="style.css">
@@ -11,8 +11,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- AOS Animate on Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous">
 </head>
 <body><script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode')</script>
+
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-inner">
+      <span class="loader-logo">&lt;JA /&gt;</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="navbar" id="navbar">
@@ -38,21 +52,25 @@
   <!-- ===================== HERO / HOME ===================== -->
   <section class="hero" id="home">
     <div class="hero-bg-grid"></div>
+    <!-- Floating orbs -->
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
     <div class="container hero-content">
       <div class="hero-text">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1 class="hero-name">Jenella Awo</h1>
-        <h2 class="hero-title">
+        <p class="hero-greeting hero-animate-1">Hello, I'm</p>
+        <h1 class="hero-name hero-animate-2">Jenella Awo</h1>
+        <h2 class="hero-title hero-animate-3">
           <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
         </h2>
-        <p class="hero-description">
-          I design and deliver <strong>scalable, secure, and cost-efficient</strong> cloud infrastructure across AWS, Azure, and GCP — from Terraform modules to Kubernetes clusters to CI/CD pipelines. Uptime is everything.
+        <p class="hero-description hero-animate-4">
+          I design and deliver <strong>scalable, secure, and cost-efficient</strong> cloud infrastructure across AWS, Azure, and GCP. From Terraform modules to Kubernetes clusters to CI/CD pipelines. Uptime is everything.
         </p>
-        <div class="hero-buttons">
-          <a href="projects.html" class="btn btn-primary">View My Work</a>
-          <a href="assets/Jenella_V_Resume.pdf" class="btn btn-outline" download>Download Resume</a>
+        <div class="hero-buttons hero-animate-5">
+          <a href="projects.html" class="btn btn-primary ripple-btn">View My Work</a>
+          <a href="assets/Jenella_V_Resume.pdf" class="btn btn-outline ripple-btn" download>Download Resume</a>
         </div>
-        <div class="hero-stats">
+        <div class="hero-stats hero-animate-6">
           <div class="stat">
             <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
             <span class="stat-label">Years Experience</span>
@@ -71,13 +89,13 @@
           </div>
         </div>
       </div>
-      <div class="hero-visual">
+      <div class="hero-visual hero-animate-2">
         <div class="hero-graphic">
           <div class="orbit orbit-1"><div class="orbit-dot" title="AWS"></div></div>
           <div class="orbit orbit-2"><div class="orbit-dot" title="Azure"></div></div>
           <div class="orbit orbit-3"><div class="orbit-dot" title="GCP"></div></div>
           <div class="orbit-center">
-            <span>CLOUD</span>
+            <img src="assets/jenella-profile-2.jpeg" alt="Jenella Awo, Cloud and DevOps Engineer" class="orbit-center-photo">
           </div>
         </div>
       </div>
@@ -90,30 +108,30 @@
   <!-- ===================== ABOUT ===================== -->
   <section class="section section-decorated" id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">Turning business requirements into production-grade cloud infrastructure</p>
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Turning business requirements into production-grade cloud infrastructure</p>
 
-      <div class="about-grid">
+      <div class="about-grid" data-aos="fade-up" data-aos-delay="150">
         <div class="about-image">
-          <img src="assets/jenella-profile.jpeg" alt="Jenella Awo — Solutions Architect & Cloud Engineer" class="about-photo">
+          <img src="assets/IMG_4870.jpeg" alt="Jenella Awo, Solutions Architect and Cloud Engineer" class="about-photo">
           <div class="about-image-accent"></div>
         </div>
         <div class="about-content">
           <p>
-            I build cloud infrastructure that doesn't break at 2 AM. As a <strong>Solutions Architect, Cloud Engineer, DevOps Engineer, and Site Reliability Engineer</strong>, I design multi-cloud environments across AWS, Azure, and GCP that are secure, cost-efficient, and self-healing — from reusable Terraform modules to Kubernetes platforms to fully automated CI/CD pipelines.
+            I build cloud infrastructure that doesn't break at 2 AM. As a <strong>Solutions Architect, Cloud Engineer, DevOps Engineer, and Site Reliability Engineer</strong>, I design multi-cloud environments across AWS, Azure, and GCP that are secure, cost-efficient, and self-healing. From reusable Terraform modules to Kubernetes platforms to fully automated CI/CD pipelines.
           </p>
           <p>
-            I believe the best way to demonstrate skill is to ship. I've built <strong>18 production-grade infrastructure labs</strong>, an <strong>18-lab Kubernetes Mastery Guide</strong> covering beginner to expert, and a <strong>40-module multi-cloud Terraform library</strong> — all open source on GitHub. Every project reflects how I work: methodical, well-documented, and built to scale.
+            I believe the best way to demonstrate skill is to ship. I've built <strong>18 production-grade infrastructure labs</strong>, an <strong>18-lab Kubernetes Mastery Guide</strong> covering beginner to expert, and a <strong>40-module multi-cloud Terraform library</strong>, all open source on GitHub. Every project reflects how I work: methodical, well-documented, and built to scale.
           </p>
           <p>
-            I'm completing a B.S. in Computer Science at <strong>Western Governors University</strong> (May 2026) and hold an <strong>AWS Solutions Architect Associate</strong>, <strong>CKA</strong>, and <strong>Linux Essentials</strong> certification. My earlier Bachelor's in Business Management gives me something many engineers lack — the ability to translate business requirements into technical decisions stakeholders actually understand.
+            I'm completing a B.S. in Computer Science at <strong>Western Governors University</strong> (May 2026) and hold an <strong>AWS Solutions Architect Associate</strong>, <strong>CKA</strong>, and <strong>Linux Essentials</strong> certification. My earlier Bachelor's in Business Management gives me something many engineers lack: the ability to translate business requirements into technical decisions stakeholders actually understand.
           </p>
           <div class="about-details">
             <div class="about-detail">
               <span class="detail-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg></span>
               <div>
                 <strong>Education</strong>
-                <p>B.S. Computer Science — WGU (May 2026) | Bachelor's in Business Mgmt — Univ. of Douala</p>
+                <p>B.S. Computer Science, WGU (May 2026) | Bachelor's in Business Mgmt, Univ. of Douala</p>
               </div>
             </div>
             <div class="about-detail">
@@ -127,7 +145,7 @@
               <span class="detail-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
               <div>
                 <strong>Availability</strong>
-                <p>Open to Solutions Architect, Cloud Engineer, DevOps, and SRE roles — remote preferred</p>
+                <p>Open to Solutions Architect, Cloud Engineer, DevOps, and SRE roles. Remote preferred.</p>
               </div>
             </div>
             <div class="about-detail">
@@ -146,11 +164,11 @@
   <!-- ===================== SKILLS ===================== -->
   <section class="section section-alt section-decorated" id="skills">
     <div class="container">
-      <h2 class="section-title">Skills & Expertise</h2>
-      <p class="section-subtitle">Technologies and tools I work with daily</p>
+      <h2 class="section-title" data-aos="fade-up">Skills &amp; Expertise</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Technologies and tools I work with daily</p>
 
       <!-- Skill Category Tabs -->
-      <div class="skill-tabs">
+      <div class="skill-tabs" data-aos="fade-up" data-aos-delay="150">
         <button class="skill-tab active" data-tab="technical">Technical</button>
         <button class="skill-tab" data-tab="professional">Professional</button>
         <button class="skill-tab" data-tab="soft">Soft Skills</button>
@@ -334,17 +352,17 @@
   <!-- ===================== EXPERIENCE ===================== -->
   <section class="section section-decorated" id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <p class="section-subtitle">My professional journey in cloud, infrastructure, and reliability</p>
+      <h2 class="section-title" data-aos="fade-up">Experience</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">My professional journey in cloud, infrastructure, and reliability</p>
 
       <div class="timeline">
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
               <h3>DevOps Engineer</h3>
-              <span class="timeline-date">2024 — Present</span>
+              <span class="timeline-date">2024 to Present</span>
             </div>
             <p class="timeline-company">Freelance / Contract | Remote</p>
             <ul>
@@ -360,12 +378,12 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
               <h3>Desk Adjuster</h3>
-              <span class="timeline-date">January 2022 — 2024</span>
+              <span class="timeline-date">January 2022 to 2024</span>
             </div>
             <p class="timeline-company">Pilot Catastrophe Services | Remote</p>
             <ul>
@@ -377,7 +395,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
@@ -391,7 +409,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
@@ -412,32 +430,32 @@
   <!-- ===================== CERTIFICATIONS ===================== -->
   <section class="section section-alt section-decorated" id="certifications">
     <div class="container">
-      <h2 class="section-title">Certifications & Achievements</h2>
-      <p class="section-subtitle">Validated cloud expertise</p>
+      <h2 class="section-title" data-aos="fade-up">Certifications &amp; Achievements</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Validated cloud expertise</p>
 
       <div class="certs-grid">
 
-        <div class="cert-card earned">
+        <div class="cert-card earned" data-aos="zoom-in" data-aos-delay="0">
           <div class="cert-badge">
             <span class="cert-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
           </div>
-          <h3>AWS Solutions Architect — Associate</h3>
+          <h3>AWS Solutions Architect Associate</h3>
           <p class="cert-issuer">Amazon Web Services</p>
           <p class="cert-date">Earned</p>
           <span class="cert-status earned">Earned</span>
         </div>
 
-        <div class="cert-card in-progress">
+        <div class="cert-card in-progress" data-aos="zoom-in" data-aos-delay="100">
           <div class="cert-badge">
             <span class="cert-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
           </div>
-          <h3>AWS Solutions Architect — Professional</h3>
+          <h3>AWS Solutions Architect Professional</h3>
           <p class="cert-issuer">Amazon Web Services</p>
           <p class="cert-date">In Progress</p>
           <span class="cert-status progress">In Progress</span>
         </div>
 
-        <div class="cert-card planned">
+        <div class="cert-card planned" data-aos="zoom-in" data-aos-delay="200">
           <div class="cert-badge">
             <span class="cert-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
           </div>
@@ -447,7 +465,7 @@
           <span class="cert-status planned">Planned</span>
         </div>
 
-        <div class="cert-card earned">
+        <div class="cert-card earned" data-aos="zoom-in" data-aos-delay="300">
           <div class="cert-badge">
             <span class="cert-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
           </div>
@@ -457,7 +475,7 @@
           <span class="cert-status earned">Earned</span>
         </div>
 
-        <div class="cert-card earned">
+        <div class="cert-card earned" data-aos="zoom-in" data-aos-delay="400">
           <div class="cert-badge">
             <span class="cert-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
           </div>
@@ -474,40 +492,45 @@
   <!-- ===================== CONTACT ===================== -->
   <section class="section section-decorated" id="contact">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">I'm open to Solutions Architect, Cloud Engineer, DevOps Engineer, SRE, and Cloud Consultant opportunities</p>
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">I'm open to Solutions Architect, Cloud Engineer, DevOps Engineer, SRE, and Cloud Consultant opportunities</p>
 
-      <div class="contact-grid">
+      <div class="contact-grid" data-aos="fade-up" data-aos-delay="200">
         <div class="contact-info">
           <div class="contact-card">
             <span class="contact-icon"><svg class="icon icon-md" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-            <h3>Email</h3>
-            <a href="mailto:vanessa93730@gmail.com">vanessa93730@gmail.com</a>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:vanessa93730@gmail.com">vanessa93730@gmail.com</a>
+            </div>
           </div>
           <div class="contact-card">
             <span class="contact-icon"><svg class="icon icon-md" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <h3>Phone</h3>
-            <a href="tel:+12024159373">(202) 415-9373</a>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon"><svg class="icon icon-md" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <h3>Location</h3>
-            <p>Remote</p>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+12024159373">(202) 415-9373</a>
+            </div>
           </div>
           <div class="contact-card">
             <span class="contact-icon"><svg class="icon icon-md" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
-            <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/jenella-v-4a4b963ab/" target="_blank" rel="noopener">linkedin.com/in/jenella-v-4a4b963ab</a>
+            <div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/jenella-v-4a4b963ab/" target="_blank" rel="noopener">linkedin.com/in/jenella-v-4a4b963ab</a>
+            </div>
           </div>
           <div class="contact-card">
             <span class="contact-icon"><svg class="icon icon-md" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
-            <h3>GitHub</h3>
-            <a href="https://github.com/vanessa9373" target="_blank" rel="noopener">github.com/vanessa9373</a>
+            <div>
+              <h3>GitHub</h3>
+              <a href="https://github.com/vanessa9373" target="_blank" rel="noopener">github.com/vanessa9373</a>
+            </div>
           </div>
           <div class="contact-card">
             <span class="contact-icon"><svg class="icon icon-md" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-            <h3>Portfolio</h3>
-            <a href="https://vanessa9373.github.io/portfolio/" target="_blank" rel="noopener">vanessa9373.github.io/portfolio</a>
+            <div>
+              <h3>Portfolio</h3>
+              <a href="https://vanessa9373.github.io/portfolio/" target="_blank" rel="noopener">vanessa9373.github.io/portfolio</a>
+            </div>
           </div>
         </div>
 
@@ -516,7 +539,7 @@
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://vanessa9373.github.io/portfolio/thanks.html">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'll get back to you within 24 hours. — Jenella Awo">
+          <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'll get back to you within 24 hours. Jenella Awo">
           <input type="text" name="_honey" style="display:none">
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -554,6 +577,7 @@
   <!-- Back to Top -->
   <button class="back-to-top" id="back-to-top" aria-label="Back to top"><svg class="icon" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -268,6 +268,20 @@ ul { list-style: none; }
   padding-top: 80px;
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: url('assets/IMG_4870.jpeg') center top / cover no-repeat;
+  opacity: 0.08;
+  z-index: 0;
+  mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, transparent 100%);
+}
+
 .hero-bg-grid {
   position: absolute;
   inset: 0;
@@ -414,18 +428,22 @@ ul { list-style: none; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
-  background: var(--gradient-1);
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--white);
-  letter-spacing: 2px;
-  box-shadow: 0 0 40px rgba(0, 180, 216, 0.2);
+  box-shadow: 0 0 0 3px var(--accent), 0 0 40px rgba(0, 180, 216, 0.35);
+  overflow: hidden;
+}
+
+.orbit-center-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
 }
 
 /* Scroll indicator */
@@ -751,6 +769,17 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.3);
 }
 
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-img {
+  border-radius: 8px 8px 0 0;
+}
+
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -989,6 +1018,15 @@ ul { list-style: none; }
 /* ============================================================
    CONTACT
    ============================================================ */
+#contact {
+  background-image:
+    linear-gradient(to right, var(--dark) 55%, rgba(10,22,40,0.55) 100%),
+    url('assets/jenella-profile.jpeg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1679,4 +1717,253 @@ body.light-mode .nav-toggle span {
   .theme-toggle { margin-right: 8px; }
 }
 
+
+/* ============================================================
+   PAGE LOADER
+   ============================================================ */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loader-logo {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  animation: loaderPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.95); }
+}
+
+.loader-bar {
+  width: 200px;
+  height: 3px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--primary-lighter), #6c47ff);
+  width: 0;
+  border-radius: 3px;
+  animation: loaderFill 1.2s ease-out forwards;
+}
+
+@keyframes loaderFill {
+  0% { width: 0; }
+  60% { width: 75%; }
+  100% { width: 100%; }
+}
+
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary-lighter), #6c47ff);
+  z-index: 1002;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+
+/* ============================================================
+   HERO FLOATING ORBS
+   ============================================================ */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  animation: orbFloat 9s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(108, 71, 255, 0.10) 0%, transparent 70%);
+  bottom: 0;
+  left: -80px;
+  animation: orbFloat 11s ease-in-out infinite reverse;
+}
+
+.orb-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(74, 158, 218, 0.08) 0%, transparent 70%);
+  top: 40%;
+  left: 40%;
+  animation: orbFloat 13s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+
+/* ============================================================
+   HERO ENTRANCE ANIMATIONS
+   ============================================================ */
+.hero-animate-1,
+.hero-animate-2,
+.hero-animate-3,
+.hero-animate-4,
+.hero-animate-5,
+.hero-animate-6 {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroEntrance 0.7s ease forwards;
+}
+
+.hero-animate-1 { animation-delay: 0.15s; }
+.hero-animate-2 { animation-delay: 0.35s; }
+.hero-animate-3 { animation-delay: 0.55s; }
+.hero-animate-4 { animation-delay: 0.75s; }
+.hero-animate-5 { animation-delay: 0.95s; }
+.hero-animate-6 { animation-delay: 1.15s; }
+
+@keyframes heroEntrance {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* hero-name runs both entrance + gradient color animations */
+h1.hero-name.hero-animate-2 {
+  animation: heroEntrance 0.7s ease 0.35s both, gradientShift 6s ease infinite;
+}
+
+
+/* ============================================================
+   BUTTON RIPPLE
+   ============================================================ */
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(0);
+  animation: rippleEffect 0.55s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to { transform: scale(4); opacity: 0; }
+}
+
+
+/* ============================================================
+   TIMELINE DOT PULSE
+   ============================================================ */
+.timeline-dot {
+  position: relative;
+}
+
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0;
+  animation: dotPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+
+/* ============================================================
+   CERT CARD SHIMMER (earned cards only)
+   ============================================================ */
+.cert-card.earned {
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card.earned::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.055) 50%, transparent 60%);
+  animation: certShimmer 4.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes certShimmer {
+  0%      { left: -60%; }
+  50%, 100% { left: 130%; }
+}
+
+
+/* ============================================================
+   SECTION TITLE UNDERLINE REVEAL
+   ============================================================ */
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, var(--accent), var(--primary-lighter), #6c47ff);
+  border-radius: 2px;
+  transition: width 0.8s ease 0.3s;
+}
+
+.section-title.aos-animate::after {
+  width: 72px;
+}
 
