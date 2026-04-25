@@ -87,6 +87,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  /* ---------- CLEAN HASH URLS: intercept all anchor clicks ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      const target = document.querySelector(hash);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+    });
+  });
+
+
   /* ---------- NAVBAR SCROLL EFFECT ---------- */
   const navbar = document.getElementById('navbar');
   const backToTop = document.getElementById('back-to-top');
