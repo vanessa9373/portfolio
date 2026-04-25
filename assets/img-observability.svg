@@ -1,55 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
   <rect width="400" height="180" fill="#0a1628"/>
-  <rect width="400" height="26" fill="#0a1f3a"/>
-  <text x="200" y="17" text-anchor="middle" fill="#f97316" font-size="10" font-family="monospace" font-weight="bold" letter-spacing="1">BUILDING AN OBSERVABILITY STACK FROM SCRATCH</text>
-
-  <!-- Three pillars -->
-  <!-- Metrics -->
-  <rect x="8" y="32" width="118" height="90" rx="5" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
-  <text x="67" y="50" text-anchor="middle" fill="#f97316" font-size="9" font-family="monospace" font-weight="bold">METRICS</text>
-  <rect x="14" y="56" width="106" height="14" rx="3" fill="#2a1500" stroke="#f97316" stroke-width="0.8"/>
-  <text x="67" y="67" text-anchor="middle" fill="#fb923c" font-size="7.5" font-family="monospace">Prometheus Scrape</text>
-  <rect x="14" y="74" width="106" height="14" rx="3" fill="#2a1500" stroke="#f9731660" stroke-width="0.8"/>
-  <text x="67" y="85" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Alertmanager Rules</text>
-  <rect x="14" y="92" width="106" height="14" rx="3" fill="#2a1500" stroke="#f9731660" stroke-width="0.8"/>
-  <text x="67" y="103" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">PromQL Queries</text>
-  <rect x="14" y="110" width="106" height="6" rx="3" fill="#f9731630"/>
-
-  <!-- Traces -->
-  <rect x="140" y="32" width="118" height="90" rx="5" fill="#0d1f3c" stroke="#a78bfa" stroke-width="1.5"/>
-  <text x="199" y="50" text-anchor="middle" fill="#a78bfa" font-size="9" font-family="monospace" font-weight="bold">TRACES</text>
-  <rect x="146" y="56" width="106" height="14" rx="3" fill="#1a0a2a" stroke="#a78bfa" stroke-width="0.8"/>
-  <text x="199" y="67" text-anchor="middle" fill="#c4b5fd" font-size="7.5" font-family="monospace">OpenTelemetry SDK</text>
-  <rect x="146" y="74" width="106" height="14" rx="3" fill="#1a0a2a" stroke="#a78bfa60" stroke-width="0.8"/>
-  <text x="199" y="85" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Jaeger / Tempo</text>
-  <rect x="146" y="92" width="106" height="14" rx="3" fill="#1a0a2a" stroke="#a78bfa60" stroke-width="0.8"/>
-  <text x="199" y="103" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Service Map</text>
-  <!-- Trace diagram -->
-  <line x1="152" y1="115" x2="240" y2="115" stroke="#a78bfa50" stroke-width="8" stroke-linecap="round"/>
-  <line x1="160" y1="115" x2="200" y2="115" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
-
-  <!-- Logs -->
-  <rect x="272" y="32" width="120" height="90" rx="5" fill="#0d1f3c" stroke="#10b981" stroke-width="1.5"/>
-  <text x="332" y="50" text-anchor="middle" fill="#10b981" font-size="9" font-family="monospace" font-weight="bold">LOGS</text>
-  <rect x="278" y="56" width="108" height="14" rx="3" fill="#0a2a1a" stroke="#10b981" stroke-width="0.8"/>
-  <text x="332" y="67" text-anchor="middle" fill="#34d399" font-size="7.5" font-family="monospace">Loki + Fluentd</text>
-  <rect x="278" y="74" width="108" height="14" rx="3" fill="#0a2a1a" stroke="#10b98160" stroke-width="0.8"/>
-  <text x="332" y="85" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Structured JSON</text>
-  <rect x="278" y="92" width="108" height="14" rx="3" fill="#0a2a1a" stroke="#10b98160" stroke-width="0.8"/>
-  <text x="332" y="103" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">LogQL Queries</text>
-  <text x="278" y="115" fill="#10b981" font-size="6.5" font-family="monospace">{"level":"info","svc":"api"}</text>
-
-  <!-- Grafana dashboards -->
-  <rect x="8" y="132" width="384" height="40" rx="4" fill="#0d2137" stroke="#f97316" stroke-width="1.2"/>
-  <text x="45" y="148" text-anchor="middle" fill="#f97316" font-size="8" font-family="monospace" font-weight="bold">Grafana</text>
-  <text x="45" y="160" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Dashboards</text>
-  <line x1="80" y1="132" x2="80" y2="172" stroke="#1e3a5f" stroke-width="1"/>
-  <!-- Mini graph -->
-  <polyline points="90,162 100,150 112,155 124,144 136,148 150,140 162,145 174,138" fill="none" stroke="#10b981" stroke-width="1.5"/>
-  <line x1="180" y1="132" x2="180" y2="172" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="240" y="148" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="monospace">SLO Dashboards</text>
-  <text x="240" y="160" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">Error Budget · Burn Rate</text>
-  <line x1="300" y1="132" x2="300" y2="172" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="350" y="148" text-anchor="middle" fill="#fbbf24" font-size="8" font-family="monospace">PagerDuty</text>
-  <text x="350" y="160" text-anchor="middle" fill="#64748b" font-size="7" font-family="monospace">On-call · Escalation</text>
+  <ellipse cx="200" cy="90" rx="170" ry="80" fill="#fb923c" opacity="0.04"/>
+  <!-- Chart area -->
+  <rect x="48" y="32" width="304" height="110" rx="6" fill="#0d1f3c" stroke="#fb923c" stroke-width="1.2" fill-opacity="1" stroke-opacity="0.35"/>
+  <!-- Grid lines -->
+  <line x1="48" y1="60" x2="352" y2="60" stroke="#fb923c" stroke-width="0.5" opacity="0.12"/>
+  <line x1="48" y1="87" x2="352" y2="87" stroke="#fb923c" stroke-width="0.5" opacity="0.12"/>
+  <line x1="48" y1="114" x2="352" y2="114" stroke="#fb923c" stroke-width="0.5" opacity="0.12"/>
+  <!-- Area fill under chart -->
+  <path d="M60 118 L96 108 L130 100 L164 88 L200 72 L236 60 L272 48 L308 42 L340 36 L340 142 L60 142 Z" fill="#fb923c" opacity="0.07"/>
+  <!-- Main chart line -->
+  <polyline points="60,118 96,108 130,100 164,88 200,72 236,60 272,48 308,42 340,36" fill="none" stroke="#fb923c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Data points -->
+  <circle cx="96"  cy="108" r="3.5" fill="#fb923c" opacity="0.7"/>
+  <circle cx="164" cy="88"  r="3.5" fill="#fb923c" opacity="0.7"/>
+  <circle cx="236" cy="60"  r="3.5" fill="#fb923c" opacity="0.7"/>
+  <circle cx="308" cy="42"  r="4.5" fill="#fb923c" opacity="0.9"/>
+  <!-- Y-axis labels -->
+  <text x="42" y="64"  text-anchor="end" fill="#fb923c" font-size="8" font-family="monospace" opacity="0.4">99.9</text>
+  <text x="42" y="118" text-anchor="end" fill="#fb923c" font-size="8" font-family="monospace" opacity="0.4">99.0</text>
+  <!-- Bottom pillars -->
+  <rect x="60"  y="150" width="72" height="18" rx="3" fill="#fb923c" fill-opacity="0.12" stroke="#fb923c" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="96"  y="163" text-anchor="middle" fill="#fb923c" font-size="8" font-family="monospace" opacity="0.6">metrics</text>
+  <rect x="164" y="150" width="72" height="18" rx="3" fill="#a78bfa" fill-opacity="0.1"  stroke="#a78bfa" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="200" y="163" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="monospace" opacity="0.5">traces</text>
+  <rect x="268" y="150" width="72" height="18" rx="3" fill="#34d399" fill-opacity="0.1"  stroke="#34d399" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="304" y="163" text-anchor="middle" fill="#34d399" font-size="8" font-family="monospace" opacity="0.5">logs</text>
 </svg>

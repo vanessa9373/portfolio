@@ -1,65 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
   <rect width="400" height="180" fill="#0a1628"/>
-  <rect width="400" height="26" fill="#0a1f3a"/>
-  <text x="200" y="17" text-anchor="middle" fill="#00b4d8" font-size="10" font-family="monospace" font-weight="bold" letter-spacing="1">CLOUD ENGINEERING PORTFOLIO &amp; LAB PLATFORM</text>
-
-  <!-- Lab grid -->
-  <!-- Row 1 -->
-  <rect x="8" y="32" width="88" height="34" rx="4" fill="#0d1f3c" stroke="#ff9900" stroke-width="1.2"/>
-  <text x="52" y="46" text-anchor="middle" fill="#fbbf24" font-size="7.5" font-family="monospace" font-weight="bold">AWS Migration</text>
-  <text x="52" y="58" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Lab 01 · Terraform</text>
-
-  <rect x="104" y="32" width="88" height="34" rx="4" fill="#0d1f3c" stroke="#326ce5" stroke-width="1.2"/>
-  <text x="148" y="46" text-anchor="middle" fill="#60a5fa" font-size="7.5" font-family="monospace" font-weight="bold">Kubernetes</text>
-  <text x="148" y="58" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">18 Labs · EKS/AKS</text>
-
-  <rect x="200" y="32" width="88" height="34" rx="4" fill="#0d1f3c" stroke="#7c3aed" stroke-width="1.2"/>
-  <text x="244" y="46" text-anchor="middle" fill="#a78bfa" font-size="7.5" font-family="monospace" font-weight="bold">Terraform Lib</text>
-  <text x="244" y="58" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">40 Modules · 3 Clouds</text>
-
-  <rect x="296" y="32" width="96" height="34" rx="4" fill="#0d1f3c" stroke="#10b981" stroke-width="1.2"/>
-  <text x="344" y="46" text-anchor="middle" fill="#34d399" font-size="7.5" font-family="monospace" font-weight="bold">SRE Observ.</text>
-  <text x="344" y="58" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Prometheus · Grafana</text>
-
-  <!-- Row 2 -->
-  <rect x="8" y="74" width="88" height="34" rx="4" fill="#0d1f3c" stroke="#ef4444" stroke-width="1.2"/>
-  <text x="52" y="88" text-anchor="middle" fill="#f87171" font-size="7.5" font-family="monospace" font-weight="bold">Chaos Eng.</text>
-  <text x="52" y="100" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">AWS FIS · Litmus</text>
-
-  <rect x="104" y="74" width="88" height="34" rx="4" fill="#0d1f3c" stroke="#0078d4" stroke-width="1.2"/>
-  <text x="148" y="88" text-anchor="middle" fill="#60a5fa" font-size="7.5" font-family="monospace" font-weight="bold">Multi-Cloud</text>
-  <text x="148" y="100" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">AWS + Azure + GCP</text>
-
-  <rect x="200" y="74" width="88" height="34" rx="4" fill="#0d1f3c" stroke="#f97316" stroke-width="1.2"/>
-  <text x="244" y="88" text-anchor="middle" fill="#fb923c" font-size="7.5" font-family="monospace" font-weight="bold">Serverless</text>
-  <text x="244" y="100" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Lambda · 1M events/day</text>
-
-  <rect x="296" y="74" width="96" height="34" rx="4" fill="#0d1f3c" stroke="#fbbf24" stroke-width="1.2"/>
-  <text x="344" y="88" text-anchor="middle" fill="#fbbf24" font-size="7.5" font-family="monospace" font-weight="bold">Security</text>
-  <text x="344" y="100" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">IAM · KMS · SOC 2</text>
-
-  <!-- Cloud badges -->
-  <rect x="8" y="118" width="384" height="20" rx="4" fill="#0d2137" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="60" y="132" text-anchor="middle" fill="#ff9900" font-size="8" font-family="monospace" font-weight="bold">AWS</text>
-  <text x="130" y="132" text-anchor="middle" fill="#0078d4" font-size="8" font-family="monospace" font-weight="bold">Azure</text>
-  <text x="200" y="132" text-anchor="middle" fill="#4285f4" font-size="8" font-family="monospace" font-weight="bold">GCP</text>
-  <text x="280" y="132" text-anchor="middle" fill="#326ce5" font-size="8" font-family="monospace" font-weight="bold">Kubernetes</text>
-  <text x="355" y="132" text-anchor="middle" fill="#7c3aed" font-size="8" font-family="monospace" font-weight="bold">Terraform</text>
-
-  <!-- Stats -->
-  <rect x="8" y="146" width="90" height="28" rx="4" fill="#0d2137" stroke="#00b4d8" stroke-width="1.2"/>
-  <text x="53" y="159" text-anchor="middle" fill="#00b4d8" font-size="14" font-family="monospace" font-weight="bold">36</text>
-  <text x="53" y="170" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">LABS</text>
-
-  <rect x="110" y="146" width="90" height="28" rx="4" fill="#0d2137" stroke="#7c3aed" stroke-width="1.2"/>
-  <text x="155" y="159" text-anchor="middle" fill="#a78bfa" font-size="14" font-family="monospace" font-weight="bold">40</text>
-  <text x="155" y="170" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">TF MODULES</text>
-
-  <rect x="212" y="146" width="90" height="28" rx="4" fill="#0d2137" stroke="#10b981" stroke-width="1.2"/>
-  <text x="257" y="159" text-anchor="middle" fill="#10b981" font-size="14" font-family="monospace" font-weight="bold">3</text>
-  <text x="257" y="170" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">CLOUD PLATFORMS</text>
-
-  <rect x="314" y="146" width="78" height="28" rx="4" fill="#0d2137" stroke="#ff9900" stroke-width="1.2"/>
-  <text x="353" y="159" text-anchor="middle" fill="#ff9900" font-size="12" font-family="monospace" font-weight="bold">Open</text>
-  <text x="353" y="170" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">SOURCE</text>
+  <ellipse cx="200" cy="90" rx="170" ry="80" fill="#34d399" opacity="0.04"/>
+  <!-- Terminal window -->
+  <rect x="60" y="28" width="280" height="128" rx="8" fill="#0d1f3c" stroke="#34d399" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="60" y="28" width="280" height="28" rx="8" fill="#162240"/>
+  <rect x="60" y="44" width="280" height="12" fill="#162240"/>
+  <circle cx="80" cy="42" r="5" fill="#ef4444" opacity="0.7"/>
+  <circle cx="96" cy="42" r="5" fill="#fbbf24" opacity="0.7"/>
+  <circle cx="112" cy="42" r="5" fill="#34d399" opacity="0.7"/>
+  <!-- Code lines -->
+  <text x="78" y="78" fill="#34d399" font-size="11" font-family="monospace" opacity="0.9">$ terraform apply</text>
+  <text x="78" y="96" fill="#34d399" font-size="11" font-family="monospace" opacity="0.6">  + aws_vpc.main</text>
+  <text x="78" y="112" fill="#34d399" font-size="11" font-family="monospace" opacity="0.5">  + aws_eks_cluster.prod</text>
+  <text x="78" y="128" fill="#34d399" font-size="11" font-family="monospace" opacity="0.4">  + aws_rds_instance.db</text>
+  <text x="78" y="144" fill="#34d399" font-size="11" font-family="monospace" opacity="0.8">Apply complete! 12 added.</text>
+  <!-- Cursor blink -->
+  <rect x="78" y="150" width="8" height="2" fill="#34d399" opacity="0.9"/>
 </svg>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanessa Awo - Solutions Architect Resume</title>
+<style>
+  @page { margin: 0.5in 0.6in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.5in 0.6in;
+  }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 16px; border-bottom: 2px solid #1a3c5e; padding-bottom: 12px; }
+  .header h1 { font-size: 22pt; color: #1a3c5e; letter-spacing: 1px; margin-bottom: 4px; }
+  .header .subtitle { font-size: 11.5pt; color: #2c6faa; font-weight: 600; margin-bottom: 6px; }
+  .header .contact { font-size: 9.5pt; color: #444; }
+  .header .contact span { margin: 0 6px; }
+  .header .contact .sep { color: #1a3c5e; font-weight: bold; }
+
+  /* Section */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: #1a3c5e;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 1.5px solid #1a3c5e;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+  }
+
+  /* Summary */
+  .summary { font-size: 10.5pt; color: #2a2a2a; }
+
+  /* Experience */
+  .job { margin-bottom: 12px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-title { font-weight: 700; font-size: 11pt; color: #1a1a1a; }
+  .job-date { font-size: 9.5pt; color: #555; font-style: italic; }
+  .job-company { font-size: 10pt; color: #2c6faa; font-weight: 600; margin-bottom: 4px; }
+  .job ul { padding-left: 18px; }
+  .job li { margin-bottom: 2px; font-size: 10.2pt; }
+  .job li::marker { color: #1a3c5e; }
+
+  /* Projects */
+  .project { margin-bottom: 10px; }
+  .project-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .project-name { font-weight: 700; font-size: 10.5pt; color: #1a1a1a; }
+  .project-metrics { font-size: 9.5pt; color: #555; font-style: italic; }
+  .project-desc { font-size: 10.2pt; margin-top: 2px; }
+
+  /* Skills */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+  .skill-category { font-size: 10.2pt; }
+  .skill-category strong { color: #1a3c5e; }
+
+  /* Certs & Education */
+  .cert-item, .edu-item { margin-bottom: 4px; font-size: 10.2pt; }
+  .cert-item strong, .edu-item strong { color: #1a1a1a; }
+  .cert-date, .edu-date { color: #555; font-style: italic; font-size: 9.5pt; }
+
+  /* Keywords bar */
+  .keywords { font-size: 9pt; color: #666; margin-top: 10px; text-align: center; border-top: 1px solid #ddd; padding-top: 6px; }
+
+  /* Print nav bar at top */
+  .resume-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0 16px; margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .resume-nav a { color: #2c6faa; text-decoration: none; font-size: 10pt; }
+  .resume-nav a:hover { text-decoration: underline; }
+  .resume-nav .print-btn {
+    background: #1a3c5e; color: #fff; border: none; padding: 6px 16px;
+    border-radius: 4px; cursor: pointer; font-size: 10pt;
+  }
+  .resume-nav .print-btn:hover { background: #2c6faa; }
+
+  @media print {
+    body { padding: 0; }
+    .section { break-inside: avoid; }
+    .resume-nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="resume-nav">
+  <a href="index.html">&larr; Back to Portfolio</a>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ========== HEADER ========== -->
+<div class="header">
+  <h1>VANESSA AWO</h1>
+  <div class="subtitle">Solutions Architect | Cloud &amp; DevOps Engineer | SRE</div>
+  <div class="contact">
+    <span>Remote</span>
+    <span class="sep">|</span>
+    <span>jenellaawo93@gmail.com</span>
+    <span class="sep">|</span>
+    <span>(202) 415-9373</span>
+    <span class="sep">|</span>
+    <span>linkedin.com/in/jenella-v-4a4b963ab</span>
+    <span class="sep">|</span>
+    <span>github.com/vanessa9373</span>
+    <span class="sep">|</span>
+    <span>vanessa9373.github.io/portfolio</span>
+  </div>
+</div>
+
+<!-- ========== SUMMARY ========== -->
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <div class="summary">
+    AWS Certified Solutions Architect and CKA-certified Kubernetes Administrator who builds cloud infrastructure that scales. Designs and delivers multi-cloud environments across AWS, Azure, and GCP - from reusable Terraform modules to Kubernetes platforms to fully automated CI/CD pipelines. Built 18 production-grade infrastructure labs, an 18-lab Kubernetes Mastery Guide, and a 40-module multi-cloud Terraform library, all open source. Combines a B.S. in Computer Science with a Bachelor&rsquo;s in Business Management to translate business requirements into technical decisions stakeholders understand.
+  </div>
+</div>
+
+<!-- ========== TECHNICAL SKILLS ========== -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-category"><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, Google Cloud Platform (GCP)</div>
+    <div class="skill-category"><strong>IaC &amp; Automation:</strong> Terraform, CloudFormation, Ansible, Pulumi</div>
+    <div class="skill-category"><strong>Containers &amp; Orchestration:</strong> Docker, Kubernetes (EKS, AKS, GKE)</div>
+    <div class="skill-category"><strong>CI/CD &amp; GitOps:</strong> GitHub Actions, Jenkins, ArgoCD, Helm, Kustomize</div>
+    <div class="skill-category"><strong>SRE:</strong> SLOs/SLIs, Error Budgets, Incident Response, Chaos Engineering, Toil Reduction</div>
+    <div class="skill-category"><strong>Observability:</strong> Prometheus, Grafana, Loki, OpenTelemetry, Jaeger, PagerDuty</div>
+    <div class="skill-category"><strong>Service Mesh:</strong> Istio, Envoy, mTLS</div>
+    <div class="skill-category"><strong>Networking:</strong> VPC, DNS (Route 53), ALB/NLB, VPN, Direct Connect, ExpressRoute</div>
+    <div class="skill-category"><strong>Security:</strong> IAM, KMS, WAF, Security Hub, GuardDuty, Zero Trust, SOC 2, ISO 27001</div>
+    <div class="skill-category"><strong>Monitoring:</strong> CloudWatch, Azure Monitor, Datadog</div>
+    <div class="skill-category"><strong>Languages &amp; Scripting:</strong> Python, Bash, PowerShell, Go, YAML, JSON</div>
+    <div class="skill-category"><strong>Databases:</strong> RDS, DynamoDB, Aurora, CosmosDB, Redis</div>
+    <div class="skill-category"><strong>Methodology:</strong> Well-Architected Framework, Agile/Scrum, ITIL, Blameless Postmortems</div>
+  </div>
+</div>
+
+<!-- ========== EXPERIENCE ========== -->
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Cloud &amp; DevOps Engineer</span>
+      <span class="job-date">2024 &ndash; Present</span>
+    </div>
+    <div class="job-company">Independent / Portfolio Projects - Remote</div>
+    <ul>
+      <li>Built <strong>18 production-grade infrastructure labs</strong> spanning cloud migration, multi-cloud architecture, CI/CD, SRE, security, and chaos engineering - all open source on GitHub.</li>
+      <li>Designed and implemented a <strong>14-phase DevOps Mastery</strong> e-commerce platform with 6 microservices deployed on EKS using ArgoCD, Istio service mesh, and Prometheus observability.</li>
+      <li>Developed a <strong>40-module multi-cloud Terraform library</strong> (AWS, Azure, GCP) for VPC, EKS, RDS, and IAM, cutting environment provisioning time by 80%.</li>
+      <li>Created an <strong>18-lab Kubernetes Mastery Guide</strong> covering beginner to expert concepts, aligned with CKA certification objectives.</li>
+      <li>Architected enterprise cloud migration from on-prem to AWS, achieving <strong>35% cost reduction</strong> and <strong>99.95% uptime</strong> using ECS Fargate and RDS Aurora.</li>
+      <li>Built a comprehensive SRE observability platform with SLO/SLI dashboards, automated alerting, and error budget tracking, resulting in <strong>60% fewer incidents</strong> across 50+ monitored services.</li>
+      <li>Implemented chaos engineering program using AWS Fault Injection Simulator and Litmus Chaos, identifying <strong>12 failure modes</strong> and improving recovery time by 40%.</li>
+      <li>Established CI/CD pipelines with GitHub Actions and ArgoCD using GitOps practices, increasing deployment frequency <strong>10x</strong> with zero-downtime deployments.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Property Claims Adjuster</span>
+      <span class="job-date">Jan 2022 &ndash; 2025</span>
+    </div>
+    <div class="job-company">Pilot Catastrophe Services - Remote</div>
+    <ul>
+      <li>Analyzed complex property damage scenarios using data-driven decision-making processes transferable to troubleshooting technical infrastructure issues.</li>
+      <li>Evaluated and prioritized high volumes of claims efficiently, managing <strong>multiple concurrent tasks</strong> under tight deadlines.</li>
+      <li>Utilized specialized software systems (Guidewire, Xactimate) for claims processing, documentation, and workflow management.</li>
+      <li>Mastered remote collaboration tools for distributed team coordination across multiple time zones.</li>
+      <li>Communicated complex technical assessments to non-technical stakeholders including policyholders, contractors, and engineers.</li>
+      <li>Streamlined claims processing workflows, improving turnaround times and maintaining accuracy with large datasets.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== KEY PROJECTS ========== -->
+<div class="section">
+  <div class="section-title">Key Projects</div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">E-Commerce DevOps Mastery Platform</span>
+      <span class="project-metrics">14 Phases &bull; 6 Microservices &bull; 50+ Tools</span>
+    </div>
+    <div class="project-desc">End-to-end DevOps lifecycle project: containerized microservices on EKS with ArgoCD GitOps, Istio service mesh, Prometheus/Grafana observability, and Backstage developer portal.</div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Enterprise Cloud Migration - On-Prem to AWS</span>
+      <span class="project-metrics">35% Cost Reduction &bull; 99.95% Uptime &bull; 3-Month Timeline</span>
+    </div>
+    <div class="project-desc">Re-architected monolithic applications into microservices using ECS Fargate and RDS Aurora with Terraform-managed infrastructure and CloudWatch monitoring.</div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">SRE Observability &amp; SLO Platform</span>
+      <span class="project-metrics">99.95% SLO &bull; 60% Fewer Incidents &bull; 50+ Services</span>
+    </div>
+    <div class="project-desc">Built SLO/SLI dashboards with Prometheus, Grafana, and OpenTelemetry. Automated alerting and error budget tracking with PagerDuty integration.</div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">CI/CD Pipeline - GitHub Actions + ArgoCD + Kubernetes</span>
+      <span class="project-metrics">10x Deploy Frequency &bull; Zero Downtime &bull; GitOps</span>
+    </div>
+    <div class="project-desc">Designed and deployed a full GitOps CI/CD pipeline using GitHub Actions for build/test automation and ArgoCD for continuous delivery to EKS, with Helm chart management and automated rollbacks.</div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Cloud Security &amp; Compliance Framework</span>
+      <span class="project-metrics">100% Audit Pass &bull; 45% Faster Detection &bull; ISO 27001</span>
+    </div>
+    <div class="project-desc">Implemented IAM least-privilege policies, encryption strategies, and automated compliance scanning using Security Hub, GuardDuty, and CloudTrail.</div>
+  </div>
+</div>
+
+<!-- ========== CERTIFICATIONS ========== -->
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <div class="cert-item"><strong>AWS Certified Solutions Architect - Associate (SAA-C03)</strong> <span class="cert-date">- Amazon Web Services</span></div>
+  <div class="cert-item"><strong>Certified Kubernetes Administrator (CKA)</strong> <span class="cert-date">- Cloud Native Computing Foundation (CNCF)</span></div>
+  <div class="cert-item"><strong>Linux Essentials Certificate</strong> <span class="cert-date">- Linux Professional Institute (LPI)</span></div>
+</div>
+
+<!-- ========== EDUCATION ========== -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-item">
+    <strong>Bachelor of Science in Computer Science</strong> <span class="edu-date">- Western Governors University, Anticipated May 2026</span>
+  </div>
+  <div class="edu-item">
+    <strong>Bachelor&rsquo;s in Business Management</strong> <span class="edu-date">- University of Douala, June 2019</span>
+  </div>
+</div>
+
+<!-- ========== ATS KEYWORD BAR ========== -->
+<div class="keywords">
+  Solutions Architecture &bull; Cloud Migration &bull; AWS &bull; Azure &bull; GCP &bull; Terraform &bull; Kubernetes &bull; Docker &bull; CI/CD &bull; Infrastructure as Code &bull; IAM &bull; DevOps &bull; SRE &bull; Site Reliability &bull; Observability &bull; Prometheus &bull; ArgoCD &bull; GitOps &bull; Istio &bull; Chaos Engineering &bull; Helm &bull; Kustomize &bull; Python &bull; Serverless &bull; Well-Architected Framework
+</div>
+
+</body>
+</html>

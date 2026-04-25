@@ -190,12 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedElement = document.getElementById('typed-text');
   if (typedElement) {
     const titles = [
-      'Solutions Architect',
       'Cloud Engineer',
       'DevOps Engineer',
-      'Site Reliability Engineer',
-      'AWS Certified',
-      'Multi-Cloud Expert'
+      'AWS DevOps Engineer',
+      'Site Reliability Engineer'
     ];
     let titleIndex = 0;
     let charIndex = 0;
