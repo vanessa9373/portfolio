@@ -271,6 +271,19 @@ ul { list-style: none; }
   transform: translateY(-2px);
 }
 
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.3);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
 .btn-full { width: 100%; justify-content: center; }
 
 
@@ -354,15 +367,46 @@ ul { list-style: none; }
   50% { opacity: 0; }
 }
 
+.hero-role-badge {
+  display: inline-block;
+  background: rgba(0,180,216,0.1);
+  border: 1px solid rgba(0,180,216,0.3);
+  color: var(--accent);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: var(--font-mono);
+}
+
 .hero-description {
   font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 540px;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   line-height: 1.7;
 }
 
 .hero-description strong { color: var(--text); }
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.hero-proof-chip {
+  display: inline-block;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
 
 .hero-buttons {
   display: flex;

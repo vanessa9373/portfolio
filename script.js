@@ -210,9 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typedElement) {
     const titles = [
       'Cloud Engineer',
-      'DevOps Engineer',
-      'AWS DevOps Engineer',
-      'Site Reliability Engineer'
+      'DevOps Engineer'
     ];
     let titleIndex = 0;
     let charIndex = 0;
