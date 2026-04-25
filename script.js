@@ -4,6 +4,10 @@
    Hybrid single-page + separate pages version
    ============================================================ */
 
+if (location.hash === '#home') {
+  history.replaceState(null, '', location.pathname + location.search);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- AOS (ANIMATE ON SCROLL) ---------- */
