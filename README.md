@@ -16,6 +16,7 @@ Each project simulates a real business scenario — not a tutorial — with arch
 | 2 | [Serverless SaaS Multi-Tenant Platform](./projects/project-2-saas-platform/) | B2B SaaS startup | API Gateway, Lambda, DynamoDB, Cognito, WAF | Tenant isolation, serverless scale-to-zero, JWT auth |
 | 3 | [Secure FinTech Data Lake & Analytics](./projects/project-3-fintech-data-lake/) | FinTech / regulated industry | S3, Glue, Athena, Redshift, Lake Formation, Macie | Data governance, compliance (PCI-DSS), column-level security |
 | 4 | [Global Media Streaming Platform](./projects/project-4-media-platform/) | Video-on-demand media company | CloudFront, S3, MediaConvert, API Gateway, DynamoDB | Signed URLs, adaptive bitrate, global CDN, origin shield |
+| 5 | [Real-Time Ride-Sharing Platform](./projects/project-5-ridesharing-platform/) | Transportation marketplace startup | API Gateway WebSocket, Kinesis, OpenSearch, ElastiCache, SNS | WebSocket architecture, geospatial matching, event streaming |
 
 ---
 
