@@ -12,10 +12,10 @@ Each project simulates a real business scenario — not a tutorial — with arch
 
 | # | Project | Scenario | Core Services | Key Concepts |
 |---|---------|----------|---------------|--------------|
-| 1 | [Multi-Region E-Commerce Platform](./project-1-ecommerce-platform/) | Flash-sale retail startup | ALB, Aurora Global DB, CloudFront, Route 53, ElastiCache | Multi-region HA, disaster recovery, session management |
-| 2 | [Serverless SaaS Multi-Tenant Platform](./project-2-saas-platform/) | B2B SaaS startup | API Gateway, Lambda, DynamoDB, Cognito, WAF | Tenant isolation, serverless scale-to-zero, JWT auth |
-| 3 | [Secure FinTech Data Lake & Analytics](./project-3-fintech-data-lake/) | FinTech / regulated industry | S3, Glue, Athena, Redshift, Lake Formation, Macie | Data governance, compliance (PCI-DSS), column-level security |
-| 4 | [Global Media Streaming Platform](./project-4-media-platform/) | Video-on-demand media company | CloudFront, S3, MediaConvert, API Gateway, DynamoDB | Signed URLs, adaptive bitrate, global CDN, origin shield |
+| 1 | [Multi-Region E-Commerce Platform](./projects/project-1-ecommerce-platform/) | Flash-sale retail startup | ALB, Aurora Global DB, CloudFront, Route 53, ElastiCache | Multi-region HA, disaster recovery, session management |
+| 2 | [Serverless SaaS Multi-Tenant Platform](./projects/project-2-saas-platform/) | B2B SaaS startup | API Gateway, Lambda, DynamoDB, Cognito, WAF | Tenant isolation, serverless scale-to-zero, JWT auth |
+| 3 | [Secure FinTech Data Lake & Analytics](./projects/project-3-fintech-data-lake/) | FinTech / regulated industry | S3, Glue, Athena, Redshift, Lake Formation, Macie | Data governance, compliance (PCI-DSS), column-level security |
+| 4 | [Global Media Streaming Platform](./projects/project-4-media-platform/) | Video-on-demand media company | CloudFront, S3, MediaConvert, API Gateway, DynamoDB | Signed URLs, adaptive bitrate, global CDN, origin shield |
 
 ---
 
