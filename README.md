@@ -2,7 +2,7 @@
 
 **Author:** Vanessa Awo &nbsp;|&nbsp; GitHub: [@vanessa9373](https://github.com/vanessa9373)
 
-A portfolio of four production-grade AWS architecture projects designed to demonstrate the thinking, tradeoffs, and design decisions expected of an **AWS Solutions Architect** or **Solutions Engineer**.
+A portfolio of six production-grade AWS architecture projects designed to demonstrate the thinking, tradeoffs, and design decisions expected of an **AWS Solutions Architect** or **Solutions Engineer**.
 
 Each project simulates a real business scenario — not a tutorial — with architecture decisions justified, cost analyzed, and failure modes addressed.
 
@@ -17,6 +17,7 @@ Each project simulates a real business scenario — not a tutorial — with arch
 | 3 | [Secure FinTech Data Lake & Analytics](./projects/project-3-fintech-data-lake/) | FinTech / regulated industry | S3, Glue, Athena, Redshift, Lake Formation, Macie | Data governance, compliance (PCI-DSS), column-level security |
 | 4 | [Global Media Streaming Platform](./projects/project-4-media-platform/) | Video-on-demand media company | CloudFront, S3, MediaConvert, API Gateway, DynamoDB | Signed URLs, adaptive bitrate, global CDN, origin shield |
 | 5 | [Real-Time Ride-Sharing Platform](./projects/project-5-ridesharing-platform/) | Transportation marketplace startup | API Gateway WebSocket, Kinesis, OpenSearch, ElastiCache, SNS | WebSocket architecture, geospatial matching, event streaming |
+| 6 | [Global Image Sharing Platform](./projects/project-6-pixelvault-platform/) | Instagram/Pinterest-scale social platform (10M MAU) | CloudFront, Aurora, ElastiCache, S3, SQS, Lambda, Rekognition | Fan-out on write, viral traffic handling, hot partition sharding, content moderation |
 
 ---
 
