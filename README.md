@@ -1,80 +1,313 @@
-# Vanessa Awo — Cloud & DevOps Portfolio
+<p align="center">
+  <strong>&lt;JA /&gt;</strong>
+</p>
 
-**Author:** Vanessa Awo &nbsp;|&nbsp; GitHub: [@vanessa9373](https://github.com/vanessa9373)
+<h1 align="center">Jenella Awo</h1>
+<h3 align="center">Solutions Architect | Cloud Engineer | DevOps Engineer | Site Reliability Engineer</h3>
 
-A portfolio of production-grade cloud and DevOps projects demonstrating architecture design, SRE practices, infrastructure-as-code, CI/CD, observability, and security. Built for **AWS Solutions Architect**, **SRE**, and **Cloud/DevOps Engineer** roles.
+<p align="center">
+  <a href="https://vanessa9373.github.io/portfolio/">Portfolio</a> &bull;
+  <a href="https://www.linkedin.com/in/jenella-v-4a4b963ab/">LinkedIn</a> &bull;
+  <a href="mailto:vanessa93730@gmail.com">Email</a> &bull;
+  Remote
+</p>
 
----
-
-## Repository Structure
-
-| Folder | Contents |
-|--------|----------|
-| [`aws-sa-projects/`](./aws-sa-projects/) | 6 AWS Solutions Architect design projects |
-| [`sre-projects/`](./sre-projects/) | 9 SRE projects — observability, chaos, security, GitOps |
-| [`devops-projects/`](./devops-projects/) | End-to-End CI/CD pipeline with EKS |
-| [`portfolio-site/`](./portfolio-site/) | Portfolio website (HTML/CSS/JS) with full lab catalog |
-| [`learning/`](./learning/) | AWS concepts, interview prep, and practice exercises |
-
----
-
-## AWS Solutions Architect Projects
-
-Six production-grade AWS architecture designs solving real business scenarios. Each project includes Terraform, architecture diagrams, cost analysis, and interview talking points.
-
-| # | Project | Scenario | Core AWS Services |
-|---|---------|----------|-------------------|
-| 1 | [Multi-Region E-Commerce Platform](./aws-sa-projects/project-1-ecommerce-platform/) | Flash-sale retail startup | ALB, Aurora Global DB, CloudFront, Route 53, ElastiCache |
-| 2 | [Serverless SaaS Multi-Tenant Platform](./aws-sa-projects/project-2-saas-platform/) | B2B SaaS startup | API Gateway, Lambda, DynamoDB, Cognito, WAF |
-| 3 | [Secure FinTech Data Lake & Analytics](./aws-sa-projects/project-3-fintech-data-lake/) | FinTech / regulated industry | S3, Glue, Athena, Redshift, Lake Formation, Macie |
-| 4 | [Global Media Streaming Platform](./aws-sa-projects/project-4-media-platform/) | Video-on-demand media company | CloudFront, S3, MediaConvert, API Gateway, DynamoDB |
-| 5 | [Real-Time Ride-Sharing Platform](./aws-sa-projects/project-5-ridesharing-platform/) | Transportation marketplace startup | API Gateway WebSocket, Kinesis, OpenSearch, ElastiCache |
-| 6 | [Global Image Sharing Platform](./aws-sa-projects/project-6-pixelvault-platform/) | Instagram/Pinterest-scale (10M MAU) | CloudFront, Aurora, ElastiCache, S3, SQS, Lambda, Rekognition |
+<p align="center">
+  <img src="https://img.shields.io/badge/AWS-Solutions_Architect-FF9900?style=flat&logo=amazonaws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/Linux-Essentials-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/Terraform-IaC-7B42BC?style=flat&logo=terraform&logoColor=white" alt="Terraform" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/Python-Scripting-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+</p>
 
 ---
 
-## SRE Projects
+## About
 
-Nine hands-on SRE projects with real code — Kubernetes manifests, Terraform, Ansible, Helm charts, scripts, and runbooks.
+I design and deliver **scalable, secure, and cost-efficient** cloud solutions across AWS, Azure, and GCP. With a B.S. in Computer Science from **Western Governors University** (anticipated May 2026) and a Bachelor's in Business Management from the **University of Douala**, I combine deep technical expertise in Infrastructure as Code, containers, and SRE practices with strong analytical and stakeholder communication skills.
 
-| # | Project | Focus Area |
-|---|---------|-----------|
-| 1 | [Kubernetes Observability Platform](./sre-projects/sre-project-1-kubernetes-observability/) | Prometheus, Grafana, alerting, microservices demo |
-| 2 | [CI/CD Pipeline with GitOps](./sre-projects/sre-project-2-cicd-gitops/) | Dockerized app, Kubernetes deployment, CI/CD pipeline |
-| 3 | [Incident Response & SLO Monitoring](./sre-projects/sre-project-3-incident-response-slo/) | SLO/SLI rules, runbooks, incident drill scripts |
-| 4 | [Infrastructure as Code — Terraform & Ansible](./sre-projects/sre-project-4-iac-terraform-ansible/) | Multi-env Terraform modules + Ansible roles |
-| 5 | [Logging & Tracing Pipeline](./sre-projects/sre-project-5-logging-tracing/) | EFK stack, OpenTelemetry, Jaeger distributed tracing |
-| 6 | [Chaos Engineering with Litmus](./sre-projects/sre-project-6-chaos-engineering/) | Pod/node/network chaos experiments, gameday runbooks |
-| 7 | [Cloud Cost Optimization (FinOps)](./sre-projects/sre-project-7-cost-optimization-finops/) | Cost dashboards, budget alerts, Kubernetes resource quotas |
-| 8 | [GitOps CI/CD with ArgoCD & Rollouts](./sre-projects/sre-project-8-gitops-argocd/) | ArgoCD ApplicationSets, Helm, canary rollouts |
-| 9 | [Kubernetes Security & Compliance](./sre-projects/sre-project-9-kubernetes-security/) | RBAC, OPA/Gatekeeper, Falco, Vault, CIS benchmarks |
+This repository is itself one of my key projects — it contains my **professional portfolio website**, **18 production-grade infrastructure labs**, an **18-lab Kubernetes Mastery Guide** (beginner to expert), and a **40-module multi-cloud Terraform library** across AWS, Azure, and GCP.
 
 ---
 
-## DevOps Projects
+## Live Portfolio
 
-| Project | Description |
-|---------|-------------|
-| [End-to-End CI/CD on EKS](./devops-projects/end-to-end-cicd-eks/) | Django app with Jenkins CI/CD, Docker, EKS, ArgoCD, Prometheus/Grafana, Terraform |
+**[vanessa9373.github.io/portfolio](https://vanessa9373.github.io/portfolio/)** — Modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring interactive sections, animated skill bars, project filtering, and a contact form.
 
 ---
 
-## Skills Demonstrated
+## Education
 
-- **AWS Architecture** — Multi-region HA, serverless, CDN, data lakes, media pipelines
-- **Kubernetes & Container Orchestration** — EKS, Helm, ArgoCD, Argo Rollouts, network policies
-- **SRE Practices** — SLOs, error budgets, runbooks, chaos engineering, incident response
-- **Infrastructure as Code** — Terraform modules, Ansible roles, environment management
-- **Observability** — Prometheus, Grafana, EFK, OpenTelemetry, Jaeger
-- **Security & Compliance** — RBAC, OPA, Falco, HashiCorp Vault, CIS benchmarks
-- **CI/CD & GitOps** — Jenkins, ArgoCD, canary deployments, blue-green rollouts
-- **FinOps** — Cost dashboards, budget alerts, resource right-sizing
+| Degree | Institution | Date |
+|--------|------------|------|
+| **B.S. Computer Science** | Western Governors University | Anticipated May 2026 |
+| **Bachelor's in Business Management** | University of Douala | June 2019 |
+
+## Certifications
+
+| Certification | Issuer | Status |
+|--------------|--------|--------|
+| **AWS Certified Solutions Architect — Associate** | Amazon Web Services | Earned |
+| **Linux Essentials Certificate** | Linux Professional Institute | Earned |
 
 ---
 
-## Certifications These Projects Support
+## Technical Skills
 
-- AWS Certified Solutions Architect – Associate (SAA-C03)
-- AWS Certified Solutions Architect – Professional (SAP-C02)
-- AWS Certified DevOps Engineer – Professional (DOP-C02)
-- Certified Kubernetes Administrator (CKA)
+| Category | Technologies |
+|----------|-------------|
+| **Cloud Platforms** | AWS (EC2, S3, VPC, IAM, RDS, Auto Scaling, ELB, Route 53, SNS, CloudWatch) |
+| **Infrastructure as Code** | Terraform, CloudFormation |
+| **Containers & Orchestration** | Docker, Kubernetes, Amazon ECS, Ansible |
+| **CI/CD** | Jenkins, GitLab CI, GitHub Actions, ArgoCD |
+| **Monitoring & Observability** | CloudWatch, Prometheus, Grafana, ELK Stack, Alerting, Dashboards |
+| **Scripting & Programming** | Bash, Python, Java, YAML |
+| **Networking** | VPC design, Subnets, Security Groups, Load Balancing |
+| **Other Tools** | Git, MS Excel Advanced, Guidewire, Xactimate, XactAnalysis |
+
+---
+
+## Professional Experience
+
+### Property Claims Adjuster
+**Pilot Catastrophe Services** | January 2022 — 2025
+
+**Analytical & Problem-Solving Skills:**
+- Analyzed complex property damage scenarios and assessed coverage eligibility using data-driven decision-making processes similar to troubleshooting technical issues
+- Evaluated and prioritized high volumes of claims efficiently, demonstrating ability to manage multiple concurrent tasks under pressure
+
+**Technical Proficiency:**
+- Utilized specialized software systems (Guidewire, Xactimate) for claims processing, documentation, and workflow management
+- Mastered remote collaboration tools and virtual communication platforms for distributed team coordination
+- Created detailed reports and documentation following standardized procedures and compliance requirements
+
+**Stakeholder Communication & Client Management:**
+- Delivered excellent customer service while managing difficult situations and setting appropriate expectations
+- Communicated complex technical assessments to non-technical stakeholders (policyholders, contractors)
+- Negotiated settlements and coordinated with multiple parties (adjusters, engineers, contractors) to resolve issues
+
+**Process Efficiency:**
+- Streamlined claims processing workflows to improve turnaround times
+- Maintained accuracy and attention to detail while working with large datasets
+
+---
+
+## Labs
+
+> All labs are located on the [`labs`](https://github.com/vanessa9373/portfolio/tree/labs/labs) branch.
+
+### Infrastructure & Cloud (Labs 01–04)
+
+<table>
+  <tr>
+    <td width="60"><strong>01</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/01-cloud-migration">Enterprise Cloud Migration — On-Prem to AWS</a></h4>
+      <p>End-to-end migration of legacy on-premises infrastructure to AWS. Re-architected monolithic applications into containerized microservices on ECS Fargate with Aurora PostgreSQL and full IaC automation.</p>
+      <p>
+        <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" />
+        <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+        <img src="https://img.shields.io/badge/ECS_Fargate-FF9900?style=flat-square&logo=amazonecs&logoColor=white" />
+      </p>
+      <p><strong>Results:</strong> 35% cost reduction &bull; 99.95% uptime &bull; 80% faster provisioning</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>02</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/02-multi-cloud-architecture">Multi-Cloud Hybrid Architecture — AWS & Azure</a></h4>
+      <p>Hybrid multi-cloud architecture spanning AWS and Azure for a financial services client with secure cross-cloud VPN connectivity and SOC 2 compliance.</p>
+      <p>
+        <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" />
+        <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+        <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+      </p>
+      <p><strong>Results:</strong> 99.99% availability &bull; SOC 2 compliant &bull; &lt;15 min RTO</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>03</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/03-terraform-modules">Multi-Cloud Terraform Module Library (AWS + Azure + GCP)</a></h4>
+      <p>40 reusable, production-grade Terraform modules across AWS (16), Azure (12), and GCP (12) — used across 10+ engagements for consistent, secure infrastructure deployments.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+        <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" />
+        <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+        <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+      </p>
+      <p><strong>Results:</strong> 40 modules &bull; 3 clouds &bull; 96% faster provisioning</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>04</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/04-iac-terraform-ansible">Infrastructure as Code — Terraform & Ansible</a></h4>
+      <p>Production-ready IaC framework using Terraform for provisioning and Ansible for configuration management. Covers VPC, EC2, EKS, ALB, server hardening, monitoring agents, and zero-downtime rolling deployments across dev, staging, and production.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+        <img src="https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white" />
+        <img src="https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white" />
+      </p>
+      <p><strong>Results:</strong> Multi-environment promotion &bull; Zero-downtime deploys &bull; Automated hardening</p>
+    </td>
+  </tr>
+</table>
+
+### CI/CD & Deployment (Labs 05–07)
+
+<table>
+  <tr>
+    <td width="60"><strong>05</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/05-cicd-kubernetes">CI/CD Pipeline & Kubernetes Deployment Platform</a></h4>
+      <p>Fully automated GitOps-based CI/CD platform using GitHub Actions, ArgoCD, and Amazon EKS with zero-downtime deployments and progressive rollouts.</p>
+      <p><strong>Results:</strong> 10x deploy frequency &bull; Zero-downtime &bull; 30s rollback</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>06</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/06-cicd-gitops">CI/CD Pipeline with GitOps</a></h4>
+      <p>Automated CI/CD pipeline where Git is the single source of truth for Kubernetes deployments.</p>
+      <p><strong>Results:</strong> Fully automated pipeline &bull; Git as single source of truth</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>07</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/07-cicd-argocd-rollouts">CI/CD with ArgoCD & Argo Rollouts</a></h4>
+      <p>Production-grade CI/CD with ArgoCD GitOps and Argo Rollouts for canary analysis and progressive delivery.</p>
+      <p><strong>Results:</strong> Canary deployments &bull; Automated rollback &bull; Security scanning</p>
+    </td>
+  </tr>
+</table>
+
+### Observability & Monitoring (Labs 08–10)
+
+<table>
+  <tr>
+    <td width="60"><strong>08</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/08-kubernetes-observability">Kubernetes Observability Platform</a></h4>
+      <p>Prometheus metrics, Grafana dashboards, alerting, and auto-scaling for 12-service microservices on K8s.</p>
+      <p><strong>Results:</strong> 12 microservices monitored &bull; Real-time alerting &bull; Auto-scaling</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>09</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/09-sre-observability-slo">SRE Observability & SLO Platform</a></h4>
+      <p>Full observability stack with SLO/SLI dashboards and multi-window burn-rate alerting for 50+ microservices.</p>
+      <p><strong>Results:</strong> 99.95% SLO achieved &bull; 60% fewer incidents</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="60"><strong>10</strong></td>
+    <td>
+      <h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/10-logging-tracing-pipeline">Logging & Tracing Pipeline (EFK + OpenTelemetry + Jaeger)</a></h4>
+      <p>Centralized logging (EFK stack) and distributed tracing (OpenTelemetry + Jaeger).</p>
+      <p><strong>Results:</strong> Centralized logging &bull; Distributed tracing &bull; Log-trace correlation</p>
+    </td>
+  </tr>
+</table>
+
+### Incident Response & Resilience (Labs 11–14)
+
+<table>
+  <tr>
+    <td width="60"><strong>11</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/11-incident-response-slo">Incident Response & SLO Monitoring</a></h4></td>
+  </tr>
+  <tr>
+    <td width="60"><strong>12</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/12-incident-response-postmortem">Automated Incident Response & Postmortem Pipeline</a></h4></td>
+  </tr>
+  <tr>
+    <td width="60"><strong>13</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/13-chaos-engineering-aws">Chaos Engineering & Resilience Testing (AWS FIS)</a></h4></td>
+  </tr>
+  <tr>
+    <td width="60"><strong>14</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/14-chaos-engineering-litmus">Chaos Engineering with Litmus Chaos</a></h4></td>
+  </tr>
+</table>
+
+### Security & Compliance (Labs 15–16)
+
+<table>
+  <tr>
+    <td width="60"><strong>15</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/15-security-compliance">Cloud Security & Compliance Framework</a></h4></td>
+  </tr>
+  <tr>
+    <td width="60"><strong>16</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/16-kubernetes-security">Kubernetes Security — RBAC, Network Policies & Vault</a></h4></td>
+  </tr>
+</table>
+
+### Serverless & Cost Optimization (Labs 17–18)
+
+<table>
+  <tr>
+    <td width="60"><strong>17</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/17-serverless-data-pipeline">Serverless Event-Driven Data Processing Pipeline</a></h4></td>
+  </tr>
+  <tr>
+    <td width="60"><strong>18</strong></td>
+    <td><h4><a href="https://github.com/vanessa9373/portfolio/tree/labs/labs/18-cloud-cost-optimization">Cloud Cost Optimization (FinOps)</a></h4></td>
+  </tr>
+</table>
+
+### Kubernetes Mastery Guide (18 Labs)
+
+> Located at [`labs/kubernetes/`](https://github.com/vanessa9373/portfolio/tree/labs/labs/kubernetes) on the `labs` branch.
+
+<table>
+  <tr>
+    <th>Level</th>
+    <th>Labs</th>
+    <th>Topics</th>
+  </tr>
+  <tr>
+    <td><strong>Beginner</strong><br/>(0-2 yrs)</td>
+    <td>K8S-01 — K8S-04</td>
+    <td>Pods, Deployments, Services, Storage, Ingress, Jobs/CronJobs</td>
+  </tr>
+  <tr>
+    <td><strong>Intermediate</strong><br/>(2-5 yrs)</td>
+    <td>K8S-05 — K8S-09</td>
+    <td>StatefulSets, Helm Charts, DaemonSets, Autoscaling, Scheduling</td>
+  </tr>
+  <tr>
+    <td><strong>Advanced</strong><br/>(5-10 yrs)</td>
+    <td>K8S-10 — K8S-14</td>
+    <td>Istio Service Mesh, Multi-Tenancy, Operators/CRDs, GitOps, Multi-Cluster</td>
+  </tr>
+  <tr>
+    <td><strong>Expert</strong><br/>(10-15+ yrs)</td>
+    <td>K8S-15 — K8S-18</td>
+    <td>Platform Engineering, Control Plane Internals, DR/Hardening, FinOps</td>
+  </tr>
+</table>
+
+---
+
+## Contact
+
+I'm actively seeking **Solutions Architect**, **Cloud Engineer**, **DevOps Engineer**, **SRE**, and **Cloud Consultant** opportunities.
+
+| | |
+|---|---|
+| **Email** | [vanessa93730@gmail.com](mailto:vanessa93730@gmail.com) |
+| **LinkedIn** | [linkedin.com/in/jenella-v](https://www.linkedin.com/in/jenella-v-4a4b963ab/) |
+| **GitHub** | [github.com/vanessa9373](https://github.com/vanessa9373) |
+| **Portfolio** | [vanessa9373.github.io/portfolio](https://vanessa9373.github.io/portfolio/) |
+| **Location** | Remote |
+
+---
+
+<p align="center">
+  <sub>Built with Terraform, Python, Kubernetes, and a passion for reliable infrastructure.</sub>
+</p>
