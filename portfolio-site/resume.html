@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanessa Awo - Platform Engineer / SRE Resume</title>
+<style>
+  @page { margin: 0.5in 0.6in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.5in 0.6in;
+  }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 16px; border-bottom: 2px solid #1a3c5e; padding-bottom: 12px; }
+  .header h1 { font-size: 22pt; color: #1a3c5e; letter-spacing: 1px; margin-bottom: 4px; }
+  .header .subtitle { font-size: 11.5pt; color: #2c6faa; font-weight: 600; margin-bottom: 6px; }
+  .header .contact { font-size: 9.5pt; color: #444; }
+  .header .contact span { margin: 0 6px; }
+  .header .contact .sep { color: #1a3c5e; font-weight: bold; }
+
+  /* Section */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: #1a3c5e;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 1.5px solid #1a3c5e;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+  }
+
+  /* Summary */
+  .summary { font-size: 10.5pt; color: #2a2a2a; }
+
+  /* Experience */
+  .job { margin-bottom: 12px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-title { font-weight: 700; font-size: 11pt; color: #1a1a1a; }
+  .job-date { font-size: 9.5pt; color: #555; font-style: italic; }
+  .job-company { font-size: 10pt; color: #2c6faa; font-weight: 600; margin-bottom: 4px; }
+  .job ul { padding-left: 18px; }
+  .job li { margin-bottom: 2px; font-size: 10.2pt; }
+  .job li::marker { color: #1a3c5e; }
+
+  /* Projects */
+  .project { margin-bottom: 10px; }
+  .project-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .project-name { font-weight: 700; font-size: 10.5pt; color: #1a1a1a; }
+  .project-metrics { font-size: 9.5pt; color: #555; font-style: italic; }
+  .project-desc { font-size: 10.2pt; margin-top: 2px; }
+
+  /* Skills */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+  .skill-category { font-size: 10.2pt; }
+  .skill-category strong { color: #1a3c5e; }
+
+  /* Certs & Education */
+  .cert-item, .edu-item { margin-bottom: 4px; font-size: 10.2pt; }
+  .cert-item strong, .edu-item strong { color: #1a1a1a; }
+  .cert-date, .edu-date { color: #555; font-style: italic; font-size: 9.5pt; }
+
+  /* Keywords bar */
+  .keywords { font-size: 9pt; color: #666; margin-top: 10px; text-align: center; border-top: 1px solid #ddd; padding-top: 6px; }
+
+  /* Print nav bar at top */
+  .resume-nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0 16px; margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .resume-nav a { color: #2c6faa; text-decoration: none; font-size: 10pt; }
+  .resume-nav a:hover { text-decoration: underline; }
+  .resume-nav .print-btn {
+    background: #1a3c5e; color: #fff; border: none; padding: 6px 16px;
+    border-radius: 4px; cursor: pointer; font-size: 10pt;
+  }
+  .resume-nav .print-btn:hover { background: #2c6faa; }
+
+  @media print {
+    body { padding: 0; }
+    .section { break-inside: avoid; }
+    .resume-nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="resume-nav">
+  <a href="index.html">&larr; Back to Portfolio</a>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ========== HEADER ========== -->
+<div class="header">
+  <h1>VANESSA AWO</h1>
+  <div class="subtitle">Platform Engineer &nbsp;|&nbsp; Site Reliability Engineer &nbsp;|&nbsp; Cloud &amp; DevOps</div>
+  <div class="contact">
+    <span>Seattle, WA (Remote)</span>
+    <span class="sep">|</span>
+    <span>jenellaawo93@gmail.com</span>
+    <span class="sep">|</span>
+    <span>(202) 415-9373</span>
+    <span class="sep">|</span>
+    <span>linkedin.com/in/vanessaa-019921374</span>
+    <span class="sep">|</span>
+    <span>github.com/vanessa9373</span>
+    <span class="sep">|</span>
+    <span>vanessa9373.github.io/portfolio</span>
+  </div>
+</div>
+
+<!-- ========== SUMMARY ========== -->
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <div class="summary">
+    Entry-level Cloud Engineer focused on AWS architecture and site reliability. Strong interest in building scalable and fault-tolerant cloud systems. Familiar with designing cloud infrastructure that supports reliable performance and growth. Background in high-pressure operational environments builds strong problem solving and decision making skills. Hands-on experience with core AWS services and cloud deployment practices. Clear communicator who works well with teams and focuses on practical solutions that meet technical and business needs.
+  </div>
+</div>
+
+<!-- ========== TECHNICAL SKILLS ========== -->
+<div class="section">
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-category"><strong>Cloud Computing &ndash; AWS:</strong> EC2, S3, VPC, IAM, Lambda, RDS, DynamoDB, Redshift, Systems Manager (SSM), CloudWatch, CloudFormation, CloudFront, Route 53, SNS, SQS, Auto Scaling, Elastic Load Balancing, ECS, AWS Backup</div>
+    <div class="skill-category"><strong>DevOps &amp; Infrastructure as Code:</strong> Terraform, Docker, Kubernetes, Helm, Jenkins, GitHub Actions, ArgoCD, CI/CD Pipelines</div>
+    <div class="skill-category"><strong>Monitoring &amp; Observability:</strong> Prometheus, Grafana, ELK Stack, CloudWatch Dashboards &amp; Alarms, SNS Alerts, Distributed Tracing</div>
+    <div class="skill-category"><strong>Networking:</strong> VPC, Subnets, Security Groups, NACLs, Internet Gateways, Route Tables, Load Balancers, DNS, TCP/IP Protocols</div>
+    <div class="skill-category"><strong>Linux &amp; Scripting:</strong> Linux OS (Ubuntu, Amazon Linux), Bash Shell Scripting, SSH, File &amp; Directory Management, User &amp; Group Management, File Permissions, Process Management, Python</div>
+    <div class="skill-category"><strong>Databases:</strong> MySQL, PostgreSQL, Redis, Amazon RDS, DynamoDB, Redshift</div>
+    <div class="skill-category"><strong>Operating Systems &amp; AI:</strong> Linux, Windows, ChatGPT, Prompt Engineering, Claude AI, Gemini</div>
+    <div class="skill-category"><strong>Software &amp; Productivity:</strong> Microsoft Office Suite (Word, Excel, PowerPoint, Outlook), Google Workspace, Guidewire, Xactimate, XactAnalysis</div>
+  </div>
+</div>
+
+<!-- ========== EXPERIENCE ========== -->
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Claims Adjuster</span>
+      <span class="job-date">02/2022 &ndash; 03/2026</span>
+    </div>
+    <div class="job-company">Pilot Catastrophe Services &mdash; Fort Worth, TX</div>
+    <ul>
+      <li>Managed a pipeline of one-hundred-plus simultaneous active claims while consistently meeting SLA deadlines and maintaining full compliance with state regulations and policy terms</li>
+      <li>Streamlined distributed team workflows across high-volume caseloads, reducing claims processing errors and improving end-to-end case resolution turnaround times</li>
+      <li>Leveraged Guidewire, Xactimate, and XactAnalysis to optimize claims tracking and documentation accuracy, cutting manual inefficiencies and improving audit readiness</li>
+      <li>Identified and escalated suspected fraudulent claims to the Special Investigations Unit by detecting documentation inconsistencies, directly supporting loss prevention efforts and reducing organizational risk exposure</li>
+      <li>Negotiated complex property loss settlements with adjusters, engineers, and contractors, consistently achieving fair and defensible resolutions while minimizing organizational liability</li>
+      <li>Translated complex technical assessments and coverage decisions into clear communications for policyholders and non-technical stakeholders, improving client satisfaction and reducing escalations</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== KEY PROJECTS ========== -->
+<div class="section">
+  <div class="section-title">Projects</div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">SRE Production-Grade Microservices Infrastructure</span>
+      <span class="project-metrics">02/2026</span>
+    </div>
+    <p style="font-size:9.5pt;color:#555;margin-bottom:3px;">AWS | Kubernetes | Docker | Terraform | Helm | ArgoCD | GitHub Actions | Prometheus | Grafana | ELK Stack | NGINX | PostgreSQL | Redis</p>
+    <ul style="padding-left:18px;">
+      <li class="project-desc">Architected a multi-AZ Kubernetes infrastructure using Terraform and a GitOps-driven CI/CD pipeline with ArgoCD and GitHub Actions for automated builds, deployments, and rollbacks; validated 100% resiliency under node failure and traffic spikes using Chaos Mesh</li>
+      <li class="project-desc">Built full-stack observability using Prometheus, Grafana, and the ELK Stack implementing SLOs, SLIs, and error budget tracking&mdash;and designed a cross-region backup and disaster recovery strategy achieving zero data loss across all services</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">High-Availability WordPress Site with Infrastructure as Code</span>
+      <span class="project-metrics">07/2025</span>
+    </div>
+    <p style="font-size:9.5pt;color:#555;margin-bottom:3px;">AWS (EC2, RDS, S3, CloudFront, Auto Scaling, CloudFormation, CloudWatch, Route 53) | WordPress | MySQL</p>
+    <ul style="padding-left:18px;">
+      <li class="project-desc">Reduced infrastructure provisioning time from two-plus hours to fifteen minutes by authoring CloudFormation templates that automated deployment of Auto Scaling Groups, RDS Multi-AZ, and CloudFront CDN across networking, compute, database, and storage layers</li>
+      <li class="project-desc">Ensured continuous uptime visibility and data protection by building CloudWatch dashboards and alarms to monitor error rates and response times, and implementing AWS Backup with S3 lifecycle policies for automated retention</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Automated CI/CD Pipeline for Web Application Deployment</span>
+      <span class="project-metrics">06/2025</span>
+    </div>
+    <p style="font-size:9.5pt;color:#555;margin-bottom:3px;">AWS (EC2, ECS, VPC, CloudWatch, SNS) | Terraform | Jenkins | Docker | GitHub | Node.js</p>
+    <ul style="padding-left:18px;">
+      <li class="project-desc">Reduced manual deployment time by eighty-five percent by building an end-to-end CI/CD pipeline using Jenkins, GitHub, and Docker to automate Node.js application deployment to AWS EC2 and ECS, with Terraform-provisioned infrastructure including VPC, security groups, and Application Load Balancer</li>
+      <li class="project-desc">Accelerated incident response by configuring CloudWatch custom metrics and SNS email alerts that delivered real-time application health notifications, enabling proactive monitoring across the full deployment environment</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== EDUCATION & CERTIFICATIONS ========== -->
+<div class="section">
+  <div class="section-title">Education and Certifications</div>
+
+  <div class="edu-item">
+    <strong>Per Scholas | AWS Re/Start</strong> <span class="edu-date">&mdash; Seattle, WA &nbsp;&bull;&nbsp; Expected 08/2026</span>
+    <div style="font-size:9.8pt;margin-top:2px;">Rigorous, full-time 15-week virtual program covering Cloud Computing Services, Networking, Databases, and AWS Cloud Management, Monitoring, and Governance. Focus: Linux, Python, Auto Scaling, EC2, Lambda, Shell Scripting, Cloud Concepts, Network Firewall, AWS Systems Manager, Redshift, and DynamoDB.</div>
+  </div>
+
+  <div class="edu-item" style="margin-top:6px;">
+    <strong>Bachelor of Science in Computer Science</strong> <span class="edu-date">&mdash; Western Governors University &nbsp;&bull;&nbsp; 07/2023 &ndash; 07/2026</span>
+  </div>
+
+  <div class="edu-item">
+    <strong>AWS Certified Solutions Architect &ndash; Associate</strong> <span class="edu-date">&mdash; Amazon Web Services &nbsp;&bull;&nbsp; 09/2025 &ndash; 07/2028</span>
+  </div>
+
+  <div class="edu-item">
+    <strong>Linux Essentials Certificate</strong> <span class="edu-date">&mdash; Linux Professional Institute (LPI) &nbsp;&bull;&nbsp; 05/2025</span>
+  </div>
+
+  <div class="edu-item">
+    <strong>Certification in Data Analytics</strong> <span class="edu-date">&mdash; Colaberry School of Data Analytics, Plano, TX &nbsp;&bull;&nbsp; 07/2022 &ndash; 07/2023</span>
+  </div>
+
+  <div class="edu-item">
+    <strong>Bachelor&rsquo;s in Business Management</strong> <span class="edu-date">&mdash; University of Douala &nbsp;&bull;&nbsp; 10/2015 &ndash; 06/2019</span>
+  </div>
+</div>
+
+<!-- ========== ATS KEYWORD BAR ========== -->
+<div class="keywords">
+  Cloud Engineer &bull; AWS &bull; EC2 &bull; S3 &bull; VPC &bull; IAM &bull; Lambda &bull; RDS &bull; DynamoDB &bull; CloudFormation &bull; CloudWatch &bull; Terraform &bull; Kubernetes &bull; Docker &bull; Helm &bull; Jenkins &bull; GitHub Actions &bull; ArgoCD &bull; CI/CD &bull; Prometheus &bull; Grafana &bull; ELK Stack &bull; Linux &bull; Bash &bull; Python &bull; SRE &bull; Site Reliability Engineering &bull; DevOps
+</div>
+
+</body>
+</html>

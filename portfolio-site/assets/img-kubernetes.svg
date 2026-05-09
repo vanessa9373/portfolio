@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="90" rx="130" ry="80" fill="#60a5fa" opacity="0.05"/>
+  <!-- Outer ring -->
+  <circle cx="200" cy="90" r="68" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.3"/>
+  <!-- Helm (steering wheel) spokes — 6 spokes -->
+  <line x1="200" y1="90" x2="200" y2="28" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="90" x2="255" y2="57" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="90" x2="255" y2="123" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="90" x2="200" y2="152" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="90" x2="145" y2="123" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <line x1="200" y1="90" x2="145" y2="57" stroke="#60a5fa" stroke-width="1.5" opacity="0.6"/>
+  <!-- Pod circles at spoke ends -->
+  <circle cx="200" cy="28" r="10" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <circle cx="255" cy="57" r="10" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <circle cx="255" cy="123" r="10" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <circle cx="200" cy="152" r="10" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <circle cx="145" cy="123" r="10" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <circle cx="145" cy="57" r="10" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <!-- Inner ring + center hub -->
+  <circle cx="200" cy="90" r="30" fill="#0d1f3c" stroke="#60a5fa" stroke-width="1.8"/>
+  <circle cx="200" cy="90" r="12" fill="#60a5fa" opacity="0.2"/>
+  <text x="200" y="94" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="monospace" font-weight="bold">K8s</text>
+</svg>

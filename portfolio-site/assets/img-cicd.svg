@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="90" rx="170" ry="80" fill="#3b82f6" opacity="0.05"/>
+  <!-- Stage connectors -->
+  <line x1="104" y1="90" x2="148" y2="90" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="196" y1="90" x2="204" y2="90" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="252" y1="90" x2="296" y2="90" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Stage 1: Code -->
+  <circle cx="76" cy="90" r="28" fill="#0d1f3c" stroke="#3b82f6" stroke-width="1.8"/>
+  <polyline points="66,85 72,91 86,78" stroke="#3b82f6" stroke-width="0" fill="none"/>
+  <text x="76" y="88" text-anchor="middle" fill="#3b82f6" font-size="9" font-family="monospace" font-weight="bold">&lt;/&gt;</text>
+  <text x="76" y="128" text-anchor="middle" fill="#3b82f6" font-size="8" font-family="monospace" opacity="0.6">CODE</text>
+  <!-- Stage 2: Build -->
+  <circle cx="174" cy="90" r="28" fill="#0d1f3c" stroke="#3b82f6" stroke-width="1.8"/>
+  <rect x="162" y="80" width="24" height="18" rx="3" fill="none" stroke="#3b82f6" stroke-width="1.4"/>
+  <line x1="166" y1="86" x2="182" y2="86" stroke="#3b82f6" stroke-width="1.2" opacity="0.6"/>
+  <line x1="166" y1="91" x2="178" y2="91" stroke="#3b82f6" stroke-width="1.2" opacity="0.4"/>
+  <text x="174" y="128" text-anchor="middle" fill="#3b82f6" font-size="8" font-family="monospace" opacity="0.6">BUILD</text>
+  <!-- Stage 3: Test -->
+  <circle cx="226" cy="90" r="28" fill="#0d1f3c" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.6"/>
+  <text x="226" y="128" text-anchor="middle" fill="#3b82f6" font-size="8" font-family="monospace" opacity="0.4">TEST</text>
+  <line x1="218" y1="86" x2="222" y2="92" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="222" y1="92" x2="234" y2="82" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Stage 4: Deploy -->
+  <circle cx="324" cy="90" r="28" fill="#0d1f3c" stroke="#3b82f6" stroke-width="1.8"/>
+  <polygon points="316,82 316,98 332,90" fill="#3b82f6" opacity="0.7"/>
+  <text x="324" y="128" text-anchor="middle" fill="#3b82f6" font-size="8" font-family="monospace" opacity="0.6">DEPLOY</text>
+</svg>

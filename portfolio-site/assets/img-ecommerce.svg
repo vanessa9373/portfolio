@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="82" rx="180" ry="80" fill="#f97316" opacity="0.05"/>
+
+  <!-- Browser window -->
+  <rect x="44" y="16" width="312" height="130" rx="8" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="44" y="16" width="312" height="26" rx="8" fill="#162240"/>
+  <rect x="44" y="30" width="312" height="12" fill="#162240"/>
+  <!-- Traffic lights -->
+  <circle cx="62" cy="29" r="4.5" fill="#ef4444" opacity="0.65"/>
+  <circle cx="76" cy="29" r="4.5" fill="#fbbf24" opacity="0.65"/>
+  <circle cx="90" cy="29" r="4.5" fill="#34d399" opacity="0.65"/>
+  <!-- URL bar -->
+  <rect x="106" y="23" width="188" height="12" rx="3" fill="#0a1628" opacity="0.8"/>
+  <circle cx="116" cy="29" r="3" fill="#f97316" opacity="0.3"/>
+
+  <!-- Product card 1 -->
+  <rect x="58" y="52" width="84" height="80" rx="5" fill="#162240"/>
+  <rect x="58" y="52" width="84" height="44" rx="5" fill="#f97316" opacity="0.13"/>
+  <rect x="64" y="102" width="44" height="6" rx="2" fill="#f97316" opacity="0.4"/>
+  <rect x="64" y="113" width="28" height="5" rx="2" fill="#f97316" opacity="0.22"/>
+  <circle cx="100" cy="74" r="12" fill="#f97316" opacity="0.12"/>
+
+  <!-- Product card 2 (highlighted) -->
+  <rect x="158" y="52" width="84" height="80" rx="5" fill="#162240" stroke="#f97316" stroke-width="1"/>
+  <rect x="158" y="52" width="84" height="44" rx="5" fill="#f97316" opacity="0.2"/>
+  <rect x="164" y="102" width="44" height="6" rx="2" fill="#f97316" opacity="0.5"/>
+  <rect x="164" y="113" width="28" height="5" rx="2" fill="#f97316" opacity="0.3"/>
+  <circle cx="200" cy="74" r="12" fill="#f97316" opacity="0.2"/>
+
+  <!-- Product card 3 -->
+  <rect x="258" y="52" width="84" height="80" rx="5" fill="#162240"/>
+  <rect x="258" y="52" width="84" height="44" rx="5" fill="#f97316" opacity="0.08"/>
+  <rect x="264" y="102" width="44" height="6" rx="2" fill="#f97316" opacity="0.35"/>
+  <rect x="264" y="113" width="28" height="5" rx="2" fill="#f97316" opacity="0.18"/>
+  <circle cx="300" cy="74" r="12" fill="#f97316" opacity="0.08"/>
+
+  <!-- Cart icon (bottom center) -->
+  <g transform="translate(178, 148)" fill="none" stroke="#f97316" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
+    <path d="M2 2 H6 L10 18 H26 L30 8 H8"/>
+    <circle cx="13" cy="24" r="2.5" fill="#f97316" stroke="none"/>
+    <circle cx="24" cy="24" r="2.5" fill="#f97316" stroke="none"/>
+  </g>
+</svg>

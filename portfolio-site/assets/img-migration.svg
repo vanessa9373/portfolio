@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="90" rx="170" ry="90" fill="#f97316" opacity="0.05"/>
+  <!-- Server rack -->
+  <rect x="72" y="42" width="78" height="14" rx="3" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="72" y="61" width="78" height="14" rx="3" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="72" y="80" width="78" height="14" rx="3" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="72" y="99" width="78" height="14" rx="3" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <rect x="72" y="118" width="78" height="14" rx="3" fill="#0d1f3c" stroke="#f97316" stroke-width="1.5"/>
+  <circle cx="82" cy="49" r="2.5" fill="#f97316" opacity="0.9"/>
+  <circle cx="82" cy="68" r="2.5" fill="#f97316" opacity="0.6"/>
+  <circle cx="82" cy="87" r="2.5" fill="#f97316" opacity="0.4"/>
+  <circle cx="82" cy="106" r="2.5" fill="#f97316" opacity="0.25"/>
+  <circle cx="82" cy="125" r="2.5" fill="#f97316" opacity="0.1"/>
+  <!-- Dashed arrow -->
+  <line x1="158" y1="90" x2="226" y2="90" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polyline points="221,84 229,90 221,96" stroke="#f97316" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Cloud (bezier) -->
+  <path d="M254 118 C234 118 222 102 232 88 C224 68 242 54 260 62 C264 48 280 42 296 48 C312 42 330 50 330 66 C346 66 354 82 346 96 C340 110 322 118 306 116 Z" fill="#0d1f3c" stroke="#f97316" stroke-width="1.8"/>
+  <!-- Cloud shine dot -->
+  <circle cx="270" cy="72" r="3" fill="#f97316" opacity="0.5"/>
+</svg>

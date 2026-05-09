@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="90" rx="170" ry="80" fill="#fb923c" opacity="0.04"/>
+  <!-- Chart area -->
+  <rect x="48" y="32" width="304" height="110" rx="6" fill="#0d1f3c" stroke="#fb923c" stroke-width="1.2" fill-opacity="1" stroke-opacity="0.35"/>
+  <!-- Grid lines -->
+  <line x1="48" y1="60" x2="352" y2="60" stroke="#fb923c" stroke-width="0.5" opacity="0.12"/>
+  <line x1="48" y1="87" x2="352" y2="87" stroke="#fb923c" stroke-width="0.5" opacity="0.12"/>
+  <line x1="48" y1="114" x2="352" y2="114" stroke="#fb923c" stroke-width="0.5" opacity="0.12"/>
+  <!-- Area fill under chart -->
+  <path d="M60 118 L96 108 L130 100 L164 88 L200 72 L236 60 L272 48 L308 42 L340 36 L340 142 L60 142 Z" fill="#fb923c" opacity="0.07"/>
+  <!-- Main chart line -->
+  <polyline points="60,118 96,108 130,100 164,88 200,72 236,60 272,48 308,42 340,36" fill="none" stroke="#fb923c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Data points -->
+  <circle cx="96"  cy="108" r="3.5" fill="#fb923c" opacity="0.7"/>
+  <circle cx="164" cy="88"  r="3.5" fill="#fb923c" opacity="0.7"/>
+  <circle cx="236" cy="60"  r="3.5" fill="#fb923c" opacity="0.7"/>
+  <circle cx="308" cy="42"  r="4.5" fill="#fb923c" opacity="0.9"/>
+  <!-- Y-axis labels -->
+  <text x="42" y="64"  text-anchor="end" fill="#fb923c" font-size="8" font-family="monospace" opacity="0.4">99.9</text>
+  <text x="42" y="118" text-anchor="end" fill="#fb923c" font-size="8" font-family="monospace" opacity="0.4">99.0</text>
+  <!-- Bottom pillars -->
+  <rect x="60"  y="150" width="72" height="18" rx="3" fill="#fb923c" fill-opacity="0.12" stroke="#fb923c" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="96"  y="163" text-anchor="middle" fill="#fb923c" font-size="8" font-family="monospace" opacity="0.6">metrics</text>
+  <rect x="164" y="150" width="72" height="18" rx="3" fill="#a78bfa" fill-opacity="0.1"  stroke="#a78bfa" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="200" y="163" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="monospace" opacity="0.5">traces</text>
+  <rect x="268" y="150" width="72" height="18" rx="3" fill="#34d399" fill-opacity="0.1"  stroke="#34d399" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="304" y="163" text-anchor="middle" fill="#34d399" font-size="8" font-family="monospace" opacity="0.5">logs</text>
+</svg>

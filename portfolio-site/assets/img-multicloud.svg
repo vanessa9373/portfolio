@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <!-- Connectors -->
+  <line x1="145" y1="72" x2="178" y2="90" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <line x1="255" y1="72" x2="222" y2="90" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <line x1="200" y1="120" x2="200" y2="102" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- AWS cloud (left) -->
+  <path d="M80 80 C68 80 60 70 66 62 C62 50 72 42 82 46 C84 38 92 34 100 38 C108 34 118 40 118 50 C128 50 132 60 126 68 C122 76 112 80 104 78 Z" fill="#0d1f3c" stroke="#f97316" stroke-width="1.8"/>
+  <text x="100" y="98" text-anchor="middle" fill="#f97316" font-size="8" font-family="monospace" opacity="0.7">AWS</text>
+  <!-- Azure cloud (right) -->
+  <path d="M282 80 C270 80 262 70 268 62 C264 50 274 42 284 46 C286 38 294 34 302 38 C310 34 320 40 320 50 C330 50 334 60 328 68 C324 76 314 80 306 78 Z" fill="#0d1f3c" stroke="#4aa3e0" stroke-width="1.8"/>
+  <text x="301" y="98" text-anchor="middle" fill="#4aa3e0" font-size="8" font-family="monospace" opacity="0.7">AZURE</text>
+  <!-- GCP cloud (center bottom) -->
+  <path d="M162 148 C150 148 142 138 148 130 C144 118 154 110 164 114 C166 106 174 102 182 106 C190 102 200 108 200 118 C210 118 214 128 208 136 C204 144 194 148 186 146 Z" fill="#0d1f3c" stroke="#6ca4f7" stroke-width="1.8"/>
+  <text x="180" y="162" text-anchor="middle" fill="#6ca4f7" font-size="8" font-family="monospace" opacity="0.7">GCP</text>
+  <!-- Center hub -->
+  <circle cx="200" cy="90" r="14" fill="#0d1f3c" stroke="#8b5cf6" stroke-width="1.8"/>
+  <circle cx="200" cy="90" r="5" fill="#8b5cf6" opacity="0.7"/>
+</svg>

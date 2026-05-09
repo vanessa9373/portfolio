@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="82" rx="110" ry="80" fill="#f87171" opacity="0.05"/>
+  <!-- Bell outline -->
+  <path d="M200 22 C178 22 162 38 160 56 L152 102 L248 102 L240 56 C238 38 222 22 200 22 Z" fill="#0d1f3c" stroke="#f87171" stroke-width="1.8"/>
+  <path d="M186 102 C186 110 192 116 200 116 C208 116 214 110 214 102" fill="#0d1f3c" stroke="#f87171" stroke-width="1.8"/>
+  <!-- Alert dot on bell -->
+  <circle cx="236" cy="38" r="10" fill="#f87171"/>
+  <text x="236" y="43" text-anchor="middle" fill="#0a1628" font-size="12" font-weight="bold">!</text>
+  <!-- Pulse rings -->
+  <circle cx="200" cy="62" r="24" fill="none" stroke="#f87171" stroke-width="1" opacity="0.3"/>
+  <circle cx="200" cy="62" r="40" fill="none" stroke="#f87171" stroke-width="1" opacity="0.15"/>
+  <!-- Timeline at bottom -->
+  <line x1="60" y1="148" x2="340" y2="148" stroke="#f87171" stroke-width="1" opacity="0.3"/>
+  <circle cx="90" cy="148" r="4" fill="#f87171" opacity="0.3"/>
+  <circle cx="150" cy="148" r="4" fill="#f87171" opacity="0.5"/>
+  <circle cx="200" cy="148" r="6" fill="#f87171" opacity="0.9"/>
+  <circle cx="260" cy="148" r="4" fill="#f87171" opacity="0.4"/>
+  <circle cx="310" cy="148" r="4" fill="#f87171" opacity="0.2"/>
+</svg>

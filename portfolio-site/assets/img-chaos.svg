@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="90" rx="160" ry="80" fill="#fbbf24" opacity="0.04"/>
+  <!-- Network connections (healthy) -->
+  <line x1="200" y1="90" x2="120" y2="50" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="90" x2="280" y2="50" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="90" x2="100" y2="130" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="90" x2="300" y2="130" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+  <line x1="120" y1="50" x2="280" y2="50" stroke="#fbbf24" stroke-width="1" opacity="0.2"/>
+  <line x1="100" y1="130" x2="300" y2="130" stroke="#fbbf24" stroke-width="1" opacity="0.2"/>
+  <!-- Broken connection (fault injected) -->
+  <line x1="200" y1="90" x2="346" y2="90" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <!-- Healthy nodes -->
+  <circle cx="200" cy="90" r="14" fill="#0d1f3c" stroke="#fbbf24" stroke-width="1.8"/>
+  <circle cx="120" cy="50" r="10" fill="#0d1f3c" stroke="#fbbf24" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="280" cy="50" r="10" fill="#0d1f3c" stroke="#fbbf24" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="100" cy="130" r="10" fill="#0d1f3c" stroke="#fbbf24" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="300" cy="130" r="10" fill="#0d1f3c" stroke="#fbbf24" stroke-width="1.5" opacity="0.6"/>
+  <!-- Fault node (red X) -->
+  <circle cx="346" cy="90" r="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.8"/>
+  <line x1="340" y1="84" x2="352" y2="96" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="352" y1="84" x2="340" y2="96" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="200" cy="90" r="5" fill="#fbbf24" opacity="0.8"/>
+</svg>

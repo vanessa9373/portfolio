@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <rect width="400" height="180" fill="#0a1628"/>
+  <ellipse cx="200" cy="90" rx="170" ry="80" fill="#34d399" opacity="0.04"/>
+  <!-- Terminal window -->
+  <rect x="60" y="28" width="280" height="128" rx="8" fill="#0d1f3c" stroke="#34d399" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="60" y="28" width="280" height="28" rx="8" fill="#162240"/>
+  <rect x="60" y="44" width="280" height="12" fill="#162240"/>
+  <circle cx="80" cy="42" r="5" fill="#ef4444" opacity="0.7"/>
+  <circle cx="96" cy="42" r="5" fill="#fbbf24" opacity="0.7"/>
+  <circle cx="112" cy="42" r="5" fill="#34d399" opacity="0.7"/>
+  <!-- Code lines -->
+  <text x="78" y="78" fill="#34d399" font-size="11" font-family="monospace" opacity="0.9">$ terraform apply</text>
+  <text x="78" y="96" fill="#34d399" font-size="11" font-family="monospace" opacity="0.6">  + aws_vpc.main</text>
+  <text x="78" y="112" fill="#34d399" font-size="11" font-family="monospace" opacity="0.5">  + aws_eks_cluster.prod</text>
+  <text x="78" y="128" fill="#34d399" font-size="11" font-family="monospace" opacity="0.4">  + aws_rds_instance.db</text>
+  <text x="78" y="144" fill="#34d399" font-size="11" font-family="monospace" opacity="0.8">Apply complete! 12 added.</text>
+  <!-- Cursor blink -->
+  <rect x="78" y="150" width="8" height="2" fill="#34d399" opacity="0.9"/>
+</svg>
