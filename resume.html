@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vanessa Awo - Solutions Architect Resume</title>
+<title>Vanessa Awo — Solutions Architect | Solutions Engineer | Pre-Sales SE</title>
 <style>
   @page { margin: 0.5in 0.6in; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,7 +17,6 @@
     padding: 0.5in 0.6in;
   }
 
-  /* Header */
   .header { text-align: center; margin-bottom: 16px; border-bottom: 2px solid #1a3c5e; padding-bottom: 12px; }
   .header h1 { font-size: 22pt; color: #1a3c5e; letter-spacing: 1px; margin-bottom: 4px; }
   .header .subtitle { font-size: 11.5pt; color: #2c6faa; font-weight: 600; margin-bottom: 6px; }
@@ -25,7 +24,6 @@
   .header .contact span { margin: 0 6px; }
   .header .contact .sep { color: #1a3c5e; font-weight: bold; }
 
-  /* Section */
   .section { margin-bottom: 14px; }
   .section-title {
     font-size: 11.5pt;
@@ -38,10 +36,8 @@
     margin-bottom: 8px;
   }
 
-  /* Summary */
   .summary { font-size: 10.5pt; color: #2a2a2a; }
 
-  /* Experience */
   .job { margin-bottom: 12px; }
   .job-header { display: flex; justify-content: space-between; align-items: baseline; }
   .job-title { font-weight: 700; font-size: 11pt; color: #1a1a1a; }
@@ -51,27 +47,22 @@
   .job li { margin-bottom: 2px; font-size: 10.2pt; }
   .job li::marker { color: #1a3c5e; }
 
-  /* Projects */
   .project { margin-bottom: 10px; }
   .project-header { display: flex; justify-content: space-between; align-items: baseline; }
   .project-name { font-weight: 700; font-size: 10.5pt; color: #1a1a1a; }
   .project-metrics { font-size: 9.5pt; color: #555; font-style: italic; }
   .project-desc { font-size: 10.2pt; margin-top: 2px; }
 
-  /* Skills */
   .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
   .skill-category { font-size: 10.2pt; }
   .skill-category strong { color: #1a3c5e; }
 
-  /* Certs & Education */
   .cert-item, .edu-item { margin-bottom: 4px; font-size: 10.2pt; }
   .cert-item strong, .edu-item strong { color: #1a1a1a; }
   .cert-date, .edu-date { color: #555; font-style: italic; font-size: 9.5pt; }
 
-  /* Keywords bar */
   .keywords { font-size: 9pt; color: #666; margin-top: 10px; text-align: center; border-top: 1px solid #ddd; padding-top: 6px; }
 
-  /* Print nav bar at top */
   .resume-nav {
     display: flex; justify-content: space-between; align-items: center;
     padding: 10px 0 16px; margin-bottom: 8px;
@@ -100,159 +91,168 @@
   <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
 </div>
 
-<!-- ========== HEADER ========== -->
+<!-- HEADER -->
 <div class="header">
   <h1>VANESSA AWO</h1>
-  <div class="subtitle">Solutions Architect | Cloud &amp; DevOps Engineer | SRE</div>
+  <div class="subtitle">Solutions Architect &nbsp;|&nbsp; Solutions Engineer &nbsp;|&nbsp; Pre-Sales SE</div>
   <div class="contact">
-    <span>Seattle, WA (Remote)</span>
+    <span>Seattle, WA &mdash; Remote-Ready &mdash; Open to Relocation</span>
     <span class="sep">|</span>
     <span>jenellaawo93@gmail.com</span>
     <span class="sep">|</span>
     <span>(202) 415-9373</span>
     <span class="sep">|</span>
-    <span>linkedin.com/in/jenella-v-4a4b963ab</span>
+    <span>linkedin.com/in/vanessajen</span>
     <span class="sep">|</span>
     <span>github.com/vanessa9373</span>
     <span class="sep">|</span>
-    <span>vanessa9373.github.io/portfolio</span>
+    <span>jenellavan.com</span>
   </div>
 </div>
 
-<!-- ========== SUMMARY ========== -->
+<!-- SUMMARY -->
 <div class="section">
   <div class="section-title">Professional Summary</div>
   <div class="summary">
-    AWS Certified Solutions Architect and CKA-certified Kubernetes Administrator who builds cloud infrastructure that scales. Designs and delivers multi-cloud environments across AWS, Azure, and GCP - from reusable Terraform modules to Kubernetes platforms to fully automated CI/CD pipelines. Built 18 production-grade infrastructure labs, an 18-lab Kubernetes Mastery Guide, and a 40-module multi-cloud Terraform library, all open source. Combines a B.S. in Computer Science with a Bachelor&rsquo;s in Business Management to translate business requirements into technical decisions stakeholders understand.
+    AWS-certified cloud professional targeting Solutions Architect, Solutions Engineer, and Pre-Sales SE roles. Designs production-grade AWS architectures with Terraform IaC &mdash; Multi-AZ deployments, multi-account landing zones, and serverless systems &mdash; and delivers live technical POCs with Well-Architected Framework analysis across all 6 pillars. Brings 3+ years of real client-facing, high-stakes communication developed through managing 100+ concurrent engagements under SLA pressure: structured discovery, multi-party negotiation, and translating complex technical decisions into plain business language. Business background (B.S. Business Management) combined with technical depth (AWS SAA-C03, ITIL 4, Terraform, Linux) creates the exact profile great SAs and SEs need.
   </div>
 </div>
 
-<!-- ========== TECHNICAL SKILLS ========== -->
+<!-- TECHNICAL SKILLS -->
 <div class="section">
   <div class="section-title">Technical Skills</div>
   <div class="skills-grid">
-    <div class="skill-category"><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, Google Cloud Platform (GCP)</div>
-    <div class="skill-category"><strong>IaC &amp; Automation:</strong> Terraform, CloudFormation, Ansible, Pulumi</div>
-    <div class="skill-category"><strong>Containers &amp; Orchestration:</strong> Docker, Kubernetes (EKS, AKS, GKE)</div>
-    <div class="skill-category"><strong>CI/CD &amp; GitOps:</strong> GitHub Actions, Jenkins, ArgoCD, Helm, Kustomize</div>
-    <div class="skill-category"><strong>SRE:</strong> SLOs/SLIs, Error Budgets, Incident Response, Chaos Engineering, Toil Reduction</div>
-    <div class="skill-category"><strong>Observability:</strong> Prometheus, Grafana, Loki, OpenTelemetry, Jaeger, PagerDuty</div>
-    <div class="skill-category"><strong>Service Mesh:</strong> Istio, Envoy, mTLS</div>
-    <div class="skill-category"><strong>Networking:</strong> VPC, DNS (Route 53), ALB/NLB, VPN, Direct Connect, ExpressRoute</div>
-    <div class="skill-category"><strong>Security:</strong> IAM, KMS, WAF, Security Hub, GuardDuty, Zero Trust, SOC 2, ISO 27001</div>
-    <div class="skill-category"><strong>Monitoring:</strong> CloudWatch, Azure Monitor, Datadog</div>
-    <div class="skill-category"><strong>Languages &amp; Scripting:</strong> Python, Bash, PowerShell, Go, YAML, JSON</div>
-    <div class="skill-category"><strong>Databases:</strong> RDS, DynamoDB, Aurora, CosmosDB, Redis</div>
-    <div class="skill-category"><strong>Methodology:</strong> Well-Architected Framework, Agile/Scrum, ITIL, Blameless Postmortems</div>
+    <div class="skill-category"><strong>Cloud &amp; Architecture:</strong> AWS (EC2, S3, VPC, IAM, Lambda, RDS, DynamoDB, CloudFront, Route 53, Auto Scaling, ECS, WAF, KMS, GuardDuty, Security Hub)</div>
+    <div class="skill-category"><strong>IaC &amp; Automation:</strong> Terraform, CloudFormation, Ansible, GitHub Actions (OIDC auth)</div>
+    <div class="skill-category"><strong>Networking:</strong> VPC design, Transit Gateway, ALB/NLB, VPN, Route 53, Direct Connect</div>
+    <div class="skill-category"><strong>Security &amp; Governance:</strong> IAM least-privilege, SCPs, KMS CMK, WAF (OWASP/SQLi), IMDSv2, SSM Session Manager</div>
+    <div class="skill-category"><strong>Pre-Sales &amp; SE Skills:</strong> Structured discovery, POC delivery, requirements gathering, stakeholder presentations, TCO analysis</div>
+    <div class="skill-category"><strong>Containers &amp; DevOps:</strong> Docker, Kubernetes (EKS), CI/CD pipelines, ArgoCD, Helm</div>
+    <div class="skill-category"><strong>Observability:</strong> CloudWatch, Prometheus, Grafana, SLO/SLI dashboards</div>
+    <div class="skill-category"><strong>Languages &amp; Scripting:</strong> Python, Bash, Linux</div>
+    <div class="skill-category"><strong>Databases:</strong> RDS MySQL/Aurora (Multi-AZ), DynamoDB, DynamoDB GSI</div>
+    <div class="skill-category"><strong>Methodology:</strong> Well-Architected Framework, ITIL 4, Agile/Scrum, blameless postmortems</div>
   </div>
 </div>
 
-<!-- ========== EXPERIENCE ========== -->
+<!-- EXPERIENCE -->
 <div class="section">
   <div class="section-title">Professional Experience</div>
 
   <div class="job">
     <div class="job-header">
-      <span class="job-title">Cloud &amp; DevOps Engineer</span>
-      <span class="job-date">2024 &ndash; Present</span>
+      <span class="job-title">Cloud Solutions Architect &mdash; Portfolio Projects</span>
+      <span class="job-date">2025 &ndash; Present</span>
     </div>
-    <div class="job-company">Independent / Portfolio Projects - Remote</div>
+    <div class="job-company">Independent Cloud Projects &mdash; Remote</div>
     <ul>
-      <li>Built <strong>18 production-grade infrastructure labs</strong> spanning cloud migration, multi-cloud architecture, CI/CD, SRE, security, and chaos engineering - all open source on GitHub.</li>
-      <li>Designed and implemented a <strong>14-phase DevOps Mastery</strong> e-commerce platform with 6 microservices deployed on EKS using ArgoCD, Istio service mesh, and Prometheus observability.</li>
-      <li>Developed a <strong>40-module multi-cloud Terraform library</strong> (AWS, Azure, GCP) for VPC, EKS, RDS, and IAM, cutting environment provisioning time by 80%.</li>
-      <li>Created an <strong>18-lab Kubernetes Mastery Guide</strong> covering beginner to expert concepts, aligned with CKA certification objectives.</li>
-      <li>Architected enterprise cloud migration from on-prem to AWS, achieving <strong>35% cost reduction</strong> and <strong>99.95% uptime</strong> using ECS Fargate and RDS Aurora.</li>
-      <li>Built a comprehensive SRE observability platform with SLO/SLI dashboards, automated alerting, and error budget tracking, resulting in <strong>60% fewer incidents</strong> across 50+ monitored services.</li>
-      <li>Implemented chaos engineering program using AWS Fault Injection Simulator and Litmus Chaos, identifying <strong>12 failure modes</strong> and improving recovery time by 40%.</li>
-      <li>Established CI/CD pipelines with GitHub Actions and ArgoCD using GitOps practices, increasing deployment frequency <strong>10x</strong> with zero-downtime deployments.</li>
+      <li>Designed and deployed a highly available 3-tier WordPress architecture across 3 AZs using Terraform &mdash; EC2 Auto Scaling, RDS Multi-AZ, CloudFront + S3 OAC, WAF (OWASP/SQLi rules), and KMS CMK encryption; documented with Well-Architected Framework analysis across all 6 pillars.</li>
+      <li>Built a multi-account AWS landing zone with AWS Organizations, 8 SCPs (DenyRootUser, RequireIMDSv2, AllowedRegionsOnly, DenyPublicS3), Transit Gateway hub-and-spoke, IAM Identity Center (SAML 2.0 SSO), and centralized GuardDuty + Security Hub.</li>
+      <li>Delivered a serverless task management API (Lambda/Python/Graviton2, DynamoDB PAY_PER_REQUEST + GSI, API Gateway HTTP API) with GitHub Actions CI/CD using OIDC &mdash; 90% cheaper than EC2+RDS baseline at ~$2.32/month for 1M requests.</li>
+      <li>Built the Cloud Career Hub platform (React + Vite, Firebase Auth, Gemini AI resume writer) deployed to GitHub Pages with role-based access control and admin-protected content.</li>
     </ul>
   </div>
 
   <div class="job">
     <div class="job-header">
-      <span class="job-title">Insurance Claims Adjuster</span>
-      <span class="job-date">Jan 2022 &ndash; 2025</span>
+      <span class="job-title">Claims Adjuster</span>
+      <span class="job-date">Feb 2022 &ndash; Jul 2025</span>
     </div>
-    <div class="job-company">Pilot Catastrophe Services - Remote</div>
+    <div class="job-company">Pilot Catastrophe Services &mdash; Fort Worth, TX (Remote)</div>
     <ul>
-      <li>Analyzed complex property damage scenarios using data-driven decision-making processes transferable to troubleshooting technical infrastructure issues.</li>
-      <li>Evaluated and prioritized high volumes of claims efficiently, managing <strong>multiple concurrent tasks</strong> under tight deadlines.</li>
-      <li>Utilized specialized software systems (Guidewire, Xactimate) for claims processing, documentation, and workflow management.</li>
-      <li>Mastered remote collaboration tools for distributed team coordination across multiple time zones.</li>
-      <li>Communicated complex technical assessments to non-technical stakeholders including policyholders, contractors, and engineers.</li>
-      <li>Streamlined claims processing workflows, improving turnaround times and maintaining accuracy with large datasets.</li>
+      <li>Managed 100+ simultaneous active claims under SLA pressure while maintaining full compliance with state regulations &mdash; mirroring the multi-account, multi-stakeholder cadence of an enterprise SE role.</li>
+      <li>Led structured discovery conversations with policyholders, contractors, and engineers to gather requirements, assess scope, and deliver solutions &mdash; directly analogous to pre-sales discovery and POC delivery.</li>
+      <li>Translated complex technical assessments (structural damage, coverage decisions) into plain-language communications for non-technical clients, reducing escalations and improving satisfaction scores.</li>
+      <li>Negotiated multi-party settlements with adjusters, engineers, and contractors &mdash; multi-stakeholder alignment under constraint, the same skill SEs use during deal cycles.</li>
+      <li>Leveraged Guidewire, Xactimate, and XactAnalysis to optimize workflow accuracy, cutting manual processing errors and improving audit readiness.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Customer Solutions Associate</span>
+      <span class="job-date">May 2020 &ndash; Aug 2021</span>
+    </div>
+    <div class="job-company">Instacart &mdash; Remote</div>
+    <ul>
+      <li>Resolved high-complexity customer issues applying structured troubleshooting to identify root cause and deliver durable solutions under SLA pressure.</li>
+      <li>Communicated technical platform constraints in plain language to customers and internal stakeholders, building trust during escalations.</li>
+      <li>Surfaced recurring failure patterns to product and operations teams &mdash; the same feedback loop SEs use to improve product-market fit.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Operations Systems Associate</span>
+      <span class="job-date">Oct 2019 &ndash; Apr 2020</span>
+    </div>
+    <div class="job-company">Whole Foods Market &mdash; Washington DC-Baltimore Area</div>
+    <ul>
+      <li>Managed high-volume order fulfillment workflows using internal dashboards to track SLA adherence and identify bottlenecks in real-time operations.</li>
+      <li>Collaborated with tech teams to implement process improvements, reducing order errors by 15%.</li>
     </ul>
   </div>
 </div>
 
-<!-- ========== KEY PROJECTS ========== -->
+<!-- KEY PROJECTS -->
 <div class="section">
   <div class="section-title">Key Projects</div>
 
   <div class="project">
     <div class="project-header">
-      <span class="project-name">E-Commerce DevOps Mastery Platform</span>
-      <span class="project-metrics">14 Phases &bull; 6 Microservices &bull; 50+ Tools</span>
+      <span class="project-name">Highly Available WordPress Infrastructure on AWS</span>
+      <span class="project-metrics">3-AZ &bull; Terraform IaC &bull; Zero SPOF &bull; Well-Architected</span>
     </div>
-    <div class="project-desc">End-to-end DevOps lifecycle project: containerized microservices on EKS with ArgoCD GitOps, Istio service mesh, Prometheus/Grafana observability, and Backstage developer portal.</div>
+    <div class="project-desc">Production-grade 3-tier architecture: EC2 Auto Scaling behind ALB, RDS Multi-AZ (&lt;2 min failover), CloudFront + S3 OAC CDN, WAF (OWASP/SQLi), IMDSv2, KMS CMK, SSM Session Manager, CloudWatch alarms on p99 latency and 5xx rate.</div>
   </div>
 
   <div class="project">
     <div class="project-header">
-      <span class="project-name">Enterprise Cloud Migration - On-Prem to AWS</span>
-      <span class="project-metrics">35% Cost Reduction &bull; 99.95% Uptime &bull; 3-Month Timeline</span>
+      <span class="project-name">Multi-Account AWS Landing Zone</span>
+      <span class="project-metrics">10+ Accounts &bull; 8 SCPs &bull; Transit Gateway &bull; SSO</span>
     </div>
-    <div class="project-desc">Re-architected monolithic applications into microservices using ECS Fargate and RDS Aurora with Terraform-managed infrastructure and CloudWatch monitoring.</div>
+    <div class="project-desc">Enterprise governance with AWS Organizations (4 OUs), Transit Gateway hub-and-spoke for Prod&harr;Dev isolation, SAML 2.0 SSO via IAM Identity Center, centralized GuardDuty + Security Hub across all accounts.</div>
   </div>
 
   <div class="project">
     <div class="project-header">
-      <span class="project-name">SRE Observability &amp; SLO Platform</span>
-      <span class="project-metrics">99.95% SLO &bull; 60% Fewer Incidents &bull; 50+ Services</span>
+      <span class="project-name">Serverless Task Management API</span>
+      <span class="project-metrics">90% Cost Reduction &bull; ~$2.32/mo at 1M Requests &bull; OIDC CI/CD</span>
     </div>
-    <div class="project-desc">Built SLO/SLI dashboards with Prometheus, Grafana, and OpenTelemetry. Automated alerting and error budget tracking with PagerDuty integration.</div>
+    <div class="project-desc">5 Lambda functions on Graviton2/arm64 (20% cheaper than x86), API Gateway HTTP API ($1/M vs REST $3.50/M), DynamoDB PAY_PER_REQUEST + GSI, GitHub Actions CI/CD with OIDC &mdash; no long-lived AWS keys.</div>
   </div>
 
   <div class="project">
     <div class="project-header">
-      <span class="project-name">CI/CD Pipeline - GitHub Actions + ArgoCD + Kubernetes</span>
-      <span class="project-metrics">10x Deploy Frequency &bull; Zero Downtime &bull; GitOps</span>
+      <span class="project-name">Cloud Career Hub Platform</span>
+      <span class="project-metrics">React + Firebase &bull; Gemini AI &bull; GitHub Pages</span>
     </div>
-    <div class="project-desc">Designed and deployed a full GitOps CI/CD pipeline using GitHub Actions for build/test automation and ArgoCD for continuous delivery to EKS, with Helm chart management and automated rollbacks.</div>
-  </div>
-
-  <div class="project">
-    <div class="project-header">
-      <span class="project-name">Cloud Security &amp; Compliance Framework</span>
-      <span class="project-metrics">100% Audit Pass &bull; 45% Faster Detection &bull; ISO 27001</span>
-    </div>
-    <div class="project-desc">Implemented IAM least-privilege policies, encryption strategies, and automated compliance scanning using Security Hub, GuardDuty, and CloudTrail.</div>
+    <div class="project-desc">Full-stack career platform with Firebase Auth, AI-powered resume writer (Gemini 2.0 Flash), SA and SE resume toggles, calendar with PIN lock, admin-protected pages, and role-based access control.</div>
   </div>
 </div>
 
-<!-- ========== CERTIFICATIONS ========== -->
+<!-- CERTIFICATIONS -->
 <div class="section">
   <div class="section-title">Certifications</div>
-  <div class="cert-item"><strong>AWS Certified Solutions Architect - Associate (SAA-C03)</strong> <span class="cert-date">- Amazon Web Services</span></div>
-  <div class="cert-item"><strong>Certified Kubernetes Administrator (CKA)</strong> <span class="cert-date">- Cloud Native Computing Foundation (CNCF), In Progress</span></div>
-  <div class="cert-item"><strong>Linux Essentials Certificate</strong> <span class="cert-date">- Linux Professional Institute (LPI)</span></div>
+  <div class="cert-item"><strong>AWS Solutions Architect &mdash; Associate (SAA-C03)</strong> <span class="cert-date">&mdash; Amazon Web Services &nbsp;&bull;&nbsp; Sep 2025</span></div>
+  <div class="cert-item"><strong>ITIL 4 Foundation &mdash; IT Service Management</strong> <span class="cert-date">&mdash; PeopleCert &nbsp;&bull;&nbsp; Jun 2026</span></div>
+  <div class="cert-item"><strong>AWS Solutions Architecture Job Simulation</strong> <span class="cert-date">&mdash; Amazon Web Services &middot; Forage &nbsp;&bull;&nbsp; Sep 2025</span></div>
+  <div class="cert-item"><strong>Verizon Cloud Platform Job Simulation</strong> <span class="cert-date">&mdash; Verizon Communications &middot; Forage &nbsp;&bull;&nbsp; Sep 2025</span></div>
+  <div class="cert-item"><strong>Linux Essentials Certificate</strong> <span class="cert-date">&mdash; Linux Professional Institute (LPI) &nbsp;&bull;&nbsp; May 2025</span></div>
+  <div class="cert-item"><strong>Data Analytics Certificate</strong> <span class="cert-date">&mdash; Colaberry School of Data Analytics &nbsp;&bull;&nbsp; Jul 2022</span></div>
 </div>
 
-<!-- ========== EDUCATION ========== -->
+<!-- EDUCATION -->
 <div class="section">
   <div class="section-title">Education</div>
-  <div class="edu-item">
-    <strong>Bachelor of Science in Computer Science</strong> <span class="edu-date">- Western Governors University, Anticipated May 2026</span>
-  </div>
-  <div class="edu-item">
-    <strong>Bachelor&rsquo;s in Business Management</strong> <span class="edu-date">- University of Douala, June 2019</span>
-  </div>
+  <div class="edu-item"><strong>AWS Re/Start Program</strong> <span class="edu-date">&mdash; Per Scholas, Seattle, WA &nbsp;&bull;&nbsp; Expected 2026</span></div>
+  <div class="edu-item"><strong>B.S. Computer Science</strong> <span class="edu-date">&mdash; Western Governors University &nbsp;&bull;&nbsp; 2023&ndash;2026</span></div>
+  <div class="edu-item"><strong>B.S. Business Management</strong> <span class="edu-date">&mdash; University of Douala &nbsp;&bull;&nbsp; 2019</span></div>
 </div>
 
-<!-- ========== ATS KEYWORD BAR ========== -->
+<!-- ATS KEYWORDS -->
 <div class="keywords">
-  Solutions Architecture &bull; Cloud Migration &bull; AWS &bull; Azure &bull; GCP &bull; Terraform &bull; Kubernetes &bull; Docker &bull; CI/CD &bull; Infrastructure as Code &bull; IAM &bull; DevOps &bull; SRE &bull; Site Reliability &bull; Observability &bull; Prometheus &bull; ArgoCD &bull; GitOps &bull; Istio &bull; Chaos Engineering &bull; Helm &bull; Kustomize &bull; Python &bull; Serverless &bull; Well-Architected Framework
+  Solutions Architect &bull; Solutions Engineer &bull; Pre-Sales SE &bull; AWS &bull; Terraform &bull; IaC &bull; Well-Architected Framework &bull; Multi-AZ &bull; VPC &bull; IAM &bull; Lambda &bull; RDS &bull; DynamoDB &bull; CloudFront &bull; Transit Gateway &bull; AWS Organizations &bull; SCPs &bull; GuardDuty &bull; Security Hub &bull; POC Delivery &bull; Discovery &bull; Stakeholder Communication &bull; ITIL 4 &bull; Python &bull; Bash &bull; GitHub Actions &bull; Docker &bull; Kubernetes &bull; Cloud Migration &bull; FinOps &bull; SLO &bull; Serverless
 </div>
 
 </body>
