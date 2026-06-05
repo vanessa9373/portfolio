@@ -43,5 +43,5 @@ Source code for **[jenellavan.com](https://jenellavan.com)** — the personal po
 | 🌐 **Portfolio** | [jenellavan.com](https://jenellavan.com) |
 | ☁️ **Cloud Career Hub** | [denvanholdings-cloud.github.io/sa-career](https://denvanholdings-cloud.github.io/sa-career) |
 | 💼 **LinkedIn** | [linkedin.com/in/vanessajen](https://linkedin.com/in/vanessajen) |
-| 📧 **Email** | [jenellaawo93@gmail.com](mailto:jenellaawo93@gmail.com) |
+| 📧 **Email** | [vanessa93730@gmail.com](mailto:vanessa93730@gmail.com) |
 | 📍 **Location** | Seattle, WA · Remote-Ready · Open to Relocation |
