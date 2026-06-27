@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-06-27" version="21.0.0">
+  <diagram id="cloud-career-hub" name="Cloud Career Hub">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TITLE -->
+        <mxCell id="2" value="Cloud Career Hub — React SPA · Firebase Auth · Gemini 2.0 AI · GitHub Pages  |  Zero-server, near-zero cost architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1450" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- INTERNET USERS -->
+        <mxCell id="3" value="Users&#xa;(Global)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#232F3E;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- CLOUDFRONT / GitHub Pages CDN -->
+        <mxCell id="4" value="GitHub Pages&#xa;CDN Edge&#xa;(Global PoPs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#24292E;strokeColor=#24292E;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="270" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#24292E;" edge="1" source="3" target="4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_lbl" value="HTTPS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><Array as="offset"><mxPoint x="0" y="-12"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- REACT SPA -->
+        <mxCell id="5" value="React SPA&#xa;(Static Build)" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;strokeColor=#61DAFB;fillColor=#E3F8FF;verticalLabelPosition=top;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;fontColor=#0097B2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="180" width="420" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#61DAFB;" edge="1" source="4" target="5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- SPA Components -->
+        <mxCell id="5a" value="Job Board&#xa;Component" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="225" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5b" value="AI Career&#xa;Advisor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="225" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5c" value="Resume&#xa;Builder" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="225" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d" value="React Router&#xa;(Client-side nav)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="480" y="300" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5e" value="Context API&#xa;(State Management)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="5f" value="Axios&#xa;(API Client)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="300" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- FIREBASE AUTH -->
+        <mxCell id="6" value="Firebase&#xa;Authentication&#xa;(Google / Email)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontColor=#E65100;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="160" width="140" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#F57C00;" edge="1" source="5" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3_lbl" value="JWT token&#xa;(OAuth 2.0)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;" vertex="1" connectable="0" parent="e3">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><Array as="offset"><mxPoint x="0" y="-15"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- GEMINI AI -->
+        <mxCell id="7" value="Gemini 2.0 Flash&#xa;API (Google AI)&#xa;Career Advisor / Q&amp;A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#388E3C;fontColor=#1B5E20;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="290" width="140" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#388E3C;" edge="1" source="5" target="7" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4_lbl" value="REST API&#xa;(API Key, HTTPS)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;" vertex="1" connectable="0" parent="e4">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><Array as="offset"><mxPoint x="0" y="15"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- FIRESTORE (optional data) -->
+        <mxCell id="8" value="Firestore&#xa;(User profiles,&#xa;saved jobs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontColor=#E65100;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="220" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#F57C00;dashed=1;" edge="1" source="6" target="8" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- CI/CD SECTION -->
+        <mxCell id="cicd_title" value="CI/CD Pipeline — GitHub Actions → gh-pages branch (automated deploy on every push to main)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="80" y="490" width="900" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- GitHub Repo -->
+        <mxCell id="gh" value="GitHub Repo&#xa;(main branch)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#24292E;strokeColor=#24292E;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="545" width="120" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- GitHub Actions -->
+        <mxCell id="gha" value="GitHub Actions&#xa;Workflow&#xa;(npm run build)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2088FF;strokeColor=#2088FF;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="545" width="130" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_gh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2088FF;" edge="1" source="gh" target="gha" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Build output -->
+        <mxCell id="build" value="npm build&#xa;(/dist artefact&#xa;tree-shaken, minified)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;fontColor=#4A148C;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="545" width="130" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_build" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#7B1FA2;" edge="1" source="gha" target="build" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- gh-pages deploy -->
+        <mxCell id="ghpages" value="gh-pages Branch&#xa;(Static HTML/CSS/JS&#xa;published by GitHub)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#24292E;strokeColor=#24292E;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="545" width="140" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pages" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#24292E;" edge="1" source="build" target="ghpages" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pages_lbl" value="auto-push" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;" vertex="1" connectable="0" parent="e_pages">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><Array as="offset"><mxPoint x="0" y="-12"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Feedback arrow: gh-pages back to CDN -->
+        <mxCell id="e_live" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#24292E;dashed=1;" edge="1" source="ghpages" target="4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_live_lbl" value="Serves live site" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;fontSize=10;" vertex="1" connectable="0" parent="e_live">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><Array as="offset"><mxPoint x="0" y="-12"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- LEGEND -->
+        <mxCell id="80" value="&lt;b&gt;Cost&lt;/b&gt; — Zero server costs: GitHub Pages (free CDN), Firebase Auth Spark plan (free tier), Gemini 2.0 Flash API (low per-token cost); &lt;$5/month at scale&#xa;&lt;b&gt;Performance&lt;/b&gt; — React code-split + tree-shaken bundle &lt;150 KB gzip; served from global CDN edge (sub-50ms TTFB)&#xa;&lt;b&gt;Security&lt;/b&gt; — Firebase JWT validation (RS256); API key scoped to Gemini only; HTTPS enforced by GitHub Pages; no backend = no SQL injection surface" style="text;html=1;strokeColor=#8C4FFF;fillColor=#F4ECFF;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="1390" height="70" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

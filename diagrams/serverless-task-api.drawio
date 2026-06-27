@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-06-27" version="21.0.0">
+  <diagram id="serverless-task-api" name="Serverless Task API">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TITLE -->
+        <mxCell id="2" value="Serverless Task API — API Gateway + Lambda (Graviton2/arm64) + DynamoDB  |  CI/CD via GitHub Actions OIDC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1450" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- CLIENT -->
+        <mxCell id="3" value="Client&#xa;(Web / Mobile)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#232F3E;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- API GATEWAY -->
+        <mxCell id="4" value="API Gateway&#xa;HTTP API (v2)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1">
+          <mxGeometry x="290" y="230" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#8C4FFF;" edge="1" source="3" target="4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_lbl" value="HTTPS REST" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="e1">
+          <mxGeometry x="-0.1" y="-1" relative="1" as="geometry"><Array as="offset"><mxPoint x="0" y="-10"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- LAMBDA FUNCTIONS GROUP -->
+        <mxCell id="5" value="Lambda Functions — Graviton2 / arm64 (–20% cost)" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_lambda_function;strokeColor=#E7157B;fillColor=#FFF0F7;verticalLabelPosition=top;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;fontColor=#E7157B;" vertex="1" parent="1">
+          <mxGeometry x="510" y="160" width="560" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- 5 LAMBDA FUNCTIONS -->
+        <mxCell id="6" value="createTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="530" y="210" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="getTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="620" y="210" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="updateTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="710" y="210" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="deleteTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="800" y="210" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="9b" value="listTasks" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="970" y="210" width="50" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Routes label -->
+        <mxCell id="routes" value="POST /tasks     GET /tasks/{id}     PUT /tasks/{id}     DELETE /tasks/{id}     GET /tasks" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#E7157B;" vertex="1" parent="1">
+          <mxGeometry x="510" y="280" width="560" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Connection APIGW to Lambda group -->
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;" edge="1" source="4" target="5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- DYNAMODB -->
+        <mxCell id="10" value="DynamoDB&#xa;PAY_PER_REQUEST&#xa;+ GSI (status-index)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#2E73B8;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="230" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2E73B8;" edge="1" source="5" target="10" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- CLOUDWATCH -->
+        <mxCell id="11" value="CloudWatch&#xa;(Duration / Error&#xa;Rate / Throttle)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="80" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_cw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;dashed=1;" edge="1" source="5" target="11" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- X-RAY -->
+        <mxCell id="xray" value="AWS X-Ray&#xa;(Distributed Tracing)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.xray;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="230" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_xray" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;dashed=1;" edge="1" source="5" target="xray" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- IAM ROLE -->
+        <mxCell id="12" value="IAM Execution Role&#xa;(least-privilege&#xa;DynamoDB access)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.role;" vertex="1" parent="1">
+          <mxGeometry x="790" y="410" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_iam" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;dashed=1;" edge="1" source="5" target="12" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- CI/CD PIPELINE -->
+        <mxCell id="cicd_title" value="CI/CD — GitHub Actions OIDC (no long-lived credentials)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="80" y="530" width="700" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- GitHub -->
+        <mxCell id="gh" value="GitHub&#xa;Repository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#24292E;strokeColor=#24292E;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="100" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- GitHub Actions -->
+        <mxCell id="gha" value="GitHub Actions&#xa;Workflow&#xa;(on: push to main)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2088FF;strokeColor=#2088FF;fontColor=#FFFFFF;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="580" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_gh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2088FF;" edge="1" source="gh" target="gha" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- OIDC -->
+        <mxCell id="oidc" value="OIDC Token&#xa;(GitHub → AWS&#xa;AssumeRoleWithWebIdentity)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+          <mxGeometry x="450" y="590" width="55" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_oidc" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="gha" target="oidc" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Deploy Lambda -->
+        <mxCell id="deploy" value="Deploy Lambda&#xa;(aws lambda update-function-code)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="620" y="590" width="55" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_deploy" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;" edge="1" source="oidc" target="deploy" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Test stage -->
+        <mxCell id="tests" value="pytest + boto3&#xa;Integration Tests&#xa;(pre-deploy)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=10;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="250" y="680" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_test" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E65100;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" source="gha" target="tests" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- LEGEND -->
+        <mxCell id="80" value="&lt;b&gt;Performance&lt;/b&gt; — Lambda Graviton2 (arm64) delivers ~20% lower cost + ~10% better performance vs x86 | DynamoDB PAY_PER_REQUEST, no capacity planning&#xa;&lt;b&gt;Security&lt;/b&gt; — OIDC eliminates long-lived GitHub secrets; Lambda IAM role scoped to exact DynamoDB table (least-privilege) | X-Ray traces all invocations&#xa;&lt;b&gt;Operational Excellence&lt;/b&gt; — CloudWatch alarms on Duration P99, error rate &gt;1%, throttle &gt;0; deploy pipeline blocks on integration test failure" style="text;html=1;strokeColor=#8C4FFF;fillColor=#F4ECFF;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="780" width="1390" height="70" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

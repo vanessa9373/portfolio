@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-06-27" version="21.0.0">
+  <diagram id="cloud-security" name="Cloud Security Baseline">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- TITLE -->
+        <mxCell id="2" value="AWS Cloud Security Baseline — Defence-in-Depth across Identity, Data, Perimeter, Detection &amp; Response" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="1450" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- LAYER LABELS -->
+        <mxCell id="l1" value="PERIMETER" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontStyle=1;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="80" y="75" width="140" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="l2" value="IDENTITY &amp; ACCESS" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontStyle=1;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="310" y="75" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="l3" value="DATA PROTECTION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontStyle=1;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="640" y="75" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="l4" value="DETECTION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontStyle=1;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="970" y="75" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="l5" value="RESPONSE &amp; ALERTING" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=11;fontStyle=1;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="75" width="200" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== LAYER 1: PERIMETER ===== -->
+        <mxCell id="waf" value="WAF&#xa;(OWASP Top 10&#xa;SQLi / XSS rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="cf" value="CloudFront&#xa;(HTTPS-only&#xa;TLS 1.2+)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="sg" value="Security Groups&#xa;(Stateful, least-privilege&#xa;ingress rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.security_group;" vertex="1" parent="1">
+          <mxGeometry x="80" y="335" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="nacl" value="Network ACL&#xa;(Stateless perimeter&#xa;subnet firewall)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.network_access_control_list;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== LAYER 2: IDENTITY ===== -->
+        <mxCell id="iam" value="IAM&#xa;(Least-privilege&#xa;policies)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+          <mxGeometry x="330" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="iam_policy" value="Permission Boundaries · SCPs · Conditions (aws:SourceVpce, aws:MultiFactorAuthPresent)" style="text;html=1;strokeColor=#DD344C;fillColor=#FFEBEE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="310" y="185" width="270" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sso" value="IAM Identity Center&#xa;(SSO, MFA enforced)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+          <mxGeometry x="440" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="imds" value="IMDSv2&#xa;(Session-oriented,&#xa;no SSRF via IMDSv1)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
+          <mxGeometry x="330" y="280" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ssm" value="Systems Manager&#xa;(SSM Session Manager&#xa;— no SSH / port 22)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.systems_manager;" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="secrets" value="Secrets Manager&#xa;(DB creds, API keys&#xa;— auto-rotate 30d)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.secrets_manager;" vertex="1" parent="1">
+          <mxGeometry x="380" y="400" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== LAYER 3: DATA PROTECTION ===== -->
+        <mxCell id="kms" value="KMS CMK&#xa;(Customer-managed,&#xa;automatic rotation)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.key_management_service;" vertex="1" parent="1">
+          <mxGeometry x="660" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Encrypted services under KMS -->
+        <mxCell id="enc_lbl" value="KMS-encrypted at rest:" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="640" y="185" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3_enc" value="S3 SSE-KMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#3F8624;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="640" y="210" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="rds_enc" value="RDS Encrypted" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#2E73B8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="750" y="210" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="ddb_enc" value="DynamoDB CMK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#2E73B8;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="640" y="255" width="90" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="ebs_enc" value="EBS Volumes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="750" y="255" width="90" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_kms_s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;dashed=1;" edge="1" source="kms" target="s3_enc" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_kms_rds" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;dashed=1;" edge="1" source="kms" target="rds_enc" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="tls" value="TLS in Transit&#xa;(ACM + enforce-https&#xa;S3 bucket policy)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.certificate_manager;" vertex="1" parent="1">
+          <mxGeometry x="760" y="340" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== LAYER 4: DETECTION ===== -->
+        <mxCell id="gd" value="GuardDuty&#xa;(ML threat detection&#xa;— all regions)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.guardduty;" vertex="1" parent="1">
+          <mxGeometry x="990" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="sh" value="Security Hub&#xa;(CIS AWS Benchmark&#xa;score + aggregation)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.security_hub;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ct" value="CloudTrail&#xa;(API audit log&#xa;S3 + integrity)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudtrail;" vertex="1" parent="1">
+          <mxGeometry x="990" y="240" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="cfg" value="AWS Config&#xa;(Continuous compliance&#xa;— &gt;150 managed rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.config;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="240" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ai" value="Amazon Inspector&#xa;(Vuln scanning&#xa;EC2 + ECR images)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.inspector;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="370" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Feeds into Security Hub -->
+        <mxCell id="e_gd_sh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="gd" target="sh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_ct_sh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="ct" target="sh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_cfg_sh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="cfg" target="sh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_ai_sh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="ai" target="sh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- ===== LAYER 5: RESPONSE ===== -->
+        <mxCell id="cw" value="CloudWatch&#xa;Alarms&#xa;(metric filters on&#xa;CloudTrail logs)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="sns" value="SNS Topic&#xa;(Email + PagerDuty&#xa;on HIGH findings)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="110" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="lambda_r" value="Lambda&#xa;(Auto-remediation:&#xa;isolate EC2 on&#xa;GuardDuty finding)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="280" width="60" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="eb" value="EventBridge&#xa;(Security Hub → Lambda&#xa;rule trigger)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="280" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_sh_cw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="sh" target="cw" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_cw_sns" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;" edge="1" source="cw" target="sns" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_sh_eb" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#8C4FFF;" edge="1" source="sh" target="eb" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_eb_lam" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#8C4FFF;" edge="1" source="eb" target="lambda_r" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- LEGEND -->
+        <mxCell id="80" value="&lt;b&gt;Perimeter&lt;/b&gt; — WAF OWASP rules block SQLi / XSS at edge; CloudFront enforces HTTPS; Security Groups use least-privilege ingress (no 0.0.0.0/0 on SSH)&#xa;&lt;b&gt;Identity&lt;/b&gt; — IAM Permission Boundaries + SCPs prevent privilege escalation; IMDSv2 blocks SSRF; Secrets Manager auto-rotates credentials every 30 days&#xa;&lt;b&gt;Detection → Response&lt;/b&gt; — GuardDuty + Config + Inspector feed Security Hub; EventBridge triggers Lambda to auto-isolate compromised EC2 instances within seconds" style="text;html=1;strokeColor=#DD344C;fillColor=#FFEBEE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="490" width="1480" height="70" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
