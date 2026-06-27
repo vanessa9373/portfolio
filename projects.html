@@ -45,14 +45,18 @@
   <section class="section section-decorated" id="projects">
     <div class="container">
 
+      <!-- Hiring Manager Banner -->
+      <div style="background:rgba(0,180,216,0.07);border:1px solid rgba(0,180,216,0.2);border-radius:10px;padding:16px 22px;margin-bottom:28px;font-size:0.97rem;line-height:1.6;color:var(--text-secondary,#94a3b8);">
+        <strong style="color:var(--accent,#00b4d8);">For hiring managers:</strong> Each project includes full Terraform IaC, an architecture deep-dive with trade-off analysis, and AWS Well-Architected Framework alignment. Click <strong>Architecture Doc</strong> to access the documentation directly.
+      </div>
+
       <!-- Filter -->
       <div class="project-filters">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="architecture">Architecture</button>
         <button class="filter-btn" data-filter="serverless">Serverless</button>
-        <button class="filter-btn" data-filter="devops">DevOps</button>
         <button class="filter-btn" data-filter="security">Security</button>
-        <button class="filter-btn" data-filter="sre">SRE</button>
+        <button class="filter-btn" data-filter="devops">DevOps</button>
       </div>
 
       <div class="projects-grid">
@@ -83,6 +87,7 @@
               <strong>Tools:</strong> Terraform, EC2 ASG, ALB, RDS Multi-AZ, CloudFront, WAF, KMS, SSM, CloudWatch
             </div>
             <p class="project-role"><strong>SA angle:</strong> Well-Architected Framework across all 6 pillars &nbsp;|&nbsp; <strong>SE angle:</strong> Live POC for stakeholder trade-off discussions</p>
+            <a href="https://github.com/vanessa9373/my-portfolio-projects/blob/main/ha-wordpress-terraform/docs/architecture-deep-dive.md" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:0.85rem;color:var(--accent,#00b4d8);text-decoration:none;">Architecture Doc &rarr;</a>
           </div>
         </div>
 
@@ -112,6 +117,7 @@
               <strong>Tools:</strong> AWS Organizations, Terraform, Transit Gateway, IAM Identity Center, GuardDuty, Security Hub
             </div>
             <p class="project-role"><strong>Role:</strong> Solutions Architect</p>
+            <a href="https://github.com/vanessa9373/my-portfolio-projects/tree/main/multi-account-landing-zone" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:0.85rem;color:var(--accent,#00b4d8);text-decoration:none;">Architecture Doc &rarr;</a>
           </div>
         </div>
 
@@ -141,6 +147,7 @@
               <strong>Tools:</strong> Lambda (Graviton2/arm64), API Gateway HTTP, DynamoDB, GitHub Actions, OIDC, Terraform
             </div>
             <p class="project-role"><strong>Role:</strong> Solutions Architect</p>
+            <a href="https://github.com/vanessa9373/my-portfolio-projects/tree/main/serverless-task-api" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:0.85rem;color:var(--accent,#00b4d8);text-decoration:none;">Architecture Doc &rarr;</a>
           </div>
         </div>
 
@@ -173,64 +180,6 @@
           </div>
         </div>
 
-        <!-- E-Commerce DevOps Mastery -->
-        <div class="project-card" data-category="devops">
-          <div class="project-image">
-            <img src="assets/img-ecommerce.svg" alt="E-Commerce Platform DevOps" class="project-img">
-            <div class="project-overlay">
-              <a href="https://github.com/vanessa9373/portfolio-devops-project/tree/main/projects/devops-projects/end-to-end-cicd-eks" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span class="tag tag-aws">AWS</span>
-              <span class="tag">Kubernetes</span>
-              <span class="tag">Terraform</span>
-              <span class="tag">CI/CD</span>
-            </div>
-            <h3>E-Commerce Platform: Full DevOps Lifecycle</h3>
-            <p>End-to-end DevOps project covering 14 phases from foundation to platform engineering. Containerized microservices on EKS with ArgoCD GitOps, Istio service mesh, Prometheus/Grafana observability, and Backstage developer portal.</p>
-            <div class="project-results">
-              <div class="result"><strong>14</strong><span>Phases</span></div>
-              <div class="result"><strong>50+</strong><span>Tools</span></div>
-              <div class="result"><strong>6</strong><span>Microservices</span></div>
-            </div>
-            <div class="project-tools">
-              <strong>Tools:</strong> AWS, Terraform, Docker, Kubernetes, ArgoCD, Prometheus, Istio, Backstage
-            </div>
-            <p class="project-role"><strong>Role:</strong> DevOps Architect</p>
-          </div>
-        </div>
-
-        <!-- SRE Observability -->
-        <div class="project-card" data-category="sre">
-          <div class="project-image">
-            <img src="assets/architecture-diagram.png" alt="SRE Observability Platform" class="project-img">
-            <div class="project-overlay">
-              <a href="https://github.com/vanessa9373/portfolio-devops-project/tree/main/projects/sre-projects/sre-project-1-kubernetes-observability" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span class="tag">SRE</span>
-              <span class="tag">Prometheus</span>
-              <span class="tag">Grafana</span>
-              <span class="tag">SLOs</span>
-            </div>
-            <h3>SRE Observability &amp; SLO Platform</h3>
-            <p>Comprehensive observability platform with SLO/SLI dashboards, automated alerting, and error budget tracking for 50+ production services. Integrated PagerDuty for incident management and OpenTelemetry for distributed tracing.</p>
-            <div class="project-results">
-              <div class="result"><strong>99.95%</strong><span>SLO Achieved</span></div>
-              <div class="result"><strong>60%</strong><span>Fewer Incidents</span></div>
-              <div class="result"><strong>50+</strong><span>Services</span></div>
-            </div>
-            <div class="project-tools">
-              <strong>Tools:</strong> Prometheus, Grafana, PagerDuty, OpenTelemetry, Terraform, AWS
-            </div>
-            <p class="project-role"><strong>Role:</strong> Site Reliability Engineer</p>
-          </div>
-        </div>
-
         <!-- Security & Compliance -->
         <div class="project-card" data-category="security">
           <div class="project-image">
@@ -247,44 +196,17 @@
               <span class="tag">Compliance</span>
             </div>
             <h3>Cloud Security &amp; Compliance Framework</h3>
-            <p>End-to-end cloud security framework with IAM least-privilege policies, KMS encryption strategies, WAF rules, and automated compliance scanning using Security Hub, GuardDuty, and CloudTrail for a healthcare client.</p>
+            <p>Cloud security framework implementing IAM least-privilege policies, KMS encryption at rest, WAF rules, and automated compliance scanning via Security Hub, GuardDuty, and CloudTrail — designed to satisfy HIPAA and ISO 27001 controls.</p>
             <div class="project-results">
-              <div class="result"><strong>100%</strong><span>Audit Pass</span></div>
-              <div class="result"><strong>45%</strong><span>Faster Detection</span></div>
-              <div class="result"><strong>ISO</strong><span>27001</span></div>
+              <div class="result"><strong>IAM</strong><span>Least Privilege</span></div>
+              <div class="result"><strong>KMS</strong><span>Encryption at Rest</span></div>
+              <div class="result"><strong>ISO 27001</strong><span>Aligned</span></div>
             </div>
             <div class="project-tools">
               <strong>Tools:</strong> AWS Security Hub, GuardDuty, Config, IAM, KMS, CloudTrail, WAF
             </div>
-            <p class="project-role"><strong>Role:</strong> Security Architect</p>
-          </div>
-        </div>
-
-        <!-- Chaos Engineering -->
-        <div class="project-card" data-category="sre">
-          <div class="project-image">
-            <img src="assets/img-chaos.svg" alt="Chaos Engineering Resilience Testing" class="project-img">
-            <div class="project-overlay">
-              <a href="https://github.com/vanessa9373/portfolio-devops-project/tree/main/projects/sre-projects/sre-project-6-chaos-engineering" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span class="tag">Chaos Engineering</span>
-              <span class="tag tag-aws">AWS FIS</span>
-              <span class="tag">Reliability</span>
-            </div>
-            <h3>Chaos Engineering &amp; Resilience Testing Framework</h3>
-            <p>Chaos engineering program using AWS Fault Injection Simulator and LitmusChaos to proactively identify failure modes and validate auto-recovery mechanisms across production infrastructure.</p>
-            <div class="project-results">
-              <div class="result"><strong>12</strong><span>Failure Modes</span></div>
-              <div class="result"><strong>40%</strong><span>Faster Recovery</span></div>
-              <div class="result"><strong>99.99%</strong><span>Availability</span></div>
-            </div>
-            <div class="project-tools">
-              <strong>Tools:</strong> AWS FIS, LitmusChaos, Kubernetes, Grafana, Terraform, Python
-            </div>
-            <p class="project-role"><strong>Role:</strong> SRE / Reliability Engineer</p>
+            <p class="project-role"><strong>Role:</strong> Solutions Architect &nbsp;&bull;&nbsp; <em>Portfolio Project</em></p>
+            <a href="https://github.com/vanessa9373/my-portfolio-projects/blob/main/labs/15-security-compliance/docs/architecture-deep-dive.md" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;font-size:0.85rem;color:var(--accent,#00b4d8);text-decoration:none;">Architecture Doc &rarr;</a>
           </div>
         </div>
 
