@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    /* ── Tab bar ──────────────────────────────────────── */
     .arch-tabs {
       display: flex;
       flex-wrap: wrap;
@@ -38,69 +39,120 @@
       color: #fff;
       font-weight: 600;
     }
-    .arch-panel {
-      display: none;
+
+    /* ── Panel show/hide ──────────────────────────────── */
+    .arch-panel { display: none; }
+    .arch-panel.active { display: block; }
+
+    /* ── Colored numbered diagram header ─────────────── */
+    .arch-diagram-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 24px;
+      border-radius: 12px 12px 0 0;
+      margin-bottom: 0;
     }
-    .arch-panel.active {
-      display: block;
-    }
-    .arch-panel-header {
-      margin-bottom: 20px;
-    }
-    .arch-panel-header h2 {
-      font-size: 1.5rem;
+    .arch-diagram-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
       font-weight: 700;
-      color: var(--text-primary, #e2e8f0);
-      margin-bottom: 8px;
+      color: rgba(255,255,255,0.35);
+      line-height: 1;
+      flex-shrink: 0;
     }
-    .arch-panel-header p {
+    .arch-diagram-header h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      line-height: 1.3;
+    }
+    .arch-diagram-header .arch-diagram-sub {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    /* ── Description area ────────────────────────────── */
+    .arch-desc-box {
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      padding: 18px 24px 20px;
+      margin-bottom: 16px;
+    }
+    .arch-desc-box p {
       font-size: 0.95rem;
       color: var(--text-secondary, #94a3b8);
-      line-height: 1.6;
+      line-height: 1.65;
+      margin: 0 0 12px;
     }
     .arch-panel-meta {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 12px 0 20px;
+      margin: 0;
     }
+
+    /* ── Legend ──────────────────────────────────────── */
+    .arch-section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--text-secondary, #94a3b8);
+      margin: 20px 0 10px;
+    }
+    .arch-legend-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .legend-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Diagram iframe ──────────────────────────────── */
     .arch-viewer {
       width: 100%;
-      border: 1px solid rgba(0,180,216,0.15);
+      border: 1px solid rgba(0,180,216,0.2);
       border-radius: 12px;
       overflow: hidden;
       background: #f8fafc;
     }
-    .arch-viewer-fallback {
+    .arch-viewer iframe {
       width: 100%;
-      height: 640px;
-      border: 1px solid rgba(0,180,216,0.15);
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      background: rgba(0,180,216,0.03);
-      text-align: center;
-      padding: 40px;
+      height: 780px;
+      border: none;
+      display: block;
     }
-    .arch-viewer-fallback svg {
-      width: 60px;
-      height: 60px;
-      opacity: 0.4;
-      color: var(--accent, #00b4d8);
+    @media (max-width: 768px) {
+      .arch-viewer iframe { height: 420px; }
     }
-    .arch-viewer-fallback p {
-      color: var(--text-secondary, #94a3b8);
-      font-size: 0.95rem;
-      max-width: 420px;
-    }
+
+    /* ── Action buttons ──────────────────────────────── */
     .arch-actions {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-top: 16px;
+      margin-top: 14px;
+      margin-bottom: 4px;
     }
     .arch-btn {
       display: inline-flex;
@@ -120,23 +172,20 @@
       background: var(--accent, #00b4d8);
       color: #fff;
     }
-    .arch-btn-primary:hover {
-      background: #0096b8;
-      color: #fff;
-    }
+    .arch-btn-primary:hover { background: #0096b8; color: #fff; }
     .arch-btn-secondary {
       background: transparent;
       border: 1px solid rgba(0,180,216,0.3);
       color: var(--accent, #00b4d8);
     }
-    .arch-btn-secondary:hover {
-      background: rgba(0,180,216,0.08);
-    }
+    .arch-btn-secondary:hover { background: rgba(0,180,216,0.08); }
+
+    /* ── Well-Architected pillar cards ───────────────── */
     .arch-pillars {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
-      margin-top: 24px;
+      margin-top: 10px;
     }
     .arch-pillar {
       background: rgba(0,180,216,0.04);
@@ -157,19 +206,6 @@
       color: var(--text-secondary, #94a3b8);
       line-height: 1.5;
       margin: 0;
-    }
-    .diagram-loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 640px;
-      color: var(--text-secondary, #94a3b8);
-      font-size: 0.9rem;
-      border: 1px solid rgba(0,180,216,0.15);
-      border-radius: 12px;
-    }
-    @media (max-width: 768px) {
-      .arch-viewer, .arch-viewer-fallback, .diagram-loading { height: 400px; }
     }
   </style>
 </head>
@@ -201,7 +237,7 @@
   <div class="page-hero page-hero--projects">
     <div class="container">
       <h1 class="page-hero-title">Architecture Diagrams</h1>
-      <p class="page-hero-subtitle">AWS Well-Architected reference designs for all 6 portfolio projects — built with Draw.io and AWS official icons</p>
+      <p class="page-hero-subtitle">AWS Well-Architected reference designs for all 6 portfolio projects — built with Draw.io using official AWS icons</p>
     </div>
   </div>
 
@@ -216,19 +252,29 @@
 
       <!-- TABS -->
       <div class="arch-tabs" role="tablist">
-        <button class="arch-tab active" role="tab" aria-selected="true" data-panel="wp">HA WordPress</button>
-        <button class="arch-tab" role="tab" aria-selected="false" data-panel="lz">Multi-Account Landing Zone</button>
-        <button class="arch-tab" role="tab" aria-selected="false" data-panel="api">Serverless Task API</button>
-        <button class="arch-tab" role="tab" aria-selected="false" data-panel="hub">Cloud Career Hub</button>
-        <button class="arch-tab" role="tab" aria-selected="false" data-panel="ml">ML Customer Segmentation</button>
-        <button class="arch-tab" role="tab" aria-selected="false" data-panel="sec">Cloud Security Baseline</button>
+        <button class="arch-tab active" role="tab" aria-selected="true"  data-panel="wp">01 · HA WordPress</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="lz">02 · Landing Zone</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="api">03 · Serverless API</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="hub">04 · Career Hub</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="ml">05 · ML Pipeline</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="sec">06 · Security</button>
       </div>
 
-      <!-- PANEL 1: HA WordPress -->
+      <!-- ══════════════════════════════════════════════
+           PANEL 1 — HA WordPress
+      ══════════════════════════════════════════════ -->
       <div class="arch-panel active" id="panel-wp">
-        <div class="arch-panel-header">
-          <h2>Highly Available WordPress on AWS</h2>
-          <p>3-AZ, zero-SPOF architecture with EC2 Auto Scaling, RDS Multi-AZ failover (&lt;2 min), CloudFront CDN, WAF (OWASP/SQLi), KMS CMK encryption, IMDSv2, and SSM Session Manager. Designed to survive the loss of any single Availability Zone with no manual intervention.</p>
+
+        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#4A148C 0%,#8C4FFF 100%);">
+          <span class="arch-diagram-num">01</span>
+          <div>
+            <h2>Highly Available WordPress on AWS</h2>
+            <div class="arch-diagram-sub">3-AZ · Zero-SPOF · EC2 Auto Scaling · RDS Multi-AZ · CloudFront · WAF</div>
+          </div>
+        </div>
+
+        <div class="arch-desc-box">
+          <p>3-AZ, zero-SPOF architecture with EC2 Auto Scaling, RDS Multi-AZ failover (&lt;2 min RTO), CloudFront CDN, WAF (OWASP/SQLi rules), KMS CMK encryption at rest, IMDSv2, and SSM Session Manager — no bastion hosts, no SSH. Survives the loss of any single Availability Zone with no manual intervention.</p>
           <div class="arch-panel-meta">
             <span class="tag tag-aws">AWS</span>
             <span class="tag">Terraform</span>
@@ -236,22 +282,35 @@
             <span class="tag">Well-Architected</span>
           </div>
         </div>
-        <div class="arch-viewer" id="viewer-wp">
-                              <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fha-wordpress.drawio"
+
+        <div class="arch-section-label">Legend — AWS Service Color Coding</div>
+        <div class="arch-legend-pills">
+          <span class="legend-pill" style="background:#8C4FFF18;color:#8C4FFF;border:1px solid #8C4FFF35;"><span class="legend-dot" style="background:#8C4FFF;"></span>Networking (VPC, ALB, Route 53, CloudFront)</span>
+          <span class="legend-pill" style="background:#E7157B18;color:#E7157B;border:1px solid #E7157B35;"><span class="legend-dot" style="background:#E7157B;"></span>Compute (EC2, Auto Scaling, AMI)</span>
+          <span class="legend-pill" style="background:#3F862418;color:#3F8624;border:1px solid #3F862435;"><span class="legend-dot" style="background:#3F8624;"></span>Storage (S3, EFS, ElastiCache)</span>
+          <span class="legend-pill" style="background:#2E73B818;color:#2E73B8;border:1px solid #2E73B835;"><span class="legend-dot" style="background:#2E73B8;"></span>Database (RDS MySQL Multi-AZ)</span>
+          <span class="legend-pill" style="background:#DD344C18;color:#DD344C;border:1px solid #DD344C35;"><span class="legend-dot" style="background:#DD344C;"></span>Security (WAF, KMS, IAM, SSM)</span>
+          <span class="legend-pill" style="background:#F57C0018;color:#E65100;border:1px solid #F57C0035;"><span class="legend-dot" style="background:#F57C00;"></span>Monitoring (CloudWatch, SNS)</span>
+        </div>
+
+        <div class="arch-viewer">
+          <iframe
+            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fha-wordpress.drawio"
             title="HA WordPress Architecture Diagram"
-            style="width:100%;height:620px;border:none;"
             allowfullscreen>
           </iframe>
         </div>
+
         <div class="arch-actions">
           <a href="diagrams/ha-wordpress.drawio" download class="arch-btn arch-btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download .drawio
           </a>
           <a href="https://github.com/vanessa9373/my-portfolio-projects/tree/main/ha-wordpress-terraform" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">View Terraform Code →</a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fmy-current-porfolio%2FVan-A%2Fportfolio%2Fdiagrams%2Fha-wordpress.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
+          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fha-wordpress.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
         </div>
+
+        <div class="arch-section-label">AWS Well-Architected Framework Analysis</div>
         <div class="arch-pillars">
           <div class="arch-pillar">
             <h4>Reliability</h4>
@@ -262,21 +321,31 @@
             <p>WAF (OWASP/SQLi), KMS CMK, IMDSv2, SSM (no SSH), S3 OAC — zero public S3 ACLs</p>
           </div>
           <div class="arch-pillar">
-            <h4>Cost</h4>
+            <h4>Cost Optimisation</h4>
             <p>CloudFront edge caching reduces origin load ~60% | ElastiCache offloads DB reads</p>
           </div>
           <div class="arch-pillar">
-            <h4>Performance</h4>
+            <h4>Performance Efficiency</h4>
             <p>CloudFront global CDN, ElastiCache session store, ALB connection draining</p>
           </div>
         </div>
       </div>
 
-      <!-- PANEL 2: Multi-Account Landing Zone -->
+      <!-- ══════════════════════════════════════════════
+           PANEL 2 — Multi-Account Landing Zone
+      ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-lz">
-        <div class="arch-panel-header">
-          <h2>Multi-Account AWS Landing Zone</h2>
-          <p>Enterprise governance across 4 OUs and 10+ accounts. Transit Gateway hub-and-spoke for network isolation, IAM Identity Center SSO (SAML 2.0, MFA enforced), 8 SCPs, delegated GuardDuty and Security Hub, and CloudTrail centralised to an immutable Log Archive account.</p>
+
+        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#8B0000 0%,#DD344C 100%);">
+          <span class="arch-diagram-num">02</span>
+          <div>
+            <h2>Multi-Account AWS Landing Zone</h2>
+            <div class="arch-diagram-sub">AWS Organizations · Transit Gateway · IAM Identity Center · GuardDuty · SCPs</div>
+          </div>
+        </div>
+
+        <div class="arch-desc-box">
+          <p>Enterprise governance across 4 OUs and 10+ accounts. Transit Gateway hub-and-spoke for network isolation, IAM Identity Center SSO (SAML 2.0, MFA enforced), 8 Service Control Policies, delegated GuardDuty and Security Hub, and CloudTrail centralised to an immutable Log Archive account with MFA-Delete enabled.</p>
           <div class="arch-panel-meta">
             <span class="tag tag-aws">AWS Organizations</span>
             <span class="tag">Terraform</span>
@@ -284,22 +353,34 @@
             <span class="tag">SSO</span>
           </div>
         </div>
+
+        <div class="arch-section-label">Legend — AWS Service Color Coding</div>
+        <div class="arch-legend-pills">
+          <span class="legend-pill" style="background:#1565C018;color:#1565C0;border:1px solid #1565C035;"><span class="legend-dot" style="background:#1565C0;"></span>AWS Organizations (Root, OUs, Accounts)</span>
+          <span class="legend-pill" style="background:#8C4FFF18;color:#8C4FFF;border:1px solid #8C4FFF35;"><span class="legend-dot" style="background:#8C4FFF;"></span>Networking (Transit Gateway, VPCs)</span>
+          <span class="legend-pill" style="background:#DD344C18;color:#DD344C;border:1px solid #DD344C35;"><span class="legend-dot" style="background:#DD344C;"></span>Security (GuardDuty, Security Hub, IAM)</span>
+          <span class="legend-pill" style="background:#E6510018;color:#E65100;border:1px solid #E6510035;"><span class="legend-dot" style="background:#E65100;"></span>Logging (CloudTrail, S3, KMS)</span>
+          <span class="legend-pill" style="background:#23293018;color:#94a3b8;border:1px solid #23293035;"><span class="legend-dot" style="background:#555;"></span>Management (SSO, Config, SCPs)</span>
+        </div>
+
         <div class="arch-viewer">
-                              <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fmulti-account-landing-zone.drawio"
+          <iframe
+            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fmulti-account-landing-zone.drawio"
             title="Multi-Account Landing Zone Architecture Diagram"
-            style="width:100%;height:620px;border:none;"
             allowfullscreen>
           </iframe>
         </div>
+
         <div class="arch-actions">
           <a href="diagrams/multi-account-landing-zone.drawio" download class="arch-btn arch-btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download .drawio
           </a>
           <a href="https://github.com/vanessa9373/my-portfolio-projects/tree/main/multi-account-landing-zone" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">View Terraform Code →</a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fmy-current-porfolio%2FVan-A%2Fportfolio%2Fdiagrams%2Fmulti-account-landing-zone.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
+          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fmulti-account-landing-zone.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
         </div>
+
+        <div class="arch-section-label">AWS Well-Architected Framework Analysis</div>
         <div class="arch-pillars">
           <div class="arch-pillar">
             <h4>Security</h4>
@@ -320,11 +401,21 @@
         </div>
       </div>
 
-      <!-- PANEL 3: Serverless Task API -->
+      <!-- ══════════════════════════════════════════════
+           PANEL 3 — Serverless Task API
+      ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-api">
-        <div class="arch-panel-header">
-          <h2>Serverless Task Management API</h2>
-          <p>Full CRUD REST API at 90% lower cost than EC2+RDS. Five Lambda functions on Graviton2/arm64, API Gateway HTTP API, DynamoDB PAY_PER_REQUEST with GSI, AWS X-Ray distributed tracing, and GitHub Actions OIDC CI/CD — eliminating all long-lived secrets.</p>
+
+        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#880E4F 0%,#E7157B 100%);">
+          <span class="arch-diagram-num">03</span>
+          <div>
+            <h2>Serverless Task Management API</h2>
+            <div class="arch-diagram-sub">API Gateway HTTP API · Lambda Graviton2/arm64 · DynamoDB · GitHub Actions OIDC</div>
+          </div>
+        </div>
+
+        <div class="arch-desc-box">
+          <p>Full CRUD REST API at 90% lower cost than EC2+RDS. Five Lambda functions on Graviton2/arm64 (−20% cost vs x86), API Gateway HTTP API, DynamoDB PAY_PER_REQUEST with GSI, AWS X-Ray distributed tracing, and GitHub Actions OIDC CI/CD — eliminating all long-lived secrets. CloudWatch alarms on Duration P99, error rate, and throttle count.</p>
           <div class="arch-panel-meta">
             <span class="tag tag-aws">Lambda</span>
             <span class="tag">Python</span>
@@ -332,22 +423,34 @@
             <span class="tag">GitHub Actions</span>
           </div>
         </div>
+
+        <div class="arch-section-label">Legend — AWS Service Color Coding</div>
+        <div class="arch-legend-pills">
+          <span class="legend-pill" style="background:#8C4FFF18;color:#8C4FFF;border:1px solid #8C4FFF35;"><span class="legend-dot" style="background:#8C4FFF;"></span>API Layer (API Gateway HTTP API)</span>
+          <span class="legend-pill" style="background:#E7157B18;color:#E7157B;border:1px solid #E7157B35;"><span class="legend-dot" style="background:#E7157B;"></span>Compute (Lambda Graviton2, CloudWatch, X-Ray)</span>
+          <span class="legend-pill" style="background:#2E73B818;color:#2E73B8;border:1px solid #2E73B835;"><span class="legend-dot" style="background:#2E73B8;"></span>Database (DynamoDB PAY_PER_REQUEST + GSI)</span>
+          <span class="legend-pill" style="background:#DD344C18;color:#DD344C;border:1px solid #DD344C35;"><span class="legend-dot" style="background:#DD344C;"></span>Identity (IAM Role, OIDC)</span>
+          <span class="legend-pill" style="background:#2088FF18;color:#2088FF;border:1px solid #2088FF35;"><span class="legend-dot" style="background:#2088FF;"></span>CI/CD (GitHub Actions, OIDC deploy)</span>
+        </div>
+
         <div class="arch-viewer">
-                              <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fserverless-task-api.drawio"
+          <iframe
+            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fserverless-task-api.drawio"
             title="Serverless Task API Architecture Diagram"
-            style="width:100%;height:620px;border:none;"
             allowfullscreen>
           </iframe>
         </div>
+
         <div class="arch-actions">
           <a href="diagrams/serverless-task-api.drawio" download class="arch-btn arch-btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download .drawio
           </a>
           <a href="https://github.com/vanessa9373/my-portfolio-projects/tree/main/serverless-task-api" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">View Code →</a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fmy-current-porfolio%2FVan-A%2Fportfolio%2Fdiagrams%2Fserverless-task-api.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
+          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fserverless-task-api.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
         </div>
+
+        <div class="arch-section-label">AWS Well-Architected Framework Analysis</div>
         <div class="arch-pillars">
           <div class="arch-pillar">
             <h4>Cost ($2.32/mo at 1M req)</h4>
@@ -368,11 +471,21 @@
         </div>
       </div>
 
-      <!-- PANEL 4: Cloud Career Hub -->
+      <!-- ══════════════════════════════════════════════
+           PANEL 4 — Cloud Career Hub
+      ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-hub">
-        <div class="arch-panel-header">
-          <h2>Cloud Career Hub Platform</h2>
-          <p>Zero-server frontend architecture: React SPA served by GitHub Pages global CDN, Firebase Authentication (Google OAuth + email), Gemini 2.0 Flash AI career advisor, Firestore for user profiles, and automated gh-pages CI/CD deployment on every push to main.</p>
+
+        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#BF360C 0%,#F57C00 100%);">
+          <span class="arch-diagram-num">04</span>
+          <div>
+            <h2>Cloud Career Hub Platform</h2>
+            <div class="arch-diagram-sub">React SPA · Firebase Auth · Gemini 2.0 AI · GitHub Pages · Zero-server architecture</div>
+          </div>
+        </div>
+
+        <div class="arch-desc-box">
+          <p>Zero-server frontend architecture: React SPA served by GitHub Pages global CDN, Firebase Authentication (Google OAuth + email/password), Gemini 2.0 Flash AI career advisor, Firestore for user profile persistence, and automated gh-pages CI/CD deployment on every push to main — full pipeline in under 90 seconds.</p>
           <div class="arch-panel-meta">
             <span class="tag">React</span>
             <span class="tag">Firebase</span>
@@ -380,21 +493,33 @@
             <span class="tag">GitHub Pages</span>
           </div>
         </div>
+
+        <div class="arch-section-label">Legend — Technology Color Coding</div>
+        <div class="arch-legend-pills">
+          <span class="legend-pill" style="background:#24292E18;color:#94a3b8;border:1px solid #24292E55;"><span class="legend-dot" style="background:#24292E;"></span>GitHub (Repo, Pages CDN, gh-pages branch)</span>
+          <span class="legend-pill" style="background:#61DAFB18;color:#0097B2;border:1px solid #61DAFB55;"><span class="legend-dot" style="background:#61DAFB;"></span>React SPA (Router, Context API, Axios)</span>
+          <span class="legend-pill" style="background:#F57C0018;color:#E65100;border:1px solid #F57C0035;"><span class="legend-dot" style="background:#F57C00;"></span>Firebase (Auth, Firestore)</span>
+          <span class="legend-pill" style="background:#38941818;color:#1B5E20;border:1px solid #38941835;"><span class="legend-dot" style="background:#388E3C;"></span>Google AI (Gemini 2.0 Flash API)</span>
+          <span class="legend-pill" style="background:#2088FF18;color:#2088FF;border:1px solid #2088FF35;"><span class="legend-dot" style="background:#2088FF;"></span>CI/CD (GitHub Actions → npm build → deploy)</span>
+        </div>
+
         <div class="arch-viewer">
-                    <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-career-hub.drawio"
+          <iframe
+            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-career-hub.drawio"
             title="Cloud Career Hub Architecture Diagram"
-            style="width:100%;height:620px;border:none;"
             allowfullscreen>
           </iframe>
         </div>
+
         <div class="arch-actions">
           <a href="diagrams/cloud-career-hub.drawio" download class="arch-btn arch-btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download .drawio
           </a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fmy-current-porfolio%2FVan-A%2Fportfolio%2Fdiagrams%2Fcloud-career-hub.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
+          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-career-hub.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
         </div>
+
+        <div class="arch-section-label">Architecture Analysis</div>
         <div class="arch-pillars">
           <div class="arch-pillar">
             <h4>Cost (&lt;$5/month)</h4>
@@ -415,11 +540,21 @@
         </div>
       </div>
 
-      <!-- PANEL 5: ML Customer Segmentation -->
+      <!-- ══════════════════════════════════════════════
+           PANEL 5 — ML Customer Segmentation
+      ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-ml">
-        <div class="arch-panel-header">
-          <h2>AI/ML Customer Segmentation System</h2>
-          <p>End-to-end ML pipeline analysing 500K+ retail transactions. RFM (Recency, Frequency, Monetary) feature engineering, StandardScaler normalisation, K-Means clustering (k=4 via elbow method), Silhouette Score 0.68 — producing four actionable customer segments with marketing recommendations.</p>
+
+        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#4A148C 0%,#6A1B9A 100%);">
+          <span class="arch-diagram-num">05</span>
+          <div>
+            <h2>AI/ML Customer Segmentation Pipeline</h2>
+            <div class="arch-diagram-sub">RFM Feature Engineering · K-Means (k=4) · Silhouette 0.68 · 500K+ Transactions</div>
+          </div>
+        </div>
+
+        <div class="arch-desc-box">
+          <p>End-to-end ML pipeline analysing 500K+ retail transactions. RFM (Recency, Frequency, Monetary) feature engineering with Pandas, StandardScaler normalisation, K-Means clustering (k=4 via elbow method), Silhouette Score 0.68 — producing four actionable customer segments with specific marketing recommendations per cluster.</p>
           <div class="arch-panel-meta">
             <span class="tag">Python</span>
             <span class="tag">scikit-learn</span>
@@ -427,47 +562,70 @@
             <span class="tag">Pandas</span>
           </div>
         </div>
+
+        <div class="arch-section-label">Legend — Pipeline Stage Color Coding</div>
+        <div class="arch-legend-pills">
+          <span class="legend-pill" style="background:#1565C018;color:#1565C0;border:1px solid #1565C035;"><span class="legend-dot" style="background:#1565C0;"></span>1 · Data Ingestion (CSV/Parquet, 500K+ rows)</span>
+          <span class="legend-pill" style="background:#E6510018;color:#E65100;border:1px solid #E6510035;"><span class="legend-dot" style="background:#E65100;"></span>2 · Preprocessing (Pandas ETL, cleaning)</span>
+          <span class="legend-pill" style="background:#6A1B9A18;color:#6A1B9A;border:1px solid #6A1B9A35;"><span class="legend-dot" style="background:#6A1B9A;"></span>3 · Feature Engineering (R · F · M scores)</span>
+          <span class="legend-pill" style="background:#2E7D3218;color:#2E7D32;border:1px solid #2E7D3235;"><span class="legend-dot" style="background:#2E7D32;"></span>4 · Scaling (StandardScaler μ=0 σ=1)</span>
+          <span class="legend-pill" style="background:#C6282818;color:#C62828;border:1px solid #C6282835;"><span class="legend-dot" style="background:#C62828;"></span>5 · Modelling (K-Means k=4, n_init=10)</span>
+          <span class="legend-pill" style="background:#F9A82518;color:#F57F17;border:1px solid #F9A82535;"><span class="legend-dot" style="background:#F9A825;"></span>6 · Evaluation (Silhouette, WCSS, Davies-Bouldin)</span>
+        </div>
+
         <div class="arch-viewer">
-                              <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fml-customer-segmentation.drawio"
+          <iframe
+            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fml-customer-segmentation.drawio"
             title="ML Customer Segmentation Pipeline Diagram"
-            style="width:100%;height:620px;border:none;"
             allowfullscreen>
           </iframe>
         </div>
+
         <div class="arch-actions">
           <a href="diagrams/ml-customer-segmentation.drawio" download class="arch-btn arch-btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download .drawio
           </a>
           <a href="https://github.com/vanessa9373/my-portfolio-projects/tree/main/ml-customer-segmentation" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">View Notebook →</a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fmy-current-porfolio%2FVan-A%2Fportfolio%2Fdiagrams%2Fml-customer-segmentation.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
+          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fml-customer-segmentation.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
         </div>
+
+        <div class="arch-section-label">Cluster Profiles — Output Segments</div>
         <div class="arch-pillars">
-          <div class="arch-pillar">
-            <h4>Champions (Cluster 0)</h4>
+          <div class="arch-pillar" style="border-color:rgba(46,125,50,0.3);">
+            <h4 style="color:#2E7D32;">Champions (Cluster 0)</h4>
             <p>High frequency + monetary, low recency — action: loyalty rewards, premium upsell, early access</p>
           </div>
-          <div class="arch-pillar">
-            <h4>At Risk (Cluster 1)</h4>
+          <div class="arch-pillar" style="border-color:rgba(198,40,40,0.3);">
+            <h4 style="color:#C62828;">At Risk (Cluster 1)</h4>
             <p>High recency (dormant), was active — action: win-back campaign, discount offer, re-engagement email</p>
           </div>
-          <div class="arch-pillar">
-            <h4>Promising (Cluster 2)</h4>
+          <div class="arch-pillar" style="border-color:rgba(2,119,189,0.3);">
+            <h4 style="color:#0277BD;">Promising (Cluster 2)</h4>
             <p>Low recency, growing F + M — action: onboarding sequence, nurture track, referral programme</p>
           </div>
-          <div class="arch-pillar">
-            <h4>AWS Scale-Up</h4>
-            <p>This pipeline maps to: S3 + Glue ETL → SageMaker Processing → SageMaker Training → QuickSight dashboards</p>
+          <div class="arch-pillar" style="border-color:rgba(106,27,154,0.3);">
+            <h4 style="color:#6A1B9A;">AWS Scale-Up Path</h4>
+            <p>Pipeline maps to: S3 + Glue ETL → SageMaker Processing → SageMaker Training → QuickSight dashboards</p>
           </div>
         </div>
       </div>
 
-      <!-- PANEL 6: Cloud Security Baseline -->
+      <!-- ══════════════════════════════════════════════
+           PANEL 6 — Cloud Security Baseline
+      ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-sec">
-        <div class="arch-panel-header">
-          <h2>Cloud Security &amp; Compliance Framework</h2>
-          <p>Defence-in-depth across five layers: perimeter (WAF, Security Groups, NACLs), identity (IAM least-privilege, IMDSv2, Secrets Manager), data protection (KMS CMK, TLS 1.2+), detection (GuardDuty, Security Hub, Config, Inspector), and automated response (EventBridge → Lambda isolation + SNS alerts).</p>
+
+        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#37474F 0%,#546E7A 100%);">
+          <span class="arch-diagram-num">06</span>
+          <div>
+            <h2>Cloud Security &amp; Compliance Framework</h2>
+            <div class="arch-diagram-sub">5 Defence-in-Depth Layers · WAF · GuardDuty · Security Hub · EventBridge Auto-Remediation</div>
+          </div>
+        </div>
+
+        <div class="arch-desc-box">
+          <p>Defence-in-depth across five layers: perimeter (WAF OWASP rules, CloudFront, Security Groups, NACLs), identity (IAM least-privilege, Permission Boundaries, IMDSv2, Secrets Manager 30-day rotation), data protection (KMS CMK, TLS 1.2+/ACM), detection (GuardDuty ML, Security Hub CIS benchmark, Config, Inspector), and automated response (EventBridge → Lambda isolation in &lt;60 seconds).</p>
           <div class="arch-panel-meta">
             <span class="tag">IAM</span>
             <span class="tag">GuardDuty</span>
@@ -475,22 +633,34 @@
             <span class="tag">Compliance</span>
           </div>
         </div>
+
+        <div class="arch-section-label">Legend — Defence Layer Color Coding</div>
+        <div class="arch-legend-pills">
+          <span class="legend-pill" style="background:#8C4FFF18;color:#8C4FFF;border:1px solid #8C4FFF35;"><span class="legend-dot" style="background:#8C4FFF;"></span>Layer 1 · Perimeter (WAF, CloudFront, SGs, NACLs)</span>
+          <span class="legend-pill" style="background:#DD344C18;color:#DD344C;border:1px solid #DD344C35;"><span class="legend-dot" style="background:#DD344C;"></span>Layer 2 · Identity (IAM, IMDSv2, SSM, Secrets Manager)</span>
+          <span class="legend-pill" style="background:#2E73B818;color:#2E73B8;border:1px solid #2E73B835;"><span class="legend-dot" style="background:#2E73B8;"></span>Layer 3 · Data Protection (KMS, TLS, ACM)</span>
+          <span class="legend-pill" style="background:#E7157B18;color:#E7157B;border:1px solid #E7157B35;"><span class="legend-dot" style="background:#E7157B;"></span>Layer 4 · Detection (GuardDuty, Security Hub, Config, Inspector)</span>
+          <span class="legend-pill" style="background:#E6510018;color:#E65100;border:1px solid #E6510035;"><span class="legend-dot" style="background:#E65100;"></span>Layer 5 · Response (CloudWatch, EventBridge, Lambda, SNS)</span>
+        </div>
+
         <div class="arch-viewer">
-                              <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-security.drawio"
+          <iframe
+            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-security.drawio"
             title="Cloud Security Baseline Architecture Diagram"
-            style="width:100%;height:620px;border:none;"
             allowfullscreen>
           </iframe>
         </div>
+
         <div class="arch-actions">
           <a href="diagrams/cloud-security.drawio" download class="arch-btn arch-btn-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download .drawio
           </a>
           <a href="https://github.com/vanessa9373/my-portfolio-projects/blob/main/labs/15-security-compliance/docs/architecture-deep-dive.md" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Architecture Doc →</a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fmy-current-porfolio%2FVan-A%2Fportfolio%2Fdiagrams%2Fcloud-security.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
+          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-security.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
         </div>
+
+        <div class="arch-section-label">AWS Well-Architected Framework Analysis</div>
         <div class="arch-pillars">
           <div class="arch-pillar">
             <h4>Perimeter</h4>
@@ -532,7 +702,6 @@
   <button class="back-to-top" id="back-to-top" aria-label="Back to top"><svg class="icon" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
   <script src="script.js"></script>
   <script>
-    // Tab switching
     const tabs = document.querySelectorAll('.arch-tab');
     const panels = document.querySelectorAll('.arch-panel');
     tabs.forEach(tab => {
@@ -546,7 +715,6 @@
       });
     });
 
-    // Open tab from URL hash (e.g., architecture.html#lz)
     const hash = window.location.hash.replace('#', '');
     if (hash) {
       const matchTab = document.querySelector('[data-panel="' + hash + '"]');

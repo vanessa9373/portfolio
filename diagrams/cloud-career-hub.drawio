@@ -12,7 +12,7 @@
         </mxCell>
 
         <!-- INTERNET USERS -->
-        <mxCell id="3" value="Users&#xa;(Global)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#232F3E;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+        <mxCell id="3" value="Users&#xa;(Global)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#232F3E;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.user;" vertex="1" parent="1">
           <mxGeometry x="80" y="280" width="60" height="60" as="geometry"/>
         </mxCell>
 

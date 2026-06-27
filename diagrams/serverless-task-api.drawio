@@ -12,12 +12,12 @@
         </mxCell>
 
         <!-- CLIENT -->
-        <mxCell id="3" value="Client&#xa;(Web / Mobile)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#232F3E;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.user;" vertex="1" parent="1">
+        <mxCell id="3" value="Client&#xa;(Web / Mobile)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#232F3E;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.user;" vertex="1" parent="1">
           <mxGeometry x="80" y="230" width="60" height="60" as="geometry"/>
         </mxCell>
 
         <!-- API GATEWAY -->
-        <mxCell id="4" value="API Gateway&#xa;HTTP API (v2)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1">
+        <mxCell id="4" value="API Gateway&#xa;HTTP API (v2)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1">
           <mxGeometry x="290" y="230" width="60" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#8C4FFF;" edge="1" source="3" target="4" parent="1">
@@ -33,19 +33,19 @@
         </mxCell>
 
         <!-- 5 LAMBDA FUNCTIONS -->
-        <mxCell id="6" value="createTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="6" value="createTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="530" y="210" width="50" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="7" value="getTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="7" value="getTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="620" y="210" width="50" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="8" value="updateTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="8" value="updateTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="710" y="210" width="50" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="9" value="deleteTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="9" value="deleteTask" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="800" y="210" width="50" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="9b" value="listTasks" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="9b" value="listTasks" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="970" y="210" width="50" height="50" as="geometry"/>
         </mxCell>
 
@@ -60,7 +60,7 @@
         </mxCell>
 
         <!-- DYNAMODB -->
-        <mxCell id="10" value="DynamoDB&#xa;PAY_PER_REQUEST&#xa;+ GSI (status-index)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#2E73B8;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+        <mxCell id="10" value="DynamoDB&#xa;PAY_PER_REQUEST&#xa;+ GSI (status-index)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#2E73B8;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
           <mxGeometry x="1230" y="230" width="60" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2E73B8;" edge="1" source="5" target="10" parent="1">
@@ -68,7 +68,7 @@
         </mxCell>
 
         <!-- CLOUDWATCH -->
-        <mxCell id="11" value="CloudWatch&#xa;(Duration / Error&#xa;Rate / Throttle)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+        <mxCell id="11" value="CloudWatch&#xa;(Duration / Error&#xa;Rate / Throttle)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
           <mxGeometry x="1380" y="80" width="60" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="e_cw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;dashed=1;" edge="1" source="5" target="11" parent="1">
@@ -76,7 +76,7 @@
         </mxCell>
 
         <!-- X-RAY -->
-        <mxCell id="xray" value="AWS X-Ray&#xa;(Distributed Tracing)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.xray;" vertex="1" parent="1">
+        <mxCell id="xray" value="AWS X-Ray&#xa;(Distributed Tracing)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.xray;" vertex="1" parent="1">
           <mxGeometry x="1380" y="230" width="60" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="e_xray" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;dashed=1;" edge="1" source="5" target="xray" parent="1">
@@ -84,7 +84,7 @@
         </mxCell>
 
         <!-- IAM ROLE -->
-        <mxCell id="12" value="IAM Execution Role&#xa;(least-privilege&#xa;DynamoDB access)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.role;" vertex="1" parent="1">
+        <mxCell id="12" value="IAM Execution Role&#xa;(least-privilege&#xa;DynamoDB access)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.role;" vertex="1" parent="1">
           <mxGeometry x="790" y="410" width="60" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="e_iam" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;dashed=1;" edge="1" source="5" target="12" parent="1">
@@ -110,7 +110,7 @@
         </mxCell>
 
         <!-- OIDC -->
-        <mxCell id="oidc" value="OIDC Token&#xa;(GitHub → AWS&#xa;AssumeRoleWithWebIdentity)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+        <mxCell id="oidc" value="OIDC Token&#xa;(GitHub → AWS&#xa;AssumeRoleWithWebIdentity)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
           <mxGeometry x="450" y="590" width="55" height="55" as="geometry"/>
         </mxCell>
         <mxCell id="e_oidc" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="gha" target="oidc" parent="1">
@@ -118,7 +118,7 @@
         </mxCell>
 
         <!-- Deploy Lambda -->
-        <mxCell id="deploy" value="Deploy Lambda&#xa;(aws lambda update-function-code)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="deploy" value="Deploy Lambda&#xa;(aws lambda update-function-code)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="620" y="590" width="55" height="55" as="geometry"/>
         </mxCell>
         <mxCell id="e_deploy" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E7157B;" edge="1" source="oidc" target="deploy" parent="1">

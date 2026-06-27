@@ -29,42 +29,42 @@
         </mxCell>
 
         <!-- ===== LAYER 1: PERIMETER ===== -->
-        <mxCell id="waf" value="WAF&#xa;(OWASP Top 10&#xa;SQLi / XSS rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;" vertex="1" parent="1">
+        <mxCell id="waf" value="WAF&#xa;(OWASP Top 10&#xa;SQLi / XSS rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;" vertex="1" parent="1">
           <mxGeometry x="80" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="cf" value="CloudFront&#xa;(HTTPS-only&#xa;TLS 1.2+)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
+        <mxCell id="cf" value="CloudFront&#xa;(HTTPS-only&#xa;TLS 1.2+)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
           <mxGeometry x="80" y="220" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="sg" value="Security Groups&#xa;(Stateful, least-privilege&#xa;ingress rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.security_group;" vertex="1" parent="1">
+        <mxCell id="sg" value="Security Groups&#xa;(Stateful, least-privilege&#xa;ingress rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.security_group;" vertex="1" parent="1">
           <mxGeometry x="80" y="335" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="nacl" value="Network ACL&#xa;(Stateless perimeter&#xa;subnet firewall)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.network_access_control_list;" vertex="1" parent="1">
+        <mxCell id="nacl" value="Network ACL&#xa;(Stateless perimeter&#xa;subnet firewall)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.network_access_control_list;" vertex="1" parent="1">
           <mxGeometry x="80" y="450" width="60" height="60" as="geometry"/>
         </mxCell>
 
         <!-- ===== LAYER 2: IDENTITY ===== -->
-        <mxCell id="iam" value="IAM&#xa;(Least-privilege&#xa;policies)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+        <mxCell id="iam" value="IAM&#xa;(Least-privilege&#xa;policies)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
           <mxGeometry x="330" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="iam_policy" value="Permission Boundaries · SCPs · Conditions (aws:SourceVpce, aws:MultiFactorAuthPresent)" style="text;html=1;strokeColor=#DD344C;fillColor=#FFEBEE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="310" y="185" width="270" height="40" as="geometry"/>
         </mxCell>
 
-        <mxCell id="sso" value="IAM Identity Center&#xa;(SSO, MFA enforced)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+        <mxCell id="sso" value="IAM Identity Center&#xa;(SSO, MFA enforced)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
           <mxGeometry x="440" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="imds" value="IMDSv2&#xa;(Session-oriented,&#xa;no SSRF via IMDSv1)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
+        <mxCell id="imds" value="IMDSv2&#xa;(Session-oriented,&#xa;no SSRF via IMDSv1)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
           <mxGeometry x="330" y="280" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="ssm" value="Systems Manager&#xa;(SSM Session Manager&#xa;— no SSH / port 22)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.systems_manager;" vertex="1" parent="1">
+        <mxCell id="ssm" value="Systems Manager&#xa;(SSM Session Manager&#xa;— no SSH / port 22)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.systems_manager;" vertex="1" parent="1">
           <mxGeometry x="440" y="280" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="secrets" value="Secrets Manager&#xa;(DB creds, API keys&#xa;— auto-rotate 30d)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.secrets_manager;" vertex="1" parent="1">
+        <mxCell id="secrets" value="Secrets Manager&#xa;(DB creds, API keys&#xa;— auto-rotate 30d)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.secrets_manager;" vertex="1" parent="1">
           <mxGeometry x="380" y="400" width="60" height="60" as="geometry"/>
         </mxCell>
 
         <!-- ===== LAYER 3: DATA PROTECTION ===== -->
-        <mxCell id="kms" value="KMS CMK&#xa;(Customer-managed,&#xa;automatic rotation)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.key_management_service;" vertex="1" parent="1">
+        <mxCell id="kms" value="KMS CMK&#xa;(Customer-managed,&#xa;automatic rotation)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.key_management_service;" vertex="1" parent="1">
           <mxGeometry x="660" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
 
@@ -88,24 +88,24 @@
         <mxCell id="e_kms_s3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;dashed=1;" edge="1" source="kms" target="s3_enc" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e_kms_rds" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;dashed=1;" edge="1" source="kms" target="rds_enc" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <mxCell id="tls" value="TLS in Transit&#xa;(ACM + enforce-https&#xa;S3 bucket policy)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.certificate_manager;" vertex="1" parent="1">
+        <mxCell id="tls" value="TLS in Transit&#xa;(ACM + enforce-https&#xa;S3 bucket policy)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.certificate_manager;" vertex="1" parent="1">
           <mxGeometry x="760" y="340" width="60" height="60" as="geometry"/>
         </mxCell>
 
         <!-- ===== LAYER 4: DETECTION ===== -->
-        <mxCell id="gd" value="GuardDuty&#xa;(ML threat detection&#xa;— all regions)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.guardduty;" vertex="1" parent="1">
+        <mxCell id="gd" value="GuardDuty&#xa;(ML threat detection&#xa;— all regions)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.guardduty;" vertex="1" parent="1">
           <mxGeometry x="990" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="sh" value="Security Hub&#xa;(CIS AWS Benchmark&#xa;score + aggregation)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.security_hub;" vertex="1" parent="1">
+        <mxCell id="sh" value="Security Hub&#xa;(CIS AWS Benchmark&#xa;score + aggregation)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.security_hub;" vertex="1" parent="1">
           <mxGeometry x="1110" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="ct" value="CloudTrail&#xa;(API audit log&#xa;S3 + integrity)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudtrail;" vertex="1" parent="1">
+        <mxCell id="ct" value="CloudTrail&#xa;(API audit log&#xa;S3 + integrity)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudtrail;" vertex="1" parent="1">
           <mxGeometry x="990" y="240" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="cfg" value="AWS Config&#xa;(Continuous compliance&#xa;— &gt;150 managed rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.config;" vertex="1" parent="1">
+        <mxCell id="cfg" value="AWS Config&#xa;(Continuous compliance&#xa;— &gt;150 managed rules)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.config;" vertex="1" parent="1">
           <mxGeometry x="1110" y="240" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="ai" value="Amazon Inspector&#xa;(Vuln scanning&#xa;EC2 + ECR images)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.inspector;" vertex="1" parent="1">
+        <mxCell id="ai" value="Amazon Inspector&#xa;(Vuln scanning&#xa;EC2 + ECR images)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#DD344C;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.inspector;" vertex="1" parent="1">
           <mxGeometry x="1050" y="370" width="60" height="60" as="geometry"/>
         </mxCell>
 
@@ -116,16 +116,16 @@
         <mxCell id="e_ai_sh" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#DD344C;" edge="1" source="ai" target="sh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
 
         <!-- ===== LAYER 5: RESPONSE ===== -->
-        <mxCell id="cw" value="CloudWatch&#xa;Alarms&#xa;(metric filters on&#xa;CloudTrail logs)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+        <mxCell id="cw" value="CloudWatch&#xa;Alarms&#xa;(metric filters on&#xa;CloudTrail logs)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
           <mxGeometry x="1310" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="sns" value="SNS Topic&#xa;(Email + PagerDuty&#xa;on HIGH findings)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
+        <mxCell id="sns" value="SNS Topic&#xa;(Email + PagerDuty&#xa;on HIGH findings)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;" vertex="1" parent="1">
           <mxGeometry x="1430" y="110" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="lambda_r" value="Lambda&#xa;(Auto-remediation:&#xa;isolate EC2 on&#xa;GuardDuty finding)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
+        <mxCell id="lambda_r" value="Lambda&#xa;(Auto-remediation:&#xa;isolate EC2 on&#xa;GuardDuty finding)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda_function;" vertex="1" parent="1">
           <mxGeometry x="1370" y="280" width="60" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="eb" value="EventBridge&#xa;(Security Hub → Lambda&#xa;rule trigger)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="1">
+        <mxCell id="eb" value="EventBridge&#xa;(Security Hub → Lambda&#xa;rule trigger)" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="1">
           <mxGeometry x="1250" y="280" width="60" height="60" as="geometry"/>
         </mxCell>
 
