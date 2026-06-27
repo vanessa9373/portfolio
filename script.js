@@ -24,19 +24,26 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- PAGE LOADER ---------- */
   const pageLoader = document.getElementById('page-loader');
   if (pageLoader) {
-    const minTime = 1400;
+    const minTime = 800;
     const startTime = performance.now();
+    let dismissed = false;
 
     function dismissLoader() {
+      if (dismissed) return;
+      dismissed = true;
       const elapsed = performance.now() - startTime;
       const remaining = Math.max(0, minTime - elapsed);
       setTimeout(() => pageLoader.classList.add('hidden'), remaining);
     }
 
+    // Hard cap: dismiss after 2.5s even if CDN resources are still loading
+    const hardCap = setTimeout(dismissLoader, 2500);
+
     if (document.readyState === 'complete') {
+      clearTimeout(hardCap);
       dismissLoader();
     } else {
-      window.addEventListener('load', dismissLoader);
+      window.addEventListener('load', () => { clearTimeout(hardCap); dismissLoader(); });
     }
   }
 
