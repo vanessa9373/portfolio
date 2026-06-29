@@ -255,9 +255,8 @@
         <button class="arch-tab active" role="tab" aria-selected="true"  data-panel="wp">01 · HA WordPress</button>
         <button class="arch-tab"        role="tab" aria-selected="false" data-panel="lz">02 · Landing Zone</button>
         <button class="arch-tab"        role="tab" aria-selected="false" data-panel="api">03 · Serverless API</button>
-        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="hub">04 · Career Hub</button>
-        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="ml">05 · ML Pipeline</button>
-        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="sec">06 · Security</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="ml">04 · ML Pipeline</button>
+        <button class="arch-tab"        role="tab" aria-selected="false" data-panel="sec">05 · Security</button>
       </div>
 
       <!-- ══════════════════════════════════════════════
@@ -472,81 +471,12 @@
       </div>
 
       <!-- ══════════════════════════════════════════════
-           PANEL 4 — Cloud Career Hub
-      ══════════════════════════════════════════════ -->
-      <div class="arch-panel" id="panel-hub">
-
-        <div class="arch-diagram-header" style="background:linear-gradient(135deg,#BF360C 0%,#F57C00 100%);">
-          <span class="arch-diagram-num">04</span>
-          <div>
-            <h2>Cloud Career Hub Platform</h2>
-            <div class="arch-diagram-sub">React SPA · Firebase Auth · Gemini 2.0 AI · GitHub Pages · Zero-server architecture</div>
-          </div>
-        </div>
-
-        <div class="arch-desc-box">
-          <p>Zero-server frontend architecture: React SPA served by GitHub Pages global CDN, Firebase Authentication (Google OAuth + email/password), Gemini 2.0 Flash AI career advisor, Firestore for user profile persistence, and automated gh-pages CI/CD deployment on every push to main — full pipeline in under 90 seconds.</p>
-          <div class="arch-panel-meta">
-            <span class="tag">React</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">Gemini AI</span>
-            <span class="tag">GitHub Pages</span>
-          </div>
-        </div>
-
-        <div class="arch-section-label">Legend — Technology Color Coding</div>
-        <div class="arch-legend-pills">
-          <span class="legend-pill" style="background:#24292E18;color:#94a3b8;border:1px solid #24292E55;"><span class="legend-dot" style="background:#24292E;"></span>GitHub (Repo, Pages CDN, gh-pages branch)</span>
-          <span class="legend-pill" style="background:#61DAFB18;color:#0097B2;border:1px solid #61DAFB55;"><span class="legend-dot" style="background:#61DAFB;"></span>React SPA (Router, Context API, Axios)</span>
-          <span class="legend-pill" style="background:#F57C0018;color:#E65100;border:1px solid #F57C0035;"><span class="legend-dot" style="background:#F57C00;"></span>Firebase (Auth, Firestore)</span>
-          <span class="legend-pill" style="background:#38941818;color:#1B5E20;border:1px solid #38941835;"><span class="legend-dot" style="background:#388E3C;"></span>Google AI (Gemini 2.0 Flash API)</span>
-          <span class="legend-pill" style="background:#2088FF18;color:#2088FF;border:1px solid #2088FF35;"><span class="legend-dot" style="background:#2088FF;"></span>CI/CD (GitHub Actions → npm build → deploy)</span>
-        </div>
-
-        <div class="arch-viewer">
-          <iframe
-            src="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-career-hub.drawio"
-            title="Cloud Career Hub Architecture Diagram"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="arch-actions">
-          <a href="diagrams/cloud-career-hub.drawio" download class="arch-btn arch-btn-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download .drawio
-          </a>
-          <a href="https://viewer.diagrams.net/?lightbox=1&highlight=0077ff&edit=_blank&nav=1&fit=1&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvanessa9373%2Fportfolio%2Fmain%2Fdiagrams%2Fcloud-career-hub.drawio" target="_blank" rel="noopener" class="arch-btn arch-btn-secondary">Open Full-Screen →</a>
-        </div>
-
-        <div class="arch-section-label">Architecture Analysis</div>
-        <div class="arch-pillars">
-          <div class="arch-pillar">
-            <h4>Cost (&lt;$5/month)</h4>
-            <p>GitHub Pages = free CDN; Firebase Auth Spark plan = free tier; Gemini 2.0 Flash = low per-token cost; zero servers</p>
-          </div>
-          <div class="arch-pillar">
-            <h4>Performance</h4>
-            <p>React bundle &lt;150 KB gzip (code-split + tree-shaken); served from global CDN edge — sub-50 ms TTFB</p>
-          </div>
-          <div class="arch-pillar">
-            <h4>Security</h4>
-            <p>Firebase JWT (RS256) validation; API key scoped to Gemini only; HTTPS enforced; no backend = no SQL injection surface</p>
-          </div>
-          <div class="arch-pillar">
-            <h4>Delivery</h4>
-            <p>Every push to main triggers GitHub Actions → npm build → gh-pages deploy; full pipeline in &lt;90 seconds</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══════════════════════════════════════════════
-           PANEL 5 — ML Customer Segmentation
+           PANEL 4 — ML Customer Segmentation
       ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-ml">
 
         <div class="arch-diagram-header" style="background:linear-gradient(135deg,#4A148C 0%,#6A1B9A 100%);">
-          <span class="arch-diagram-num">05</span>
+          <span class="arch-diagram-num">04</span>
           <div>
             <h2>AI/ML Customer Segmentation Pipeline</h2>
             <div class="arch-diagram-sub">RFM Feature Engineering · K-Means (k=4) · Silhouette 0.68 · 500K+ Transactions</div>
@@ -612,12 +542,12 @@
       </div>
 
       <!-- ══════════════════════════════════════════════
-           PANEL 6 — Cloud Security Baseline
+           PANEL 5 — Cloud Security Baseline
       ══════════════════════════════════════════════ -->
       <div class="arch-panel" id="panel-sec">
 
         <div class="arch-diagram-header" style="background:linear-gradient(135deg,#37474F 0%,#546E7A 100%);">
-          <span class="arch-diagram-num">06</span>
+          <span class="arch-diagram-num">05</span>
           <div>
             <h2>Cloud Security &amp; Compliance Framework</h2>
             <div class="arch-diagram-sub">5 Defence-in-Depth Layers · WAF · GuardDuty · Security Hub · EventBridge Auto-Remediation</div>
